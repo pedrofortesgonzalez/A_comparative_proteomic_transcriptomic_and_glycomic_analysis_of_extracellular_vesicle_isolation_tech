@@ -17,6 +17,7 @@ scripts/
 The complete analysis follows this workflow:
 
 - Data Processing: Run <ins>1_ptm_detection.py</ins> to process raw data
+  - The console will ask you to provide the name of the folder where your data is located. This folder should be located in the main folder
 - Boxplots and Hypothesis Testing: Run <ins>2_hyptest_&_boxplots.R</ins> to generate statistical analyses and boxplots
 - Glycosylation Proportions Visualization: Run <ins>3_sector_diagrams.R</ins> to create pie charts
 
