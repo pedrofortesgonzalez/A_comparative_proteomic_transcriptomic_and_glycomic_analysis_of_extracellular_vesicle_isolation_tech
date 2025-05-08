@@ -22,8 +22,8 @@ from tqdm.notebook import tqdm
 import session_info
 
 # Set working directory
-WORKING_DIR = r"/Users/pedrofortesgonzalez/Desktop/NefroCHUS/projects/240614_detectar_prots_glucosiladas_bravo-susana_real/script_for_repo/scripts/"
-os.chdir(WORKING_DIR)
+WORKING_DIR = os.getcwd()
+WORKING_DIR_PARENT = os.path.dirname(WORKING_DIR)
 
 # Show package list
 session_info.show(dependencies=False, html=False, std_lib=False)
@@ -67,17 +67,21 @@ print(f"\nNumber of entries in Vesiclepedia: {vesiclepedia.shape[0]}")
 importlib.reload(udf)
 
 # Define input directory and technique identifiers
-DATA_DIR = '../input_data/input'
+RAW_DATA_DIR = '../' + str(input("\nEnter the name of your input folder: "))
+PROCESSED_DATA_DIR = '../input_data/input'
 TECHNIQUES = ["ExoGAG", "SEC", "IP_CD9", "UC"]
 
-# Step 3.1: Ensure all files are properly named with pool indicators
-udf.rename_pool_files(DATA_DIR, TECHNIQUES)  # Add "_NO_POOL" to files without pool identifier
+# Step 3.1: Create copy of the input directory for processing while preserving the original data
+udf.create_input_directory(RAW_DATA_DIR, PROCESSED_DATA_DIR)
 
-# Step 3.2: Create combined pool files from individual pools
-udf.combine_pool_files(DATA_DIR, TECHNIQUES)  # Combine pool1 + pool2 + pool3 into POOLS_123 files
+# Step 3.2: Ensure all files are properly named with pool indicators
+udf.rename_pool_files(PROCESSED_DATA_DIR, TECHNIQUES)  # Erase files without pool identifier and correct the incorrect ones
 
-# Step 3.3: Clean up filenames by removing prefixes and standardizing format
-udf.simplify_filenames(DATA_DIR, TECHNIQUES)
+# Step 3.3: Create combined pool files from individual pools
+udf.combine_pool_files(PROCESSED_DATA_DIR, TECHNIQUES)  # Combine pool1 + pool2 + pool3 into POOLS_123 files
+
+# Step 3.4: Clean up filenames by removing prefixes and standardizing format
+udf.simplify_filenames(PROCESSED_DATA_DIR, TECHNIQUES)
 
 # %%
 
@@ -89,7 +93,7 @@ udf.simplify_filenames(DATA_DIR, TECHNIQUES)
 importlib.reload(udf)
 
 # Define inputs for protein name extraction
-DATA_DIR = '../input_data/input'
+PROCESSED_DATA_DIR = '../input_data/input'
 ACCESSION_COL = 'Accession'
 PROTEIN_NAME_COL = "Prot Name"
 
@@ -98,7 +102,7 @@ PROTEIN_NAME_COL = "Prot Name"
 PROTEIN_PATTERN = r"([A-Z]\d[A-Z0-9]{3}[0-9]-?\d*|[A-NR-Z][0-9][A-Z][A-Z0-9]{2}[0-9][A-Z]?[A-Z0-9]+[0-9])"
 
 # Extract protein names from accession information and create a new column
-udf.extract_protein_names(DATA_DIR, ACCESSION_COL, PROTEIN_NAME_COL, PROTEIN_PATTERN)
+udf.extract_protein_names(PROCESSED_DATA_DIR, ACCESSION_COL, PROTEIN_NAME_COL, PROTEIN_PATTERN)
 
 # Step 4.2: Clean peptide sequences by removing modifications in parentheses
 importlib.reload(udf)
@@ -107,7 +111,7 @@ PEPTIDE_SEQ_COL = "Peptide Sequence"
 PEPTIDE_PATTERN = r'\([^)]*\)'  # Pattern to remove content inside parentheses
 
 # Extract clean peptide sequences without modification annotations
-udf.extract_peptide_sequences(DATA_DIR, PEPTIDE_COL, PEPTIDE_SEQ_COL, PEPTIDE_PATTERN)
+udf.extract_peptide_sequences(PROCESSED_DATA_DIR, PEPTIDE_COL, PEPTIDE_SEQ_COL, PEPTIDE_PATTERN)
 
 # Step 4.3: Classify PTMs into standardized categories
 importlib.reload(udf)
@@ -115,7 +119,7 @@ PTM_COL = 'PTM'
 PTM_CLUSTER_COL = "PTM cluster"
 
 # Create a new column with standardized PTM classifications
-udf.classify_ptm_types(DATA_DIR, PTM_COL, PTM_CLUSTER_COL)
+udf.classify_ptm_types(PROCESSED_DATA_DIR, PTM_COL, PTM_CLUSTER_COL)
 
 # %%
 
@@ -127,11 +131,11 @@ udf.classify_ptm_types(DATA_DIR, PTM_COL, PTM_CLUSTER_COL)
 importlib.reload(udf)
 
 # Define input directory
-DATA_DIR = '../output'
+PROCESSED_DATA_DIR = '../output'
 
 # Create standardized output directory structure with subdirectories
 # This creates folders for filtered data, value counts, and figures
-output_dir = udf.create_output_directories(DATA_DIR)
+output_dir = udf.create_output_directories(PROCESSED_DATA_DIR)
 
 # Display confirmation
 print(f"\nCreated output directory structure at: {output_dir}")
@@ -150,7 +154,7 @@ INTEREST_COLS = ['Peptide Sequence', "Prot Name", 'PTM', "Accession",
                  "Peptide", "PTM cluster"]
 
 # Base directories
-DATA_DIR = '../input_data/input'
+PROCESSED_DATA_DIR = '../input_data/input'
 OUTPUT_BASE_DIR = '../output'
 
 #----------
@@ -163,7 +167,7 @@ VCP_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/1_filtered_dfs/vesiclepedia"
 
 # Filter proteins by presence in Vesiclepedia database
 vcp_summary = udf.filter_vesiclepedia_proteins(
-    DATA_DIR, VCP_OUTPUT_DIR, TECHNIQUES, POOLS, ptms_of_interest, 
+    PROCESSED_DATA_DIR, VCP_OUTPUT_DIR, TECHNIQUES, POOLS, ptms_of_interest, 
     vesiclepedia, INTEREST_COLS
     )
 
@@ -306,6 +310,18 @@ udf.count_proteins_by_ptm(
     GLYC_INPUT_DIR, GLYC_OUTPUT_DIR, TECHNIQUES, POOLS, INTEREST_COL, 
     group_by_col=GROUP_BY_COL
     )
+
+# %%
+
+###############################################################################
+# Erase temporary processing dir
+################################
+
+# Store temporary dir's path
+temp_proc_dir_path = '../input_data/input'
+
+# Erase this directory
+udf.delete_directory(temp_proc_dir_path)
 
 # %%
 

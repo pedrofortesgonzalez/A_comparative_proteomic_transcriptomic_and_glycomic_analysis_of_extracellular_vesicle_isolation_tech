@@ -148,9 +148,9 @@ generate_charts <- function(technique, entity_type, data_path, output_path, char
 # ______________________________________________________________________________
 
 # Base paths
-peptide_data_path <- "./data/input_processed/2_value_counts/vesiclepedia_glycosylated/peptides/"
-protein_data_path <- "./data/input_processed/2_value_counts/vesiclepedia_glycosylated/proteins/"
-output_base_path <- "./data/input_processed/3_figures/sector_diagrams/"
+peptide_data_path <- "../output/2_value_counts/vesiclepedia_glycosylated/peptides/"
+protein_data_path <- "../output/2_value_counts/vesiclepedia_glycosylated/proteins/"
+output_base_path <- "../output/3_figures/sector_diagrams/"
 
 # Isolation techniques
 techniques <- c("ExoGAG", "IP_CD9", "SEC", "UC")

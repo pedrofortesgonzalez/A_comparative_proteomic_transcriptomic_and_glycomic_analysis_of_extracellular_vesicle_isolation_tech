@@ -1,4 +1,4 @@
-inf#!/usr/bin/env python
+#!/usr/bin/env python
 # coding: utf-8
 """
 PTM Detection from Mass Spectrometry Data.
@@ -9,12 +9,14 @@ proteins with post-translational modifications (PTMs).
 Author: Pedro Fortes González
 """
 # import libraries
+import os
 import pandas as pd
 import numpy as np
 import re
 from pathlib import Path
-import glob
+import shutil
 from tqdm.notebook import tqdm
+import session_info
 
 # Show package list
 session_info.show(dependencies=False, html=False, std_lib=False)
@@ -50,6 +52,58 @@ def reset_dataframe_view():
 ##############################################################################
 # File preprocessing functions
 
+def create_input_directory(RAW_DATA_DIR, PROCESSED_DATA_DIR):
+    """
+    Create a copy of the raw data directory in the processed data location.
+    
+    Args:
+        RAW_DATA_DIR: Path to the source directory containing raw data
+        PROCESSED_DATA_DIR: Path where the copy should be created
+    
+    Returns:
+        Path: Path to the created processed data directory
+    
+    This function copies the entire directory structure from RAW_DATA_DIR
+    to PROCESSED_DATA_DIR, including all subdirectories and files.
+    """
+    # Convert to Path objects if they are strings
+    raw_dir = Path(RAW_DATA_DIR)
+    processed_dir = Path(PROCESSED_DATA_DIR)
+    
+    # Check if source directory exists
+    if not raw_dir.exists():
+        raise FileNotFoundError(f"\nSource directory does not exist: {raw_dir}")
+    
+    # Create the target directory if it doesn't exist
+    processed_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Copy the entire directory structure
+    print(f"\nCopying data from {raw_dir} to {processed_dir}...")
+    
+    # Count files for progress reporting
+    total_files = sum(1 for _ in raw_dir.rglob('*') if _.is_file())
+    copied_files = 0
+    
+    # Iterate through all items in the source directory
+    for item in raw_dir.rglob('*'):
+        # Calculate relative path from RAW_DATA_DIR
+        relative_path = item.relative_to(raw_dir)
+        # Create target path
+        target_path = processed_dir / relative_path
+        
+        if item.is_dir():
+            # Create directory if it doesn't exist
+            target_path.mkdir(parents=True, exist_ok=True)
+        else:
+            # Copy the file
+            shutil.copy2(item, target_path)
+            copied_files += 1
+            if copied_files % 10 == 0 or copied_files == total_files:
+                print(f"\nCopied {copied_files}/{total_files} files...")
+    
+    print(f"\nSuccessfully copied {copied_files} files to {processed_dir}")
+    return processed_dir
+
 
 def rename_pool_files(directory, techniques):
     """
@@ -65,17 +119,15 @@ def rename_pool_files(directory, techniques):
     files = [file for file in Path(directory).rglob('*')]
     for file in files:
         if "POOL" not in file.name: 
-            new_name = file.with_name(file.stem + "_NO_POOL.csv")
-            file.rename(new_name)
-            file = new_name
-            print(f"File renamed: {file.name}")
+            file.unlink()
+            print(f"\nFile {file.name} deleted")
             
         # Correct specific misnamed file
         if "DB search psm_ID_CD9_NO_POOL.csv" in file.name:
             new_name = file.with_name("DB search psm_IP_CD9_NO_POOL.csv")
             file.rename(new_name)
             file = new_name
-            print(f"File renamed: {file.name}")
+            print(f"\nFile renamed: {file.name}")
 
 
 def combine_pool_files(directory, techniques):
@@ -709,3 +761,34 @@ def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col
             else:
                 print(f"Warning: Required grouping column '{group_by_col}' not found in file {sample_name}.")
                 continue
+            
+
+
+######################################################################################################################
+# Functions deleting the temporary dir. created for processing mass spectrometry results
+
+
+def delete_directory(directory_path):
+    """
+    Delete a directory and all its contents without confirmation.
+    
+    Args:
+        directory_path (str): Path to the directory to delete
+    
+    Returns:
+        bool: True if directory was successfully deleted, False otherwise
+    """
+    try:
+        # Check if directory exists
+        if os.path.exists(directory_path):
+            # Delete the directory and all its contents
+            shutil.rmtree(directory_path)
+            print(f"\nDeleted directory: {directory_path}")
+            return True
+        else:
+            print(f"\nDirectory does not exist: {directory_path}")
+            return False
+            
+    except Exception as e:
+        print(f"\nError deleting directory: {str(e)}")
+        return False            
