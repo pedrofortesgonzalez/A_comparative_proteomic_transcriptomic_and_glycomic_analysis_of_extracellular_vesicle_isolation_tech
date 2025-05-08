@@ -1,4 +1,4 @@
-# Input Data
+# Data
 
 This folder contains all input files required to run the analysis of glycosylations in EV proteins and peptides.
 
