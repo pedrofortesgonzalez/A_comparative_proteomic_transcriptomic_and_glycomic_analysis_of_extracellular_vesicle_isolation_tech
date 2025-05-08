@@ -44,4 +44,4 @@ List of proteins associated with EVs according to the Vesiclepedia database, upd
 
 
 ### <ins>input/</ins> Folder
-Contains CSV files with mass spectrometry data to be processed. It is a copy of the input folder located in the main folder that allows the scripts to work without modifying the original data. This script is both created and removed by the script <ins>1_ptm_detection.py</ins>.
+Contains CSV files with mass spectrometry data to be processed. It is a copy of the input folder located in the main folder that allows the scripts to work without modifying the original data, and is both created and removed by the script <ins>1_ptm_detection.py</ins>.
