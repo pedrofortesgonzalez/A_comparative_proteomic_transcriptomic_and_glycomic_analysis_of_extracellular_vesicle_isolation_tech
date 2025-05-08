@@ -8,7 +8,7 @@ This folder contains all input files required to run the analysis of glycosylati
 input_data/
 ├── glycosylation_list.csv            # List of glycosylations of interest
 ├── vesiclepedia_proteins_240712.csv  # EV proteins (updated 07/12/2024)
-└── input/                            # Mass spectrometry data for processing
+└── input/                            # Temporary folder with mass spectrometry data for processing
 ```
 
 
@@ -44,9 +44,4 @@ List of proteins associated with EVs according to the Vesiclepedia database, upd
 
 
 ### <ins>input/</ins> Folder
-Contains CSV files with mass spectrometry data to be processed. Each file represents a different experiment with a specific EV isolation technique, including:
-
-- ExoGAG
-- IP_CD9
-- SEC
-- UC
+Contains CSV files with mass spectrometry data to be processed. It is a copy of the input folder located in the main folder that allows the scripts to work without modifying the original data. This script is both created and removed by the script <ins>1_ptm_detection.py</ins>.
