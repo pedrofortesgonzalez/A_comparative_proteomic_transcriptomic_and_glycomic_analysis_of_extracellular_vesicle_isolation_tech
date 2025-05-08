@@ -1,4 +1,16 @@
-### EV_isolation_techniques_comparative_glycomic_analysis
-This repository contains a small set of Python and R scripts for processing mass spectrometry data to identify EV-related peptides isolated through ExoGAG, IP-CD9, SEC and UC. 
+## Please go through the README files for a more comprehensive description of the features of this repository.
 
-## Please go through the README files (one per folder) for a more comprehensive description of the features of this repository.
+### Glycosylation Analysis in Extracellular Vesicles
+This repository contains the code and data used for the detection and analysis of glycosylations in extracellular vesiclen (EV) proteins and peptides, as supplementary material for the publication:
+
+[Publication Title] (Authors, Journal, Year)
+--doi--
+
+#### Description
+This project analyzes the performance of different EV isolation techniques (ExoGAG, IP CD9, SEC, UC) for detecting glycosylated proteins and peptides. The analysis focuses on identifying:
+
+- The total number of proteins and peptides detected by each technique
+- Proteins and peptides present in the Vesiclepedia database
+- Proteins and peptides with specific glycosylations
+
+The results include statistical analyses (Kruskal-Wallis and Dunn's tests) and visualizations (boxplots and pie charts) that allow comparing the performance of the different techniques.
