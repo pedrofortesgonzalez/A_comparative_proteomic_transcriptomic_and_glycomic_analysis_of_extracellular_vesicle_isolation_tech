@@ -21,6 +21,11 @@ The complete analysis follows this workflow:
 - Boxplots and Hypothesis Testing: Run <ins>2_hyptest_&_boxplots.R</ins> to generate statistical analyses and boxplots
 - Glycosylation Proportions Visualization: Run <ins>3_sector_diagrams.R</ins> to create pie charts
 
+### Usage Notes
+Execute the scripts in numerical order to ensure correct workflow.
+The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code.
+Ensure all dependencies are installed before running the scripts.
+
 ### Requirements and Dependencies
 
 | **Python** 3.10.16 | **R** 4.4.2 |
@@ -39,11 +44,6 @@ The complete analysis follows this workflow:
 | **Python** | **R** |
 | :----: | :----: |
 | vulture == 1.0 | nolock_1.1.0 |
-
-### Usage Notes
-Execute the scripts in numerical order to ensure correct workflow.
-The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code.
-Ensure all dependencies are installed before running the scripts.
 
 
 ***
