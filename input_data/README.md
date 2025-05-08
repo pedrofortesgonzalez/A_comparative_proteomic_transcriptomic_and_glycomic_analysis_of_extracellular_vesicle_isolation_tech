@@ -17,7 +17,8 @@ input_data/
 1. Do not modify the original files in this folder, as the scripts use these files as a baseline reference.
 2. If you need to use an updated version of Vesiclepedia, make sure to update the filename in the corresponding scripts.
 3. The glycosylation list can be expanded following the same format if additional types need to be searched.
-4. The **mass spectrometry input files must have the following format**:
+   
+# The **mass spectrometry input files must have the following format**:
    
     - The first column must contain protein/peptide identifiers
     - Must include columns for peptide sequence
