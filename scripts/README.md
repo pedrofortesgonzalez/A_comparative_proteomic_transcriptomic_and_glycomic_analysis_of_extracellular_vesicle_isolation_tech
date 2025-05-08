@@ -59,9 +59,9 @@ This script performs the initial processing of mass spectrometry data. Its main 
 
 **Input files**:
 
-- CSV files in input_data/input/
-- input_data/glycosylation_list.csv
-- input_data/vesiclepedia_proteins_240712.csv
+- CSV files in data/input/
+- data/glycosylation_list.csv
+- data/vesiclepedia_proteins_240712.csv
 
 **Output files**: Multiple CSV files in
 
