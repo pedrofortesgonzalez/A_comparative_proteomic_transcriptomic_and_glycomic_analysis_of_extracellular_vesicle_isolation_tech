@@ -24,6 +24,12 @@ This repository contains the code and data used for the detection and analysis o
     - Automatically: if you are familiar with bash command line, then execute
 3. The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code.
 4. Ensure all dependencies are installed before running the scripts.
+5. **output folder will be named just "output" --> it is your responsibility as a user to rename to manage it (rename or move it) if your goal is to run multiple analyses (in order for it not to get overwritten every time the scripts are executed)
+
+### suggested 
+execute with bash
+
+### manually executing each script
 
 ## Description
 This project analyzes the performance of different EV isolation techniques (ExoGAG, IP CD9, SEC, UC) for detecting glycosylated proteins and peptides. The analysis focuses on identifying:
