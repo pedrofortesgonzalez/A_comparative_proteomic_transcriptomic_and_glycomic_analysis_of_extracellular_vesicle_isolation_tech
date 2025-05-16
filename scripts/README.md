@@ -59,7 +59,7 @@ Ensure all dependencies are installed before running the scripts.
 ### Execution Options
 You can run the analysis using one of the following methods:
 
-#### Option 1: Complete Pipeline (Recommended)
+#### <ins>Option 1: Complete Pipeline (Recommended)</ins>
 Run the entire analysis sequence with a single bash command:
 ```{bash}
 # Navigate to the repository directory
@@ -70,7 +70,7 @@ scripts/run_analysis.sh
 ```
 This script will automatically execute all three analysis steps in sequence and generate a PDF report with all visualizations.
 
-#### Option 2: Individual Script Execution
+#### <ins>Option 2: Individual Script Execution</ins>
 Execute each script individually in the correct sequence:
 ```{bash}
 # First, run the Python preprocessing script:
@@ -92,7 +92,7 @@ All results will be stored in the './output' directory, organized into subdirect
 ### <ins>run_analysis.sh</ins>
 This bash scripts runs scripts number 1, 2 and 3. Previous to that, it detects possible missing dependencies essential for the execution.
 
-***
+
 ### <ins>1_ptm_detection.py</ins>
 This script performs the initial processing of mass spectrometry data. Its main functions are:
 
@@ -113,7 +113,7 @@ This script performs the initial processing of mass spectrometry data. Its main 
 - output/1_filtered_dfs/
 - output/2_value_counts/
 
-***
+
 ### <ins>2_hyptest_&_boxplots.R</ins>
 This script performs statistical analyses on the processed data and generates boxplot visualizations. Its main functions are:
 
@@ -130,7 +130,7 @@ Processed CSV files in output/processed_data/
 **Output files**:
 Boxplots in output/figures/boxplots/
 
-***
+
 ### <ins>3_sector_diagrams.R</ins>
 This script creates pie charts to visualize the distribution of glycosylation types in proteins and peptides. The main functions are:
 
