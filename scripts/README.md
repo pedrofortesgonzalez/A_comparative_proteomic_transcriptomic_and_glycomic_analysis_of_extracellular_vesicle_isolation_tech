@@ -91,9 +91,9 @@ This script performs the initial processing of mass spectrometry data. Its main 
 - Generating count summaries for subsequent analyses
 
 **Input files**:
-- CSV files in data/input/
-- data/glycosylation_list.csv
-- data/vesiclepedia_proteins_240712.csv
+- CSV files in input_data/input/
+- input_data/glycosylation_list.csv
+- input_data/vesiclepedia_proteins_240712.csv
 
 **Output files**: Multiple CSV files in
 - output/1_filtered_dfs/
@@ -115,7 +115,7 @@ This script performs statistical analyses on the processed data and generates bo
   - Counts of glycosylated peptides and proteins present in Vesiclepedia
 
 **Input files**:
-Processed CSV files in output/processed_data/
+Processed CSV files in output/fitered_dfs/
 
 **Output files**:
 - Boxplots in output/figures/boxplots/
