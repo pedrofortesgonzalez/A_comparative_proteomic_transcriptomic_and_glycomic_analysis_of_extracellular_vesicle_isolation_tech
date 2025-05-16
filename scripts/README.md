@@ -35,35 +35,13 @@ scripts/
 
 
 ***
-## Workflow
-### Usage Notes
-- Drag a copy of your data folder to the main repository folder (the console will ask you to type your data folder's name once execution starts).
-- If manually executing the scripts, do so in numerical order to ensure correct workflow.
-- The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code.
-Ensure all dependencies are installed before running the scripts.
+## Workflow and Usage Notes
+<ins>Step 1</ins>. Drag your mass spectrometry data to the main repository folder. Make sure:
+    - your files are in .csv format, and contain the following columns:  **'Peptide', "Accession"** and **"PTM"**
+    - the folder containing your data has no spaces in its name
 
-### Analysis steps
-**1. Data Processing:** Run <ins>1_ptm_detection.py</ins> to process raw proteomics data
-- The script will prompt for the folder name containing your data
-- This folder should be located in the main repository directory
-- *Note: When running this script in an IDE environment (like PyCharm, VSCode, etc.), you may be prompted to provide the absolute path to the repository, as automatic directory detection may not work properly in IDEs*
-
-**2. Boxplots and Hypothesis Testing:** Run <ins>2_hyptest_n_boxplots.R</ins> to perform statistical analysis
-- This script generates statistical tests (Kruskal-Wallis and Dunn's test)
-- Creates boxplots with automatically adjusted y-axes
-- Exports statistical test results as dataframes
-
-**3. Glycosylation Proportions Visualization:** Run <ins>3_sector_diagrams.R</ins> to visualize proportional data
-- Creates pie charts showing glycosylation distribution across techniques
-- Generates both plain and annotated versions
-
-
-### Execution Options
-You can run the analysis using one of the following methods:
-
-
-#### <ins>Option 1: Complete Pipeline (Recommended)</ins>
-Run the entire analysis sequence with a single bash command:
+<ins>2</ins>. Execute the numbered scripts inside the <ins>scripts/</ins> folder. You can do it:
+    - **Automatically (recommended)**: if you are familiar with bash command line, then execute
 ```{bash}
 # Navigate to the repository directory
 cd /path/to/repository
@@ -71,11 +49,8 @@ cd /path/to/repository
 # Execute the pipeline script
 scripts/run_analysis.sh
 ```
-This script will automatically execute all three analysis steps in sequence and generate a PDF report with all visualizations.
 
-
-#### <ins>Option 2: Individual Script Execution</ins>
-Execute each script individually in the correct sequence:
+  - **Manually**: execute each script individually in the correct sequence in order to ensure correct workflow. You can do so using IDEs (like Spyder, Visual Studio Code, Jupyter Notebook, etc.) or also with the following bash command line:
 ```{bash}
 # First, run the Python preprocessing script:
 bashpython scripts/1_ptm_detection.py
@@ -88,7 +63,9 @@ bashRscript scripts/3_sector_diagrams.R
 ```
 This approach gives you more control over each step and allows you to inspect intermediate results.
 
-All results will be stored in the './output' directory, organized into subdirectories for filtered data, counts, and visualizations.
+<ins>3</ins>. The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code to remove unused libraries.
+
+<ins>4</ins>. All results will be stored in the './output' directory, organized into subdirectories for filtered data, counts, and visualizations. 
 
 
 ***
@@ -107,15 +84,17 @@ This script performs the initial processing of mass spectrometry data. Its main 
 - Generating count summaries for subsequent analyses
 
 **Input files**:
-
 - CSV files in data/input/
 - data/glycosylation_list.csv
 - data/vesiclepedia_proteins_240712.csv
 
 **Output files**: Multiple CSV files in
-
 - output/1_filtered_dfs/
 - output/2_value_counts/
+
+**Usage notes**
+- The script will prompt for the folder name containing your data
+- *Note: When running this script in an IDE environment (like PyCharm, VSCode, etc.), you may be prompted to provide the absolute path to the repository, as automatic directory detection may not work properly in IDEs*
 
 
 ### <ins>2_hyptest_&_boxplots.R</ins>
@@ -132,7 +111,8 @@ This script performs statistical analyses on the processed data and generates bo
 Processed CSV files in output/processed_data/
 
 **Output files**:
-Boxplots in output/figures/boxplots/
+- Boxplots in output/figures/boxplots/
+- Boxplots are created with automatically adjusted y-axes
 
 
 ### <ins>3_sector_diagrams.R</ins>
@@ -146,7 +126,8 @@ This script creates pie charts to visualize the distribution of glycosylation ty
 Count CSV files in output/processed_data/value_counts/
 
 **Output files**:
-Pie charts in output/figures/sector_diagrams/
+- Pie charts in output/figures/sector_diagrams/
+- Generates both plain and annotated versions
 
 
 
