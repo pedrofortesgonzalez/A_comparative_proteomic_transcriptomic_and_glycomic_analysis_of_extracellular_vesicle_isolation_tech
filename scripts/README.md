@@ -12,20 +12,7 @@ scripts/
 ├── cleaning_1_python.py               # Cleanup of unused Python libraries
 ├── cleaning_2_R.R                     # Cleanup of unused R libraries
 └── __pycache__/                       # Python compiled files (automatically generated)
-
 ```
-## Workflow
-The complete analysis follows this workflow:
-
-- Data Processing: Run <ins>1_ptm_detection.py</ins> to process raw data
-  - The console will ask you to provide the name of the folder where your data is located. This folder should be located in the main folder
-- Boxplots and Hypothesis Testing: Run <ins>2_hyptest_&_boxplots.R</ins> to generate statistical analyses and boxplots
-- Glycosylation Proportions Visualization: Run <ins>3_sector_diagrams.R</ins> to create pie charts
-
-### Usage Notes
-Execute the scripts in numerical order to ensure correct workflow.
-The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code.
-Ensure all dependencies are installed before running the scripts.
 
 ### Requirements and Dependencies
 
@@ -45,6 +32,60 @@ Ensure all dependencies are installed before running the scripts.
 | **Python** | **R** |
 | :----: | :----: |
 | vulture == 1.0 | nolock_1.1.0 |
+
+
+***
+## Workflow
+### Usage Notes
+- Execute the scripts in numerical order to ensure correct workflow.
+- The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code.
+Ensure all dependencies are installed before running the scripts.
+
+### Analysis steps
+**1. Data Processing:** Run <ins>1_ptm_detection.py</ins> to process raw proteomics data
+- The script will prompt for the folder name containing your data
+- This folder should be located in the main repository directory
+- *Note: When running this script in an IDE environment (like PyCharm, VSCode, etc.), you may be prompted to provide the absolute path to the repository, as automatic directory detection may not work properly in IDEs*
+
+**2. Boxplots and Hypothesis Testing:** Run <ins>2_hyptest_n_boxplots.R</ins> to perform statistical analysis
+- This script generates statistical tests (Kruskal-Wallis and Dunn's test)
+- Creates boxplots with automatically adjusted y-axes
+- Exports statistical test results as dataframes
+
+**3. Glycosylation Proportions Visualization:** Run <ins>3_sector_diagrams.R</ins> to visualize proportional data
+- Creates pie charts showing glycosylation distribution across techniques
+- Generates both plain and annotated versions
+
+
+## Execution Options
+You can run the analysis using one of the following methods:
+
+### Option 1: Complete Pipeline (Recommended)
+Run the entire analysis sequence with a single bash command:
+bash# Navigate to the repository directory
+cd /path/to/repository
+
+Execute the pipeline script
+scripts/run_analysis.sh
+This script will automatically execute all three analysis steps in sequence and generate a PDF report with all visualizations.
+
+
+### Option 2: Individual Script Execution
+Execute each script individually in the correct sequence:
+
+First, run the Python preprocessing script:
+bashpython scripts/1_ptm_detection.py
+
+Next, run the R statistical analysis script:
+bashRscript scripts/2_hyptest_n_boxplots.R
+
+Finally, run the visualization script:
+bashRscript scripts/3_sector_diagrams.R
+
+
+This approach gives you more control over each step and allows you to inspect intermediate results.
+
+All results will be stored in the [input_folder]_output directory, organized into subdirectories for filtered data, counts, and visualizations.
 
 
 ***
@@ -107,12 +148,12 @@ Pie charts in output/figures/sector_diagrams/
 
 
 ***
-# Additional Scripts
-## <ins>user_defined_funcs.py</ins>
+## Additional Scripts
+### <ins>user_defined_funcs.py</ins>
 Module containing custom functions used by <ins>1_ptm_detection.py</ins>. It separates the main logic from the script for better code organization and maintenance.
 
-## <ins>cleaning_1_python.py</ins>
+### <ins>cleaning_1_python.py</ins>
 Utility script that uses the vulture module to analyze <ins>1_ptm_detection.py</ins> and identify imported libraries that are not used, helping to keep the code clean and efficient.
 
-## <ins>cleaning_2_R.R</ins>
+### <ins>cleaning_2_R.R</ins>
 Utility script that uses the nolock package to identify imported but unused libraries in R scripts, helping to optimize the code.
