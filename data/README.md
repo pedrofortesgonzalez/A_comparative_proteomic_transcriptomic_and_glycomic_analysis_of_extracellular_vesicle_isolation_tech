@@ -7,7 +7,7 @@ This folder contains all input files required to run the analysis of glycosylati
 ```
 data/
 ├── glycosylation_list.csv            # List of glycosylations of interest
-├── vesiclepedia_proteins_240712.csv  # EV proteins (updated 07/12/2024)
+├── vesiclepedia_proteins_240712.csv  # EV proteins (update from July 12th, 2024)
 └── input/                            # Temporary folder with mass spectrometry data for processing
 ```
 
