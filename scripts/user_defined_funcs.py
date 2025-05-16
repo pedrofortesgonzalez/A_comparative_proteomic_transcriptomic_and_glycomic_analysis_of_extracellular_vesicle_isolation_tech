@@ -17,6 +17,7 @@ from pathlib import Path
 import shutil
 from tqdm.notebook import tqdm
 import session_info
+import csv
 
 # Show package list
 session_info.show(dependencies=False, html=False, std_lib=False)
@@ -128,47 +129,7 @@ def rename_pool_files(directory, techniques):
             file.rename(new_name)
             file = new_name
             print(f"\nFile renamed: {file.name}")
-
-
-def combine_pool_files(directory, techniques):
-    """
-    Combine individual pool files (1, 2, 3) into a single combined file.
-    
-    Args:
-        directory: Path to directory containing pool files
-        techniques: List of technique identifiers to process
-        
-    For each technique, finds all pool files and combines them into a single CSV
-    with the naming pattern "{technique}_POOLS_123.csv"
-    """
-    for technique in techniques:
-        print(f"{technique}")
-        # Create search pattern with regex to find pool files
-        pattern = re.compile(f"{technique}.*POOL(?!S).*\d\.csv")
-        # Find files matching the regex pattern
-        files = [
-            file for file in Path(directory).rglob('*') 
-            if pattern.search(file.name)
-        ]
-        
-        # Process each file for the current technique
-        file_count = 0
-        for file in files:
-            file_count += 1
-            df = pd.read_csv(file)
-            print(f"Dimensions {technique} pool {file_count} df: {df.shape}")
-        
-        # Combine all pool files into one DataFrame
-        combined_pool_df = pd.concat(
-            [pd.read_csv(file) for file in files], 
-            ignore_index=True
-        )
-        
-        # Save the resulting DataFrame
-        pool_output_path = directory + f"/{technique}_POOLS_123.csv"
-        combined_pool_df.to_csv(pool_output_path, index=False)
-        print(f"Dimensions {technique} combined pools: {combined_pool_df.shape}")
-
+            
 
 def simplify_filenames(directory, techniques):
     """
@@ -196,6 +157,124 @@ def simplify_filenames(directory, techniques):
             file = new_name
     
     print(f"Renamed {counter} files")
+            
+            
+            
+def standardize_csv_delimiters(input_directory, file_pattern="*.csv", backup=False):
+    """
+    Detect CSV delimiters and standardize all CSV files to use semicolon (;) as delimiter.
+    
+    Args:
+        input_directory: Path to directory containing CSV files
+        file_pattern: Pattern to match CSV files (default: "*.csv")
+        backup: Whether to create backup of original files (default: True)
+        
+    Returns:
+        List of files that were modified
+        
+    This function scans all CSV files in the specified directory (and subdirectories),
+    detects their delimiter, and if not already a semicolon, converts them to use semicolon
+    as the delimiter. Original files can be backed up with a .bak extension.
+    """
+    
+    input_dir = Path(input_directory)
+    modified_files = []
+    
+    # Find all CSV files in the directory and subdirectories
+    csv_files = list(input_dir.rglob(file_pattern))
+    print(f"\nFound {len(csv_files)} CSV files to check")
+    
+    for file_path in csv_files:
+        try:
+            # Detect the delimiter using csv.Sniffer
+            with open(file_path, 'r', newline='') as f:
+                sample = f.read(4096)
+                if not sample:  # Skip empty files
+                    print(f"\nSkipping empty file: {file_path}")
+                    continue
+                
+                sniffer = csv.Sniffer()
+                dialect = sniffer.sniff(sample)
+                detected_delimiter = dialect.delimiter
+            
+            # If delimiter is already semicolon, skip this file
+            if detected_delimiter == ';':
+                print(f"\nFile already uses semicolon delimiter: {file_path}")
+                continue
+                
+            # Read the CSV with the detected delimiter
+            df = pd.read_csv(file_path, sep=detected_delimiter)
+            
+            # Verify that the DataFrame has more than one column (sanity check)
+            if len(df.columns) <= 1 and detected_delimiter != ';':
+                # Try with semicolon as a fallback
+                try:
+                    test_df = pd.read_csv(file_path, sep=';')
+                    if len(test_df.columns) > 1:
+                        print(f"\nSniffer failed for {file_path}, but semicolon works better")
+                        continue  # File already uses semicolon effectively
+                except:
+                    pass  # Stick with the original detection
+            
+            # Create backup if requested
+            if backup:
+                backup_path = str(file_path) + '.bak'
+                shutil.copy2(file_path, backup_path)
+                print(f"\nCreated backup: {backup_path}")
+            
+            # Write the file back with semicolon delimiter
+            df.to_csv(file_path, sep=';', index=False)
+            print(f"\nConverted {file_path} from '{detected_delimiter}' to ';' delimiter")
+            modified_files.append(file_path)
+            
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+    
+    print(f"\nConverted {len(modified_files)} files to use semicolon delimiter")
+    return modified_files            
+
+
+def combine_pool_files(directory, techniques):
+    """
+    Combine individual pool files (1, 2, 3) into a single combined file.
+    
+    Args:
+        directory: Path to directory containing pool files
+        techniques: List of technique identifiers to process
+        
+    For each technique, finds all pool files and combines them into a single CSV
+    with the naming pattern "{technique}_POOLS_123.csv"
+    """
+    for technique in techniques:
+        print(f"\n{technique}")
+        # Create search pattern with regex to find pool files
+        pattern = re.compile(f"{technique}.*POOL(?!S).*\d\.csv")
+        # Find files matching the regex pattern
+        files = [
+            file for file in Path(directory).rglob('*') 
+            if pattern.search(file.name)
+        ]
+        
+        # Process each file for the current technique
+        file_count = 0
+        for file in files:
+            file_count += 1
+            df = pd.read_csv(file, sep=";")
+            print(f"\nDimensions {technique} pool {file_count} df: {df.shape}")
+        
+        # Combine all pool files into one DataFrame
+        combined_pool_df = pd.concat(
+            [pd.read_csv(file, sep=";") for file in files], 
+            ignore_index=True
+        )
+        
+        # Save the resulting DataFrame
+        pool_output_path = directory + f"/{technique}_POOLS_123.csv"
+        combined_pool_df.to_csv(pool_output_path, index=False, sep=";")
+        print(f"Dimensions {technique} combined pools: {combined_pool_df.shape}")
+
+
+
 
 
 
@@ -223,7 +302,7 @@ def extract_protein_names(input_dir, target_col, new_col, pattern):
     
     for csv_file in tqdm(dataframes, desc="Processing CSV files"):
         file_counter += 1
-        df = pd.read_csv(csv_file, encoding='latin1', delimiter=",", low_memory=False)
+        df = pd.read_csv(csv_file, encoding='latin1', sep=";", low_memory=False)
         
         if target_col in df.columns:
             # Extract and clean desired patterns
@@ -233,7 +312,7 @@ def extract_protein_names(input_dir, target_col, new_col, pattern):
             # Expand rows with multiple accessions
             df = df.explode(new_col)
             # Save the modified DataFrame and overwrite original file
-            df.to_csv(csv_file, index=False)
+            df.to_csv(csv_file, index=False, sep=";")
             print(f"File #{file_counter}: {csv_file.name} overwritten with new column: '{new_col}'.")
         else:
             print(f"Column {target_col} not found in {csv_file}")
@@ -272,13 +351,13 @@ def extract_peptide_sequences(input_dir, target_col, new_col, pattern):
     regex = re.compile(pattern)
     
     for csv_file in tqdm(dataframes, desc="Processing CSV files"):
-        df = pd.read_csv(csv_file)
+        df = pd.read_csv(csv_file, sep=";")
         
         if target_col in df.columns:
             # Extract desired pattern and assign to new column
             df[new_col] = df[target_col].str.replace(regex, '', regex=True)
             # Save the modified DataFrame and overwrite original file
-            df.to_csv(csv_file, index=False)
+            df.to_csv(csv_file, sep=";", index=False)
             print(f"{csv_file.name} overwritten with '{new_col}'")
         else:
             print(f"Column {target_col} not found in {csv_file}")
@@ -299,7 +378,7 @@ def classify_ptm_types(input_dir, target_col, new_col):
     print("Processing:")
     
     for csv_file in tqdm(dataframes, desc="Processing CSV files"):
-        df = pd.read_csv(csv_file)
+        df = pd.read_csv(csv_file, sep=";")
         
         if target_col in df.columns:
             print(f"\n{csv_file}: creating {new_col}: ")
@@ -348,7 +427,7 @@ def classify_ptm_types(input_dir, target_col, new_col):
         print(df[new_col].value_counts(dropna=False))
         
         # Save the modified DataFrame and overwrite original file
-        df.to_csv(csv_file, index=False)
+        df.to_csv(csv_file, index=False, sep=";")
         print(f"{csv_file.name} overwritten with {new_col}")
 
 
@@ -447,7 +526,7 @@ def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_
     csv_files = sorted(list(Path(input_dir).glob('*.csv')), key=lambda x: x.name)
 
     for csv_file in tqdm(csv_files, desc="Processing CSV files"):
-        df = pd.read_csv(csv_file)
+        df = pd.read_csv(csv_file, sep=";")
         
         # Extract sample information from filename
         sample_name = csv_file.stem
@@ -467,7 +546,7 @@ def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_
         
         # Save filtered data
         output_file = output_dir / f"{sample_name}_filtered_vcp.csv"
-        df_filtered.to_csv(output_file, index=False)
+        df_filtered.to_csv(output_file, index=False, sep=";")
         
         filtered_peptides_count = df_filtered["Peptide Sequence"].value_counts()
         print(f"Peptides in Vesiclepedia: {len(filtered_peptides_count)}")
@@ -507,25 +586,26 @@ def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_
     # Export summary results in different configurations
     # All samples
     summary_file_path = output_dir / 'summary_all.csv'
-    summary_df.to_csv(summary_file_path, index=False)
+    summary_df.to_csv(summary_file_path, index=False, sep=";")
 
     # POOLS_123 only
     sf = summary_df.loc[summary_df["Pool"]=="POOLS_123"]
     filepath = output_dir / 'summary_pools_123.csv'
-    sf.to_csv(filepath, index=False)
+    sf.to_csv(filepath, index=False, sep=";")
 
     # POOLS_123 & NO_POOL
     sf = summary_df.loc[(summary_df["Pool"]=="POOLS_123") | (summary_df["Pool"]=="NO_POOL")]
     filepath = output_dir / 'summary_123nopool.csv'
-    sf.to_csv(filepath, index=False)
+    sf.to_csv(filepath, index=False, sep=";")
 
     # Individual pools (POOL 1, POOL 2, POOL 3)
     sf = summary_df.loc[(summary_df["Pool"]!="POOLS_123") & (summary_df["Pool"]!="NO_POOL")]
     filepath = output_dir / 'summary_individual_pools.csv'
-    sf.to_csv(filepath, index=False)
+    sf.to_csv(filepath, index=False, sep=";")
     
     return summary_df
 
+            
 
 def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_of_interest, interest_cols):
     """
@@ -552,31 +632,44 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
     csv_files = sorted(list(Path(input_dir).glob('*.csv')), key=lambda x: x.name)
 
     for csv_file in tqdm(csv_files, desc="Processing CSV files"):
-        if "summary" not in csv_file.name:
-            df = pd.read_csv(csv_file)
+        if str("summary") not in csv_file.name:
+            df = pd.read_csv(csv_file, sep=";")
             
             # Extract sample information from filename
             sample_name = csv_file.stem
             sample_name = sample_name.replace(' ', '_').replace('__', '_').rstrip('.csv').lstrip('DB_search_psm_')
-            print(sample_name)
+            print(f"\n{sample_name}")
 
             # Identify technique and pool
             technique = next((technique for technique in techniques if re.search(technique, sample_name)), "")
             pool = next((pool for pool in pools if re.search(pool, sample_name)), "")
-    
             # Filter proteins by glycosylation PTMs
             peptides_count = df["Peptide Sequence"].value_counts()
-            print(f"Total peptides: {len(peptides_count)}")
+            print(f"\nTotal peptides: {len(peptides_count)}")
             
             condition = df["PTM"].isin(ptms_of_interest)
             df_filtered = df.loc[condition, interest_cols]
             
             # Save filtered data
             output_file = output_dir / f"{sample_name}_filtered_glyc.csv"
-            df_filtered.to_csv(output_file, index=False)
+            df_filtered.to_csv(output_file, index=False, sep=";")
             
             filtered_peptides_count = df_filtered["Peptide Sequence"].value_counts()
-            print(f"Glycosylated peptides: {len(filtered_peptides_count)}")
+            print(f"\nGlycosylated peptides: {len(filtered_peptides_count)}")
+
+            # Filter proteins by glycosylation PTMs
+            peptides_count = df["Peptide Sequence"].value_counts()
+            print(f"\nTotal peptides: {len(peptides_count)}")
+            
+            condition = df["PTM"].isin(ptms_of_interest)
+            df_filtered = df.loc[condition, interest_cols]
+            
+            # Save filtered data
+            output_file = output_dir / f"{sample_name}_filtered_glyc.csv"
+            df_filtered.to_csv(output_file, index=False, sep=";")
+            
+            filtered_peptides_count = df_filtered["Peptide Sequence"].value_counts()
+            print(f"\nGlycosylated peptides: {len(filtered_peptides_count)}")
     
             # Calculate statistics
             n_prots = len(df["Prot Name"].value_counts())
@@ -613,22 +706,22 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
     # Export summary results in different configurations
     # All samples
     summary_file_path = output_dir / 'summary_all.csv'
-    summary_df.to_csv(summary_file_path, index=False)
+    summary_df.to_csv(summary_file_path, index=False, sep=";")
 
     # POOLS_123 only
     sf = summary_df.loc[summary_df["Pool"]=="POOLS_123"]
     filepath = output_dir / 'summary_pools_123.csv'
-    sf.to_csv(filepath, index=False)
+    sf.to_csv(filepath, index=False, sep=";")
 
     # POOLS_123 & NO_POOL
     sf = summary_df.loc[(summary_df["Pool"]=="POOLS_123") | (summary_df["Pool"]=="NO_POOL")]
     filepath = output_dir / 'summary_123nopool.csv'
-    sf.to_csv(filepath, index=False)
+    sf.to_csv(filepath, index=False, sep=";")
 
     # Individual pools (POOL 1, POOL 2, POOL 3)
     sf = summary_df.loc[(summary_df["Pool"]!="POOLS_123") & (summary_df["Pool"]!="NO_POOL")]
     filepath = output_dir / 'summary_individual_pools.csv'
-    sf.to_csv(filepath, index=False)
+    sf.to_csv(filepath, index=False, sep=";")
     
     return summary_df
 
@@ -663,7 +756,7 @@ def count_peptides_by_category(input_dir, output_dir, techniques, pools, interes
     for csv_file in tqdm(csv_files, desc="Processing CSV files"):
         if "summary" not in csv_file.name:
             # Read dataframe
-            df = pd.read_csv(csv_file)
+            df = pd.read_csv(csv_file, sep=";")
             
             # Extract sample information from filename
             sample_name = csv_file.stem
@@ -691,7 +784,7 @@ def count_peptides_by_category(input_dir, output_dir, techniques, pools, interes
                     
                     # Export the counts to CSV
                     output_file = output_dir / f"{sample_name}_{col}.csv"
-                    summary.to_csv(output_file, index=False)
+                    summary.to_csv(output_file, index=False, sep=";")
                 else:
                     print(f"Warning: Column '{col}' not found in file {sample_name}.")
 
@@ -722,7 +815,7 @@ def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col
     for csv_file in tqdm(csv_files, desc="Processing CSV files"):
         if "summary" not in csv_file.name:
             # Read dataframe
-            df = pd.read_csv(csv_file)
+            df = pd.read_csv(csv_file, sep=";")
             
             # Extract sample information from filename
             sample_name = csv_file.stem
@@ -757,7 +850,7 @@ def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col
                 
                 # Export the counts to CSV
                 output_file = output_dir / f"{sample_name}_PTM_types_by_protein.csv"
-                summary.to_csv(output_file, index=False)
+                summary.to_csv(output_file, index=False, sep=";")
             else:
                 print(f"Warning: Required grouping column '{group_by_col}' not found in file {sample_name}.")
                 continue

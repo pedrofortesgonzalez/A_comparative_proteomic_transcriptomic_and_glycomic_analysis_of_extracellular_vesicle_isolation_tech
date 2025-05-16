@@ -1,5 +1,5 @@
 # ******************************************************************************
-# Creation of pie charts for glycosylation data analysis
+# Statistical analysis and visualization for mass spectrometry data
 # Author: Pedro Fortes González (refactored)
 # Date: 2024-09-16
 # ******************************************************************************
@@ -8,16 +8,83 @@
 # 0. Environment setup ----
 # ______________________________________________________________________________
 
-# Clean environment and set working directory
+# Clean WEnv
 rm(list = ls())
-library(rstudioapi)
-setwd(dirname(getActiveDocumentContext()$path))
+
+# Set WD
+if (requireNamespace("rstudioapi", quietly = TRUE) && rstudioapi::isAvailable()) {
+  # RStudio
+  library(rstudioapi)
+  setwd(dirname(getActiveDocumentContext()$path))
+  script_dir <- dirname(getActiveDocumentContext()$path)
+  repo_root <- dirname(script_dir)
+  
+} else {
+  # CLI
+  args <- commandArgs(trailingOnly = FALSE)
+  script_path <- normalizePath(sub("--file=", "", args[grep("--file=", args)]))
+  script_dir <- dirname(script_path)
+  repo_root <- dirname(script_dir)
+  setwd(script_dir)
+  
+}
+
+cat("\nScript's dir:", script_dir, "\n")
+cat("Repo's dir:", repo_root, "\n")
+
+
+# ______________________________________________________________________________
+# Check and install dependencies if needed ----
+# ______________________________________________________________________________
+check_and_install_dependencies <- function(required_packages) {
+  cat("\nChecking R dependencies...\n")
+  
+  missing_packages <- c()
+  for (package in required_packages) {
+    if (!requireNamespace(package, quietly = TRUE)) {
+      missing_packages <- c(missing_packages, package)
+    }
+  }
+  
+  if (length(missing_packages) > 0) {
+    cat("Missing packages:", paste(missing_packages, collapse = ", "), "\n")
+    
+    # Ask user if they want to install missing packages
+    install_choice <- readline(prompt = "Do you want to install these packages? (y/n): ")
+    
+    if (tolower(install_choice) == "y") {
+      cat("Installing packages...\n")
+      for (pkg in missing_packages) {
+        install.packages(pkg, repos = "https://cloud.r-project.org")
+      }
+      cat("Installation completed. Loading packages...\n")
+    } else {
+      cat("Required packages were not installed. The script may fail.\n")
+      return(FALSE)
+    }
+  } else {
+    cat("All dependencies are installed.\n")
+  }
+  
+  return(TRUE)
+}
+
+# Define required packages for this script
+required_packages <- c("dplyr", "ggplot2", "ggpubr", "rstatix", "envalysis", "gridExtra")
+
+# Check and install dependencies
+dependencies_ok <- check_and_install_dependencies(required_packages)
+if (!dependencies_ok) {
+  cat("ERROR: Could not load all dependencies.\n")
+  quit(status = 1)
+}
 
 
 # Load required libraries
 library(ggplot2)      # Data visualization
 library(ggrepel)      # Text label positioning
 library(utils)        # Utilities
+library(dplyr)      # Data manipulation
 
 # Set seed for reproducibility
 set.seed(0156576321)
@@ -48,7 +115,7 @@ glyco_categories <- c("Fucosylated", "Fucosialylated", "Sialylated", "Oligomanno
 #' 
 prepare_pie_data <- function(file_path) {
   # Read data
-  df <- read.csv(file_path)
+  df <- read.csv(file_path, sep=";")
   
   # Calculate percentages
   df <- df %>%

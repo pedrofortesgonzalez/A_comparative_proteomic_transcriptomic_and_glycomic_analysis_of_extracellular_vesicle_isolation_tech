@@ -7,7 +7,6 @@ This script processes mass spectrometry data to identify post-translational
 modifications, with a focus on protein glycosylation.
 
 Author: Pedro Fortes Gonzalez
-Date:
 """
 
 ###############################################################################
@@ -21,9 +20,41 @@ import importlib
 from tqdm.notebook import tqdm
 import session_info
 
-# Set working directory
-WORKING_DIR = os.getcwd()
-WORKING_DIR_PARENT = os.path.dirname(WORKING_DIR)
+
+# %%
+
+# Detecting repo's root dir
+try:
+    # Try to obtain the actual script's directory (works for executing with bash)
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+    print(f"\nRepository authomatically detected in:\n{REPO_ROOT}\n")
+    
+except Exception as e:
+    # If we work from an IDE/notebook where __file__ is not defined
+    print(f"\nPath could not be authomatically detected:\n{str(e)}")
+    REPO_ROOT = input("\nPlease, re-introduce the absolute path to the repository in your computer: ")
+    REPO_ROOT = REPO_ROOT.strip()
+    SCRIPT_DIR = REPO_ROOT + "/scripts"
+    print(f"\nUsing the given path:\n{REPO_ROOT}\n")
+    
+    # Validate that the path exists
+    if not os.path.exists(REPO_ROOT):
+        print(f"\nERROR: The given path was not found:\n{REPO_ROOT}\n")
+        sys.exit(1)
+
+# Verify if we're in a bash environment
+# If executed from bash, determine the relative path to current directory
+if os.getcwd() != REPO_ROOT and os.path.basename(os.getcwd()) == "scripts":
+    REPO_ROOT = os.path.dirname(os.getcwd())
+    SCRIPT_DIR = REPO_ROOT + "/scripts"
+    print(f"\nExecution from bash detected. Repo's path:\n{REPO_ROOT}\n")
+
+# Print depuration info
+print(f"\nCurrent script's directory:\n{SCRIPT_DIR}\n")
+print(f"\nRepository root dir:\n{REPO_ROOT}\n")
+
+# %%
 
 # Show package list
 session_info.show(dependencies=False, html=False, std_lib=False)
@@ -32,7 +63,7 @@ session_info.show(dependencies=False, html=False, std_lib=False)
 tqdm.pandas(desc="Processing")
 
 # Import custom functions module
-sys.path.append(WORKING_DIR)
+sys.path.append(SCRIPT_DIR)
 import user_defined_funcs as udf
 
 # Expand dataframe display for better visualization
@@ -43,8 +74,20 @@ udf.expand_dataframe_view()
 ###############################################################################
 # 2. Data Import
 ################
+
+# Define file's paths relative to REPO_ROOT
+GLYCOSYLATION_LIST_PATH = os.path.join(REPO_ROOT, 'data', 'glycosylation_list.csv')
+VESICLEPEDIA_PATH = os.path.join(REPO_ROOT, 'data', 'Vesiclepedia_proteins_240712.csv')
+
+# Verificar que los archivos existen
+for file_path in [GLYCOSYLATION_LIST_PATH, VESICLEPEDIA_PATH]:
+    if not os.path.exists(file_path):
+        print(f"\nERROR: Required file not found:\n{file_path}\n")
+        print(f"\nSearch path:\n{REPO_ROOT}\n")
+        print("Please verify that the files are in the correct path.\n")
+        sys.exit(1)
+
 # Import list of PTMs (glycosylations) of interest
-GLYCOSYLATION_LIST_PATH = '../input_data/glycosylation_list.csv'
 ptm_df = pd.read_csv(GLYCOSYLATION_LIST_PATH, usecols=[0], sep=";")  # Select only first column
 ptms_of_interest = list(set(ptm_df.iloc[:, 0].dropna().unique()))  # Remove NaNs and duplicates
 
@@ -52,8 +95,7 @@ ptms_of_interest = list(set(ptm_df.iloc[:, 0].dropna().unique()))  # Remove NaNs
 print(f"\nNumber of PTMs imported: {len(ptms_of_interest)}")
 
 # Import Vesiclepedia database (downloaded on 2024-07-12)
-VESICLEPEDIA_PATH = "../input_data/Vesiclepedia_proteins_240712.csv"
-vesiclepedia = pd.read_csv(VESICLEPEDIA_PATH)
+vesiclepedia = pd.read_csv(VESICLEPEDIA_PATH, sep=";")
 
 # Verify Vesiclepedia database import
 print(f"\nNumber of entries in Vesiclepedia: {vesiclepedia.shape[0]}")
@@ -67,21 +109,22 @@ print(f"\nNumber of entries in Vesiclepedia: {vesiclepedia.shape[0]}")
 importlib.reload(udf)
 
 # Define input directory and technique identifiers
-RAW_DATA_DIR = '../' + str(input("\nEnter the name of your input folder: "))
-PROCESSED_DATA_DIR = '../input_data/input'
+RAW_DATA_DIR = os.path.join(REPO_ROOT, str(input("\nEnter the name of your input folder: ")))
+INPUT_DIR = os.path.join(REPO_ROOT, 'data/input')
 TECHNIQUES = ["ExoGAG", "SEC", "IP_CD9", "UC"]
 
 # Step 3.1: Create copy of the input directory for processing while preserving the original data
-udf.create_input_directory(RAW_DATA_DIR, PROCESSED_DATA_DIR)
+udf.create_input_directory(RAW_DATA_DIR, INPUT_DIR)
+    
+# Setp 3.2.: Ensure all files are properly named
+udf.rename_pool_files(INPUT_DIR, TECHNIQUES)  # Erase files without pool identifier and correct the incorrect ones
+udf.simplify_filenames(INPUT_DIR, TECHNIQUES) # Clean up filenames by removing prefixes and standardizing format
+    
+# Step 3.3: Detect CSV delimiters and standardize all CSV files to use semicolon (;) as delimiter
+udf.standardize_csv_delimiters(INPUT_DIR)
 
-# Step 3.2: Ensure all files are properly named with pool indicators
-udf.rename_pool_files(PROCESSED_DATA_DIR, TECHNIQUES)  # Erase files without pool identifier and correct the incorrect ones
-
-# Step 3.3: Create combined pool files from individual pools
-udf.combine_pool_files(PROCESSED_DATA_DIR, TECHNIQUES)  # Combine pool1 + pool2 + pool3 into POOLS_123 files
-
-# Step 3.4: Clean up filenames by removing prefixes and standardizing format
-udf.simplify_filenames(PROCESSED_DATA_DIR, TECHNIQUES)
+# Step 3.4: Create combined pool files from individual pools
+udf.combine_pool_files(INPUT_DIR, TECHNIQUES)  # Combine pool1 + pool2 + pool3 into POOLS_123 files
 
 # %%
 
@@ -93,7 +136,6 @@ udf.simplify_filenames(PROCESSED_DATA_DIR, TECHNIQUES)
 importlib.reload(udf)
 
 # Define inputs for protein name extraction
-PROCESSED_DATA_DIR = '../input_data/input'
 ACCESSION_COL = 'Accession'
 PROTEIN_NAME_COL = "Prot Name"
 
@@ -102,7 +144,7 @@ PROTEIN_NAME_COL = "Prot Name"
 PROTEIN_PATTERN = r"([A-Z]\d[A-Z0-9]{3}[0-9]-?\d*|[A-NR-Z][0-9][A-Z][A-Z0-9]{2}[0-9][A-Z]?[A-Z0-9]+[0-9])"
 
 # Extract protein names from accession information and create a new column
-udf.extract_protein_names(PROCESSED_DATA_DIR, ACCESSION_COL, PROTEIN_NAME_COL, PROTEIN_PATTERN)
+udf.extract_protein_names(INPUT_DIR, ACCESSION_COL, PROTEIN_NAME_COL, PROTEIN_PATTERN)
 
 # Step 4.2: Clean peptide sequences by removing modifications in parentheses
 importlib.reload(udf)
@@ -111,7 +153,7 @@ PEPTIDE_SEQ_COL = "Peptide Sequence"
 PEPTIDE_PATTERN = r'\([^)]*\)'  # Pattern to remove content inside parentheses
 
 # Extract clean peptide sequences without modification annotations
-udf.extract_peptide_sequences(PROCESSED_DATA_DIR, PEPTIDE_COL, PEPTIDE_SEQ_COL, PEPTIDE_PATTERN)
+udf.extract_peptide_sequences(INPUT_DIR, PEPTIDE_COL, PEPTIDE_SEQ_COL, PEPTIDE_PATTERN)
 
 # Step 4.3: Classify PTMs into standardized categories
 importlib.reload(udf)
@@ -119,7 +161,7 @@ PTM_COL = 'PTM'
 PTM_CLUSTER_COL = "PTM cluster"
 
 # Create a new column with standardized PTM classifications
-udf.classify_ptm_types(PROCESSED_DATA_DIR, PTM_COL, PTM_CLUSTER_COL)
+udf.classify_ptm_types(INPUT_DIR, PTM_COL, PTM_CLUSTER_COL)
 
 # %%
 
@@ -131,11 +173,11 @@ udf.classify_ptm_types(PROCESSED_DATA_DIR, PTM_COL, PTM_CLUSTER_COL)
 importlib.reload(udf)
 
 # Define input directory
-PROCESSED_DATA_DIR = '../output'
+OUTPUT_DIR = os.path.join(REPO_ROOT, 'output')
 
 # Create standardized output directory structure with subdirectories
 # This creates folders for filtered data, value counts, and figures
-output_dir = udf.create_output_directories(PROCESSED_DATA_DIR)
+output_dir = udf.create_output_directories(OUTPUT_DIR)
 
 # Display confirmation
 print(f"\nCreated output directory structure at: {output_dir}")
@@ -150,12 +192,11 @@ print(f"\nCreated output directory structure at: {output_dir}")
 # Define common variables for filtering operations
 TECHNIQUES = ["ExoGAG", "SEC", "IP_CD9", "UC"]
 POOLS = ["POOL_1", "POOL_2", "POOL_3", "NO_POOL", "POOLS_123"]
-INTEREST_COLS = ['Peptide Sequence', "Prot Name", 'PTM', "Accession", 
-                 "Peptide", "PTM cluster"]
+INTEREST_COLS = ['Peptide Sequence', "Prot Name", 'PTM', "Accession", "Peptide", "PTM cluster"]
 
 # Base directories
-PROCESSED_DATA_DIR = '../input_data/input'
-OUTPUT_BASE_DIR = '../output'
+### INPUT_DIR
+### OUTPUT_DIR
 
 #----------
 # Step 6.1: Filter by Vesiclepedia
@@ -163,11 +204,11 @@ OUTPUT_BASE_DIR = '../output'
 importlib.reload(udf)
 
 # Define output directory for Vesiclepedia filtered data
-VCP_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/1_filtered_dfs/vesiclepedia"
+VCP_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "1_filtered_dfs/vesiclepedia")
 
 # Filter proteins by presence in Vesiclepedia database
 vcp_summary = udf.filter_vesiclepedia_proteins(
-    PROCESSED_DATA_DIR, VCP_OUTPUT_DIR, TECHNIQUES, POOLS, ptms_of_interest, 
+    INPUT_DIR, VCP_OUTPUT_DIR, TECHNIQUES, POOLS, ptms_of_interest, 
     vesiclepedia, INTEREST_COLS
     )
 
@@ -183,14 +224,15 @@ importlib.reload(udf)
 # Define input/output directories for glycosylation filtering
 # Input is the Vesiclepedia-filtered data from previous step
 GLYC_INPUT_DIR = VCP_OUTPUT_DIR
-GLYC_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/1_filtered_dfs/vesiclepedia_glycosylated"
+GLYC_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "1_filtered_dfs/vesiclepedia_glycosylated")
 
 # Filter Vesiclepedia proteins by presence of glycosylation PTMs
+#glyc_summary = udf.filter_trial(
 glyc_summary = udf.filter_glycosylated_proteins(
-    GLYC_INPUT_DIR, GLYC_OUTPUT_DIR, TECHNIQUES, POOLS, ptms_of_interest, 
-    INTEREST_COLS
-    )
+    GLYC_INPUT_DIR, GLYC_OUTPUT_DIR, TECHNIQUES, POOLS, ptms_of_interest, INTEREST_COLS)
 
+    
+    
 # Display summary of glycosylation filtering
 print("\nGlycosylation filtering summary:")
 print(glyc_summary)
@@ -213,7 +255,7 @@ POOLS = ["POOL_1", "POOL_2", "POOL_3", "NO_POOL", "POOLS_123"]
 INTEREST_COLS = ["Prot Name", 'PTM', 'Peptide Sequence', "PTM cluster"]
 
 # Base output directory
-OUTPUT_BASE_DIR = '../output'
+### OUTPUT_DIR
 
 #----------
 # Step 7.1: Count peptides in total dataset (unfiltered)
@@ -221,8 +263,8 @@ OUTPUT_BASE_DIR = '../output'
 importlib.reload(udf)
 
 # Define input/output directories
-TOTAL_INPUT_DIR = '../input_data/input/'
-TOTAL_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/2_value_counts/total/peptides"
+TOTAL_INPUT_DIR = INPUT_DIR
+TOTAL_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "2_value_counts/total/peptides")
 
 print("\nAnalyzing peptide distributions in total dataset...")
 udf.count_peptides_by_category(TOTAL_INPUT_DIR, TOTAL_OUTPUT_DIR, TECHNIQUES, POOLS, INTEREST_COLS)
@@ -233,8 +275,8 @@ udf.count_peptides_by_category(TOTAL_INPUT_DIR, TOTAL_OUTPUT_DIR, TECHNIQUES, PO
 importlib.reload(udf)
 
 # Define input/output directories
-VCP_INPUT_DIR = f"{OUTPUT_BASE_DIR}/1_filtered_dfs/vesiclepedia/"
-VCP_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/2_value_counts/vesiclepedia/peptides"
+VCP_INPUT_DIR = os.path.join(OUTPUT_DIR, "1_filtered_dfs/vesiclepedia/")
+VCP_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "2_value_counts/vesiclepedia/peptides")
 
 print("\nAnalyzing peptide distributions in Vesiclepedia-filtered dataset...")
 udf.count_peptides_by_category(VCP_INPUT_DIR, VCP_OUTPUT_DIR, TECHNIQUES, POOLS, INTEREST_COLS)
@@ -245,8 +287,8 @@ udf.count_peptides_by_category(VCP_INPUT_DIR, VCP_OUTPUT_DIR, TECHNIQUES, POOLS,
 importlib.reload(udf)
 
 # Define input/output directories
-GLYC_INPUT_DIR = f"{OUTPUT_BASE_DIR}/1_filtered_dfs/vesiclepedia_glycosylated/"
-GLYC_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/2_value_counts/vesiclepedia_glycosylated/peptides"
+GLYC_INPUT_DIR = os.path.join(OUTPUT_DIR, "1_filtered_dfs/vesiclepedia_glycosylated/")
+GLYC_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "2_value_counts/vesiclepedia_glycosylated/peptides")
 
 print("\nAnalyzing peptide distributions in glycosylated Vesiclepedia proteins...")
 udf.count_peptides_by_category(GLYC_INPUT_DIR, GLYC_OUTPUT_DIR, TECHNIQUES, POOLS, INTEREST_COLS)
@@ -264,7 +306,7 @@ INTEREST_COL = "PTM cluster"
 GROUP_BY_COL = "Prot Name"
 
 # Base output directory
-OUTPUT_BASE_DIR = '../output'
+### OUTPUT_DIR
 
 #----------
 # Step 8.1: Analyze PTM distribution across proteins in total dataset
@@ -272,8 +314,8 @@ OUTPUT_BASE_DIR = '../output'
 importlib.reload(udf)
 
 # Define input/output directories
-TOTAL_INPUT_DIR = '../input_data/input/'
-TOTAL_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/2_value_counts/total/proteins/"
+TOTAL_INPUT_DIR = INPUT_DIR
+TOTAL_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "2_value_counts/total/proteins/")
 
 print("\nAnalyzing PTM distribution across all proteins...")
 udf.count_proteins_by_ptm(
@@ -287,8 +329,8 @@ udf.count_proteins_by_ptm(
 importlib.reload(udf)
 
 # Define input/output directories
-VCP_INPUT_DIR = f"{OUTPUT_BASE_DIR}/1_filtered_dfs/vesiclepedia/"
-VCP_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/2_value_counts/vesiclepedia/proteins"
+VCP_INPUT_DIR = os.path.join(OUTPUT_DIR, "1_filtered_dfs/vesiclepedia/")
+VCP_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "2_value_counts/vesiclepedia/proteins")
 
 print("\nAnalyzing PTM distribution across Vesiclepedia proteins...")
 udf.count_proteins_by_ptm(
@@ -302,8 +344,8 @@ udf.count_proteins_by_ptm(
 importlib.reload(udf)
 
 # Define input/output directories
-GLYC_INPUT_DIR = f"{OUTPUT_BASE_DIR}/1_filtered_dfs/vesiclepedia_glycosylated/"
-GLYC_OUTPUT_DIR = f"{OUTPUT_BASE_DIR}/2_value_counts/vesiclepedia_glycosylated/proteins"
+GLYC_INPUT_DIR = os.path.join(OUTPUT_DIR, "1_filtered_dfs/vesiclepedia_glycosylated/")
+GLYC_OUTPUT_DIR = os.path.join(OUTPUT_DIR, "2_value_counts/vesiclepedia_glycosylated/proteins")
 
 print("\nAnalyzing PTM distribution across glycosylated Vesiclepedia proteins...")
 udf.count_proteins_by_ptm(
@@ -317,13 +359,10 @@ udf.count_proteins_by_ptm(
 # Erase temporary processing dir
 ################################
 
-# Store temporary dir's path
-temp_proc_dir_path = '../input_data/input'
-
-# Erase this directory
-udf.delete_directory(temp_proc_dir_path)
+# Erase temporary input dir this directory
+udf.delete_directory(INPUT_DIR)
 
 # %%
 
-print("\n\nAll tables have been saved to 'output/1_filtered_dfs/' & 'output/2_value_counts/'\nPython pre-processing finished\nTime to move on to R!")
+print("\n\nAll tables have been saved to 'output/1_filtered_dfs/' & 'output/2_value_counts/'\n\nPython pre-processing finished\nTime to move on to R!")
 ###############################################################################
