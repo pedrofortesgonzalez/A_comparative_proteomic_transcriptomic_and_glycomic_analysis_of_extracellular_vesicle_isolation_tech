@@ -137,7 +137,7 @@ importlib.reload(udf)
 
 # Define inputs for protein name extraction
 ACCESSION_COL = 'Accession'
-PROTEIN_NAME_COL = "Prot Name"
+PROTEIN_NAME_COL = "Prot_Name"
 
 # Regular expression pattern to extract standardized protein accession numbers
 # Matches patterns like UniProt accessions (e.g., P12345, Q9XYZ0) and other common formats
@@ -149,7 +149,7 @@ udf.extract_protein_names(INPUT_DIR, ACCESSION_COL, PROTEIN_NAME_COL, PROTEIN_PA
 # Step 4.2: Clean peptide sequences by removing modifications in parentheses
 importlib.reload(udf)
 PEPTIDE_COL = 'Peptide'
-PEPTIDE_SEQ_COL = "Peptide Sequence"
+PEPTIDE_SEQ_COL = "Peptide_Sequence"
 PEPTIDE_PATTERN = r'\([^)]*\)'  # Pattern to remove content inside parentheses
 
 # Extract clean peptide sequences without modification annotations
@@ -158,7 +158,7 @@ udf.extract_peptide_sequences(INPUT_DIR, PEPTIDE_COL, PEPTIDE_SEQ_COL, PEPTIDE_P
 # Step 4.3: Classify PTMs into standardized categories
 importlib.reload(udf)
 PTM_COL = 'PTM'
-PTM_CLUSTER_COL = "PTM cluster"
+PTM_CLUSTER_COL = "PTM_Cluster"
 
 # Create a new column with standardized PTM classifications
 udf.classify_ptm_types(INPUT_DIR, PTM_COL, PTM_CLUSTER_COL)
@@ -192,7 +192,7 @@ print(f"\nCreated output directory structure at: {output_dir}")
 # Define common variables for filtering operations
 TECHNIQUES = ["ExoGAG", "SEC", "IP_CD9", "UC"]
 POOLS = ["POOL_1", "POOL_2", "POOL_3", "NO_POOL", "POOLS_123"]
-INTEREST_COLS = ['Peptide Sequence', "Prot Name", 'PTM', "Accession", "Peptide", "PTM cluster"]
+INTEREST_COLS = ['Peptide_Sequence', "Prot_Name", 'PTM', "Accession", "Peptide", "PTM_Cluster"]
 
 # Base directories
 ### INPUT_DIR
@@ -252,7 +252,7 @@ print(individual_pools)
 # Define common variables for count operations
 TECHNIQUES = ["ExoGAG", "SEC", "IP_CD9", "UC"]
 POOLS = ["POOL_1", "POOL_2", "POOL_3", "NO_POOL", "POOLS_123"]
-INTEREST_COLS = ["Prot Name", 'PTM', 'Peptide Sequence', "PTM cluster"]
+INTEREST_COLS = ["Prot_Name", 'PTM', 'Peptide_Sequence', "PTM_Cluster"]
 
 # Base output directory
 ### OUTPUT_DIR
@@ -302,8 +302,8 @@ udf.count_peptides_by_category(GLYC_INPUT_DIR, GLYC_OUTPUT_DIR, TECHNIQUES, POOL
 # Define common variables for protein analysis
 TECHNIQUES = ["ExoGAG", "SEC", "IP_CD9", "UC"]
 POOLS = ["POOL_1", "POOL_2", "POOL_3", "NO_POOL", "POOLS_123"]
-INTEREST_COL = "PTM cluster"
-GROUP_BY_COL = "Prot Name"
+INTEREST_COL = "PTM_Cluster"
+GROUP_BY_COL = "Prot_Name"
 
 # Base output directory
 ### OUTPUT_DIR
