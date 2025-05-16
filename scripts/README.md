@@ -56,36 +56,35 @@ Ensure all dependencies are installed before running the scripts.
 - Creates pie charts showing glycosylation distribution across techniques
 - Generates both plain and annotated versions
 
-
-## Execution Options
+### Execution Options
 You can run the analysis using one of the following methods:
 
-### Option 1: Complete Pipeline (Recommended)
+#### Option 1: Complete Pipeline (Recommended)
 Run the entire analysis sequence with a single bash command:
-bash# Navigate to the repository directory
+```{bash}
+# Navigate to the repository directory
 cd /path/to/repository
 
-Execute the pipeline script
+# Execute the pipeline script
 scripts/run_analysis.sh
+```
 This script will automatically execute all three analysis steps in sequence and generate a PDF report with all visualizations.
 
-
-### Option 2: Individual Script Execution
+#### Option 2: Individual Script Execution
 Execute each script individually in the correct sequence:
-
-First, run the Python preprocessing script:
+```{bash}
+# First, run the Python preprocessing script:
 bashpython scripts/1_ptm_detection.py
 
-Next, run the R statistical analysis script:
+# Next, run the R statistical analysis script:
 bashRscript scripts/2_hyptest_n_boxplots.R
 
-Finally, run the visualization script:
+# Finally, run the visualization script:
 bashRscript scripts/3_sector_diagrams.R
-
-
+```
 This approach gives you more control over each step and allows you to inspect intermediate results.
 
-All results will be stored in the [input_folder]_output directory, organized into subdirectories for filtered data, counts, and visualizations.
+All results will be stored in the './output' directory, organized into subdirectories for filtered data, counts, and visualizations.
 
 
 ***
