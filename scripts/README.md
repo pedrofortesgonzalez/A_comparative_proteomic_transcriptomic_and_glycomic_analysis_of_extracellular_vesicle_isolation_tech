@@ -14,7 +14,8 @@ scripts/
 └── __pycache__/                       # Python compiled files (automatically generated)
 ```
 
-### Requirements and Dependencies
+***
+## Requirements and Dependencies
 
 | **Python** 3.10.16 | **R** 4.4.2 |
 | :----: | :----: |
@@ -27,7 +28,7 @@ scripts/
 |  | ggrepel_0.9.6 |
 |  | rstudioapi_0.17.1 |
 
-### Code Cleanup Libraries
+#### Code Cleanup Libraries
 
 | **Python** | **R** |
 | :----: | :----: |
@@ -36,12 +37,16 @@ scripts/
 
 ***
 ## Workflow and Usage Notes
-<ins>Step 1</ins>. Drag your mass spectrometry data to the main repository folder. Make sure:
-    - your files are in .csv format, and contain the following columns:  **'Peptide', "Accession"** and **"PTM"**
-    - the folder containing your data has no spaces in its name
+#### <ins>Step 1</ins>
+Drag your mass spectrometry data to the main repository folder. Make sure:
 
-<ins>2</ins>. Execute the numbered scripts inside the <ins>scripts/</ins> folder. You can do it:
-    - **Automatically (recommended)**: if you are familiar with bash command line, then execute
+   - your files are in .csv format, and contain the following columns:  **'Peptide', "Accession"** and **"PTM"**
+   - the folder containing your data has no spaces in its name
+
+#### <ins>Step 2</ins>
+Execute the numbered scripts inside the <ins>scripts/</ins> folder. You can do it:
+
+   - **Automatically (recommended)**: if you are familiar with bash command line, then execute
 ```{bash}
 # Navigate to the repository directory
 cd /path/to/repository
@@ -50,7 +55,7 @@ cd /path/to/repository
 scripts/run_analysis.sh
 ```
 
-  - **Manually**: execute each script individually in the correct sequence in order to ensure correct workflow. You can do so using IDEs (like Spyder, Visual Studio Code, Jupyter Notebook, etc.) or also with the following bash command line:
+   - **Manually**: execute each script individually in the correct sequence in order to ensure correct workflow. You can do so using IDEs (like Spyder, Visual Studio Code, Jupyter Notebook, etc.) or also with the following bash command line:
 ```{bash}
 # First, run the Python preprocessing script:
 bashpython scripts/1_ptm_detection.py
@@ -63,9 +68,11 @@ bashRscript scripts/3_sector_diagrams.R
 ```
 This approach gives you more control over each step and allows you to inspect intermediate results.
 
-<ins>3</ins>. The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code to remove unused libraries.
+#### <ins>Step 3</ins>
+The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code to remove unused libraries.
 
-<ins>4</ins>. All results will be stored in the './output' directory, organized into subdirectories for filtered data, counts, and visualizations. 
+#### <ins>Step 4</ins>
+All results will be stored in the './output' directory, organized into subdirectories for filtered data, counts, and visualizations. 
 
 
 ***
