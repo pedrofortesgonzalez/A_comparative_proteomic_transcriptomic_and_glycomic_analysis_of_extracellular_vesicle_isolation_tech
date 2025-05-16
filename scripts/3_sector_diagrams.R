@@ -170,7 +170,7 @@ generate_charts <- function(technique, entity_type, data_path, output_path, char
   
   # Construct file paths
   if (entity_type == "Peptides") {
-    file_suffix <- "PTM cluster.csv"
+    file_suffix <- "PTM_Cluster.csv"
   } else {
     file_suffix <- "PTM_types_by_protein.csv"
   }
