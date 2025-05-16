@@ -4,6 +4,7 @@ This folder contains all scripts needed to perform the analysis of glycosylation
 ## Folder structure
 ```{bash}
 scripts/
+├── run_analysis.sh                    # Run sequentially scripts 1, 2 and 3
 ├── 1_ptm_detection.py                 # Initial processing of mass spectrometry data
 ├── 2_hyptest_&_boxplots.R             # Statistical analysis and boxplot generation
 ├── 3_sector_diagrams.R                # Creation of pie charts
@@ -48,6 +49,10 @@ Ensure all dependencies are installed before running the scripts.
 
 ***
 ## Main Scripts
+### <ins>run_analysis.sh</ins>
+This bash scripts runs scripts number 1, 2 and 3. Previous to that, it detects possible missing dependencies essential for the execution.
+
+***
 ### <ins>1_ptm_detection.py</ins>
 This script performs the initial processing of mass spectrometry data. Its main functions are:
 
