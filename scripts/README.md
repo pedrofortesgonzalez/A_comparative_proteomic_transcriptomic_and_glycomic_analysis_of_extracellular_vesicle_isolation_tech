@@ -72,7 +72,7 @@ This approach gives you more control over each step and allows you to inspect in
 The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code to remove unused libraries.
 
 #### <ins>Step 4</ins>
-All results will be stored in the './output' directory, organized into subdirectories for filtered data, counts, and visualizations. 
+All results will be stored in the <ins>../output</ins> directory, organized into subdirectories for filtered data, counts, and visualizations. 
 
 
 ***
@@ -84,20 +84,20 @@ This bash scripts runs scripts number 1, 2 and 3. Previous to that, it detects p
 ### <ins>1_ptm_detection.py</ins>
 This script performs the initial processing of mass spectrometry data. Its main functions are:
 
-- Creating the folder structure in output/
+- Creating the folder structure in <ins>../output/</ins>
 - Processing input CSV files
 - Filtering proteins and peptides present in Vesiclepedia (EV-related)
 - Identifying proteins and peptides with glycosylations of interest
 - Generating count summaries for subsequent analyses
 
 **Input files**:
-- CSV files in input_data/input/
-- input_data/glycosylation_list.csv
-- input_data/vesiclepedia_proteins_240712.csv
+- CSV files in <ins>./input_data/input/</ins>
+- <ins>../input_data/glycosylation_list.csv</ins>
+- <ins>../input_data/vesiclepedia_proteins_240712.csv</ins>
 
 **Output files**: Multiple CSV files in
-- output/1_filtered_dfs/
-- output/2_value_counts/
+- <ins>../output/1_filtered_dfs/</ins>
+- <ins>../output/2_value_counts/</ins>
 
 **Usage notes**
 - The script will prompt for the folder name containing your data
@@ -115,10 +115,10 @@ This script performs statistical analyses on the processed data and generates bo
   - Counts of glycosylated peptides and proteins present in Vesiclepedia
 
 **Input files**:
-Processed CSV files in output/fitered_dfs/
+Processed CSV files in <ins>../output/fitered_dfs/</ins>
 
 **Output files**:
-- Boxplots in output/figures/boxplots/
+- Boxplots in <ins>../output/figures/boxplots/</ins>
 - Boxplots are created with automatically adjusted y-axes
 
 
@@ -130,10 +130,10 @@ This script creates pie charts to visualize the distribution of glycosylation ty
 - Creating versions with and without text labels for each chart
 
 **Input files**:
-Count CSV files in output/processed_data/value_counts/
+Count CSV files in <ins>../output/processed_data/value_counts/</ins>
 
 **Output files**:
-- Pie charts in output/figures/sector_diagrams/
+- Pie charts in <ins>../output/figures/sector_diagrams/</ins>
 - Generates both plain and annotated versions
 
 
