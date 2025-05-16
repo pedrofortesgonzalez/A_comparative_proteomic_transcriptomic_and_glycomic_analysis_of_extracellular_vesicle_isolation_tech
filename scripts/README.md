@@ -37,7 +37,8 @@ scripts/
 ***
 ## Workflow
 ### Usage Notes
-- Execute the scripts in numerical order to ensure correct workflow.
+- Drag a copy of your data folder to the main repository folder (the console will ask you to type your data folder's name once execution starts).
+- If manually executing the scripts, do so in numerical order to ensure correct workflow.
 - The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code.
 Ensure all dependencies are installed before running the scripts.
 
@@ -56,8 +57,10 @@ Ensure all dependencies are installed before running the scripts.
 - Creates pie charts showing glycosylation distribution across techniques
 - Generates both plain and annotated versions
 
+
 ### Execution Options
 You can run the analysis using one of the following methods:
+
 
 #### <ins>Option 1: Complete Pipeline (Recommended)</ins>
 Run the entire analysis sequence with a single bash command:
@@ -69,6 +72,7 @@ cd /path/to/repository
 scripts/run_analysis.sh
 ```
 This script will automatically execute all three analysis steps in sequence and generate a PDF report with all visualizations.
+
 
 #### <ins>Option 2: Individual Script Execution</ins>
 Execute each script individually in the correct sequence:
