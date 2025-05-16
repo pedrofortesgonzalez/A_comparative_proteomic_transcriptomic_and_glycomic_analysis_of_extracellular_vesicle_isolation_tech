@@ -335,13 +335,13 @@ def extract_and_clean_accessions(accession_str, regex):
 
 def extract_peptide_sequences(input_dir, target_col, new_col, pattern):
     """
-    Extract peptide sequences from a target column using regex pattern.
+    Extract Peptide_Sequences from a target column using regex pattern.
     
     Args:
         input_dir: Directory containing CSV files to process
         target_col: Column containing peptide information to extract from
-        new_col: Name of the new column to store extracted peptide sequences
-        pattern: Regular expression pattern to remove from peptide sequences
+        new_col: Name of the new column to store extracted Peptide_Sequences
+        pattern: Regular expression pattern to remove from Peptide_Sequences
         
     This function processes all CSV files in the input directory, cleans peptide
     sequences by removing the specified pattern, and adds them as a new column.
@@ -538,27 +538,27 @@ def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_
         pool = next((pool for pool in pools if re.search(pool, sample_name)), "")
     
         # Filter proteins by presence in Vesiclepedia
-        peptides_count = df["Peptide Sequence"].value_counts()
+        peptides_count = df["Peptide_Sequence"].value_counts()
         print(f"Total peptides: {len(peptides_count)}")
         
-        condition = df["Prot Name"].isin(vesiclepedia["Accession"])
+        condition = df["Prot_Name"].isin(vesiclepedia["Accession"])
         df_filtered = df.loc[condition, interest_cols]
         
         # Save filtered data
         output_file = output_dir / f"{sample_name}_filtered_vcp.csv"
         df_filtered.to_csv(output_file, index=False, sep=";")
         
-        filtered_peptides_count = df_filtered["Peptide Sequence"].value_counts()
+        filtered_peptides_count = df_filtered["Peptide_Sequence"].value_counts()
         print(f"Peptides in Vesiclepedia: {len(filtered_peptides_count)}")
     
         # Calculate statistics
-        n_prots = len(df["Prot Name"].value_counts())
+        n_prots = len(df["Prot_Name"].value_counts())
         n_ptms = len(df["PTM"].value_counts())
-        n_peptides = len(df["Peptide Sequence"].value_counts())
+        n_peptides = len(df["Peptide_Sequence"].value_counts())
        
-        n_prots_filt = len(df_filtered["Prot Name"].value_counts())
+        n_prots_filt = len(df_filtered["Prot_Name"].value_counts())
         n_ptms_filt = len(df_filtered["PTM"].value_counts())
-        n_peptides_filt = len(df_filtered["Peptide Sequence"].value_counts())
+        n_peptides_filt = len(df_filtered["Peptide_Sequence"].value_counts())
         
         ratio_ptms_prots = (100 * n_prots_filt) / n_prots if n_prots > 0 else 0
         ratio_ptms_peptides = (100 * n_peptides_filt) / n_peptides if n_prots > 0 else 0
@@ -644,7 +644,7 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
             technique = next((technique for technique in techniques if re.search(technique, sample_name)), "")
             pool = next((pool for pool in pools if re.search(pool, sample_name)), "")
             # Filter proteins by glycosylation PTMs
-            peptides_count = df["Peptide Sequence"].value_counts()
+            peptides_count = df["Peptide_Sequence"].value_counts()
             print(f"\nTotal peptides: {len(peptides_count)}")
             
             condition = df["PTM"].isin(ptms_of_interest)
@@ -654,11 +654,11 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
             output_file = output_dir / f"{sample_name}_filtered_glyc.csv"
             df_filtered.to_csv(output_file, index=False, sep=";")
             
-            filtered_peptides_count = df_filtered["Peptide Sequence"].value_counts()
+            filtered_peptides_count = df_filtered["Peptide_Sequence"].value_counts()
             print(f"\nGlycosylated peptides: {len(filtered_peptides_count)}")
 
             # Filter proteins by glycosylation PTMs
-            peptides_count = df["Peptide Sequence"].value_counts()
+            peptides_count = df["Peptide_Sequence"].value_counts()
             print(f"\nTotal peptides: {len(peptides_count)}")
             
             condition = df["PTM"].isin(ptms_of_interest)
@@ -668,17 +668,17 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
             output_file = output_dir / f"{sample_name}_filtered_glyc.csv"
             df_filtered.to_csv(output_file, index=False, sep=";")
             
-            filtered_peptides_count = df_filtered["Peptide Sequence"].value_counts()
+            filtered_peptides_count = df_filtered["Peptide_Sequence"].value_counts()
             print(f"\nGlycosylated peptides: {len(filtered_peptides_count)}")
     
             # Calculate statistics
-            n_prots = len(df["Prot Name"].value_counts())
+            n_prots = len(df["Prot_Name"].value_counts())
             n_ptms = len(df["PTM"].value_counts())
-            n_peptides = len(df["Peptide Sequence"].value_counts())
+            n_peptides = len(df["Peptide_Sequence"].value_counts())
        
-            n_prots_filt = len(df_filtered["Prot Name"].value_counts())
+            n_prots_filt = len(df_filtered["Prot_Name"].value_counts())
             n_ptms_filt = len(df_filtered["PTM"].value_counts())
-            n_peptides_filt = len(df_filtered["Peptide Sequence"].value_counts())
+            n_peptides_filt = len(df_filtered["Peptide_Sequence"].value_counts())
         
             ratio_ptms_prots = (100 * n_prots_filt) / n_prots if n_prots > 0 else 0
             ratio_ptms_peptides = (100 * n_peptides_filt) / n_peptides if n_prots > 0 else 0
@@ -789,7 +789,7 @@ def count_peptides_by_category(input_dir, output_dir, techniques, pools, interes
                     print(f"Warning: Column '{col}' not found in file {sample_name}.")
 
 
-def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col, group_by_col="Prot Name"):
+def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col, group_by_col="Prot_Name"):
     """
     Count proteins by PTM types, grouping at the protein level.
     
@@ -798,8 +798,8 @@ def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col
         output_dir: Directory where count files will be saved
         techniques: List of isolation techniques in the filenames
         pools: List of pool identifiers in the filenames
-        interest_col: Column to count values from (typically "PTM cluster")
-        group_by_col: Column to group by (default "Prot Name")
+        interest_col: Column to count values from (typically "PTM_Cluster")
+        group_by_col: Column to group by (default "Prot_Name")
         
     Groups proteins and counts the different types of PTMs for each protein,
     then summarizes the distribution of PTM types across all proteins.
@@ -826,7 +826,7 @@ def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col
             pool = [p for p in pools if re.search(p, sample_name)]
             
             # Group by protein name and count PTM types
-            if group_by_col in df.columns and group_by_col == "Prot Name":
+            if group_by_col in df.columns and group_by_col == "Prot_Name":
                 # Group by protein and count PTM types
                 df_grouped = df.groupby(group_by_col)[interest_col].value_counts()
                 df_grouped = df_grouped.reset_index(name="Count")
