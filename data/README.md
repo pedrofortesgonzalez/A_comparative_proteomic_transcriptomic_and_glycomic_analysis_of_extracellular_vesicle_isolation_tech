@@ -18,11 +18,11 @@ data/
 2. If you need to use an updated version of Vesiclepedia, make sure to update the filename in the corresponding scripts.
 3. The glycosylation list can be expanded following the same format if additional types need to be searched.
    
-# The **mass spectrometry input files must have the following format**:
+# The **mass spectrometry input files must contain the following columns at least**:
    
-    - The first column must contain protein/peptide identifiers
-    - Must include columns for peptide sequence
-    - Must include information about post-translational modifications (PTMs)
+    - A protein/peptide identifier in UniProtKB Accession format (**Accession** column)
+    - A column for peptide sequence (**Peptide** column)
+    - A column for post-translational modifications (**PTM** column). Examples of these may be located in <ins>glycosylation_list.csv</ins>
 
 
 
