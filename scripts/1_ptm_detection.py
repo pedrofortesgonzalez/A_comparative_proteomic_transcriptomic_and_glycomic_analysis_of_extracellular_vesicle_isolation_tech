@@ -23,7 +23,7 @@ import session_info
 
 # %%
 
-# Detecting repo's root dir
+# Detecting repo's root dir and set working dir
 try:
     # Try to obtain the actual script's directory (works for executing with bash)
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -76,8 +76,8 @@ udf.expand_dataframe_view()
 ################
 
 # Define file's paths relative to REPO_ROOT
-GLYCOSYLATION_LIST_PATH = os.path.join(REPO_ROOT, 'data', 'glycosylation_list.csv')
-VESICLEPEDIA_PATH = os.path.join(REPO_ROOT, 'data', 'Vesiclepedia_proteins_240712.csv')
+GLYCOSYLATION_LIST_PATH = os.path.join(REPO_ROOT, 'input_data', 'glycosylation_list.csv')
+VESICLEPEDIA_PATH = os.path.join(REPO_ROOT, 'input_data', 'Vesiclepedia_proteins_240712.csv')
 
 # Verificar que los archivos existen
 for file_path in [GLYCOSYLATION_LIST_PATH, VESICLEPEDIA_PATH]:
@@ -110,7 +110,7 @@ importlib.reload(udf)
 
 # Define input directory and technique identifiers
 RAW_DATA_DIR = os.path.join(REPO_ROOT, str(input("\nEnter the name of your input folder: ")))
-INPUT_DIR = os.path.join(REPO_ROOT, 'data/input')
+INPUT_DIR = os.path.join(REPO_ROOT, 'input_data/input')
 TECHNIQUES = ["ExoGAG", "SEC", "IP_CD9", "UC"]
 
 # Step 3.1: Create copy of the input directory for processing while preserving the original data
