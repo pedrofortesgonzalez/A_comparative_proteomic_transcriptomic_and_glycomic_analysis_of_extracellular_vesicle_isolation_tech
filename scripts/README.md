@@ -6,7 +6,7 @@ This folder contains all scripts needed to perform the analysis of glycosylation
 scripts/
 ├── run_analysis.sh                    # Run sequentially scripts 1, 2 and 3
 ├── 1_ptm_detection.py                 # Initial processing of mass spectrometry data
-├── 2_hyptest_&_boxplots.R             # Statistical analysis and boxplot generation
+├── 2_hyptest_n_boxplots.R             # Statistical analysis and boxplot generation
 ├── 3_sector_diagrams.R                # Creation of pie charts
 ├── user_defined_funcs.py              # Helper functions for data processing with Python
 ├── cleaning_1_python.py               # Cleanup of unused Python libraries
@@ -44,7 +44,7 @@ Drag your mass spectrometry data to the main repository folder. Make sure:
    - the folder containing your data has no spaces in its name
 
 #### <ins>Step 2</ins>
-Execute the numbered scripts inside the <ins>scripts/</ins> folder. You can do it:
+Execute the numbered scripts inside the `scripts/` folder. You can do it:
 
    - **Automatically (recommended)**: if you are familiar with bash command line, then execute
 ```{bash}
@@ -55,56 +55,56 @@ cd /path/to/repository
 scripts/run_analysis.sh
 ```
 
-   - **Manually**: execute each script individually in the correct sequence in order to ensure correct workflow. You can do so using IDEs (like Spyder, Visual Studio Code, Jupyter Notebook, etc.) or also with the following bash command line:
+   - **Manually**: execute each script individually in the correct sequence in order to ensure correct workflow. You can do so either with an IDE (like Spyder, Visual Studio Code, Jupyter Notebook, etc.) or through the following bash command line:
 ```{bash}
 # First, run the Python preprocessing script:
-bashpython scripts/1_ptm_detection.py
+python3 scripts/1_ptm_detection.py
 
 # Next, run the R statistical analysis script:
-bashRscript scripts/2_hyptest_n_boxplots.R
+Rscript scripts/2_hyptest_n_boxplots.R
 
 # Finally, run the visualization script:
-bashRscript scripts/3_sector_diagrams.R
+Rscript scripts/3_sector_diagrams.R
 ```
-This approach gives you more control over each step and allows you to inspect intermediate results.
+<ins>Note</ins>: using an IDE will give you more control over the steps in each script and allow you to directly inspect code and intermediate results.
 
 #### <ins>Step 3</ins>
-The cleaning scripts (<ins>cleaning_1_python.py</ins> and <ins>cleaning_2_R.R</ins>) are optional and can be used to optimize code to remove unused libraries.
+The cleaning scripts (`cleaning_1_python.py` and `cleaning_2_R.R`) are optional and can be used to optimize code to remove unused libraries.
 
 #### <ins>Step 4</ins>
-All results will be stored in the <ins>../output</ins> directory, organized into subdirectories for filtered data, counts, and visualizations. 
+All results will be stored in the `../output` directory, organized into subdirectories for filtered data, counts, and visualizations. 
 
 
 ***
 ## Main Scripts
-### <ins>run_analysis.sh</ins>
+### `run_analysis.sh`
 This bash scripts runs scripts number 1, 2 and 3. Previous to that, it detects possible missing dependencies essential for the execution.
 
 
-### <ins>1_ptm_detection.py</ins>
+### `1_ptm_detection.py`
 This script performs the initial processing of mass spectrometry data. Its main functions are:
 
-- Creating the folder structure in <ins>../output/</ins>
+- Creating the folder structure in `../output/`
 - Processing input CSV files
 - Filtering proteins and peptides present in Vesiclepedia (EV-related)
 - Identifying proteins and peptides with glycosylations of interest
 - Generating count summaries for subsequent analyses
 
 **Input files**:
-- CSV files in <ins>./input_data/input/</ins>
-- <ins>../input_data/glycosylation_list.csv</ins>
-- <ins>../input_data/vesiclepedia_proteins_240712.csv</ins>
+- CSV files in `./input_data/input/` --> a direct temporary copy of your input folder
+- `../input_data/glycosylation_list.csv`
+- `../input_data/vesiclepedia_proteins_240712.csv`
 
-**Output files**: Multiple CSV files in
-- <ins>../output/1_filtered_dfs/</ins>
-- <ins>../output/2_value_counts/</ins>
+**Output files**: Multiple CSV files are generated in
+- `../output/1_filtered_dfs/`
+- `../output/2_value_counts/`
 
 **Usage notes**
 - The script will prompt for the folder name containing your data
 - *Note: When running this script in an IDE environment (like PyCharm, VSCode, etc.), you may be prompted to provide the absolute path to the repository, as automatic directory detection may not work properly in IDEs*
 
 
-### <ins>2_hyptest_&_boxplots.R</ins>
+### `2_hyptest_n_boxplots.R`
 This script performs statistical analyses on the processed data and generates boxplot visualizations. Its main functions are:
 
 - Performing Kruskal-Wallis tests to compare isolation techniques
@@ -115,14 +115,14 @@ This script performs statistical analyses on the processed data and generates bo
   - Counts of glycosylated peptides and proteins present in Vesiclepedia
 
 **Input files**:
-Processed CSV files in <ins>../output/fitered_dfs/</ins>
+Processed CSV files in `../3_figures/filtered_dfs/`
 
 **Output files**:
-- Boxplots in <ins>../output/figures/boxplots/</ins>
+- Boxplots in `../3_figures/figures/boxplots/`
 - Boxplots are created with automatically adjusted y-axes
 
 
-### <ins>3_sector_diagrams.R</ins>
+### `3_sector_diagrams.R`
 This script creates pie charts to visualize the distribution of glycosylation types in proteins and peptides. The main functions are:
 
 - Processing count data for different glycosylation types
@@ -130,21 +130,21 @@ This script creates pie charts to visualize the distribution of glycosylation ty
 - Creating versions with and without text labels for each chart
 
 **Input files**:
-Count CSV files in <ins>../output/processed_data/value_counts/</ins>
+Count CSV files in `../output/2_value_counts/`
 
 **Output files**:
-- Pie charts in <ins>../output/figures/sector_diagrams/</ins>
+- Pie charts in `../output/3_figures/sector_diagrams/`
 - Generates both plain and annotated versions
 
 
 
 ***
 ## Additional Scripts
-### <ins>user_defined_funcs.py</ins>
-Module containing custom functions used by <ins>1_ptm_detection.py</ins>. It separates the main logic from the script for better code organization and maintenance.
+### `user_defined_funcs.py`
+Module containing custom functions used by `1_ptm_detection.py`. It separates the main logic from the script for better code organization and maintenance.
 
-### <ins>cleaning_1_python.py</ins>
-Utility script that uses the vulture module to analyze <ins>1_ptm_detection.py</ins> and identify imported libraries that are not used, helping to keep the code clean and efficient.
+### `cleaning_1_python.py`
+Utility script that uses the vulture module to analyze `1_ptm_detection.py` and identify imported libraries that are not used, helping to keep the code clean and efficient.
 
-### <ins>cleaning_2_R.R</ins>
+### `cleaning_2_R.R`
 Utility script that uses the nolock package to identify imported but unused libraries in R scripts, helping to optimize the code.
