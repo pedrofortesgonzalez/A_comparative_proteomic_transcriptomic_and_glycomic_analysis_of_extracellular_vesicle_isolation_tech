@@ -1,5 +1,5 @@
 # Input Data
-This folder contains the mass spectrometry data files for analysis. 
+This folder contains the mass spectrometry data files for analysis. CSV files contain mass spectrometry data processed with PEAKS 10.0 for detecting PTMs.
 
 ## Requirements
 - All files must be in CSV format
