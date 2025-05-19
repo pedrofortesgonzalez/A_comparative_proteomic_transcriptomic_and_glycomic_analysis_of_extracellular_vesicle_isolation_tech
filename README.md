@@ -3,7 +3,7 @@
 # Glycosylation Analysis in Extracellular Vesicles
 This repository contains the code and data used for the detection and analysis of glycosylations in extracellular vesicle (EV) proteins and peptides, as supplementary material for the publication:
 
-`A comparative proteomic, transcriptomic and glycomic analysis of extracellular vesicle isolation techniques highlights ExoGAG efficiency for a more complete identification of breast milk molecular signaling pathways Title`
+`A comparative proteomic, transcriptomic and glycomic analysis of extracellular vesicle isolation techniques highlights ExoGAG efficiency for a more complete identification of breast milk molecular signaling pathways`
 
 Pereira-Hernández *et al*.
 
