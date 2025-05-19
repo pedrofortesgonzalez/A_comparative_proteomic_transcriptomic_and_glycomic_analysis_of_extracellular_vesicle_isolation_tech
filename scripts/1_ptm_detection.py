@@ -6,7 +6,7 @@ PTM Detection: Analysis of glycosylated proteins from mass spectrometry data.
 This script processes mass spectrometry data to identify post-translational
 modifications, with a focus on protein glycosylation.
 
-Author: Pedro Fortes Gonzalez
+Author: Pedro Fortes Gonzalez (refactored)
 """
 
 ###############################################################################
