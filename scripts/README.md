@@ -66,8 +66,12 @@ Rscript scripts/2_hyptest_n_boxplots.R
 # Finally, run the visualization script:
 Rscript scripts/3_sector_diagrams.R
 ```
-<ins>Note</ins>: using an IDE will give you more control over the steps in each script and allow you to directly inspect code and intermediate results.
 
+#### Usage notes
+
+    - Note 1: Script 1 (`1_ptm_detection.py`) will prompt you to type the name of your input folder. For the data analysed in the article, you would type mass_spectrometry_data`.
+    - Note 2: Using an IDE will give you more control over the steps in each script and allow you to directly inspect code and intermediate results.
+    
 #### <ins>Step 3</ins>
 The cleaning scripts (`cleaning_1_python.py` and `cleaning_2_R.R`) are optional and can be used to optimize code to remove unused libraries.
 
