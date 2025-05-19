@@ -3,10 +3,10 @@
 """
 PTM Detection from Mass Spectrometry Data.
 
-This script analyzes Excel files from mass spectrometry to identify
-proteins with post-translational modifications (PTMs).
+This script contains user-defined functions (UDFs) that enable
+script no. 1 to run.
 
-Author: Pedro Fortes González
+Author: Pedro Fortes González (refactored)
 """
 # import libraries
 import os
@@ -884,4 +884,4 @@ def delete_directory(directory_path):
             
     except Exception as e:
         print(f"\nError deleting directory: {str(e)}")
-        return False            
+        return False       
