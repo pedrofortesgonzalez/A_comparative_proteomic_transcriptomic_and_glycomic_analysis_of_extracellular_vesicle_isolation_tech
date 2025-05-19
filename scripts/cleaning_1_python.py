@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
+"""
+Script cleaning: Vulture package detects imported but unused libraries in a given script.
+
+Author: Pedro Fortes Gonzalez (refactored)
+"""
 
 # Import system libraries
 import os
