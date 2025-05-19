@@ -20,15 +20,15 @@ data/
    
 # The **mass spectrometry input files must contain the following columns at least**:
    
-    - A protein/peptide identifier in UniProtKB Accession format (**Accession** column)
-    - A column for peptide sequence (**Peptide** column)
-    - A column for post-translational modifications (**PTM** column). Examples of these may be located in <ins>glycosylation_list.csv</ins>
+    - A protein/peptide identifier in UniProtKB Accession format ( **Accession** column)
+    - A column for peptide sequence ( **Peptide** column)
+    - A column for post-translational modifications ( **PTM** column). Examples of these may be located in `glycosylation_list.csv`
 
 
 
 ## File Descriptions
 
-### <ins>glycosylation_list.csv</ins>
+### `glycosylation_list.csv`
 This file contains all chemical nomenclatures of glycosylations of interest that we aim to detect in the mass spectrometry data. It includes different types such as:
 
 - Fucosylations
@@ -39,9 +39,9 @@ This file contains all chemical nomenclatures of glycosylations of interest that
 
 
 
-### <ins>vesiclepedia_proteins_240712.csv</ins>
+### `vesiclepedia_proteins_240712.csv`
 List of proteins associated with EVs according to the Vesiclepedia database, updated as of July 12, 2024. This file is used to filter the proteins detected in our experiments and determine which ones are associated with EVs according to the scientific literature.
 
 
-### <ins>input/</ins> Folder
-Contains CSV files with mass spectrometry data to be processed. It is a copy of the input folder located in the main folder that allows the scripts to work without modifying the original data, and is both created and removed by the script <ins>1_ptm_detection.py</ins>.
+### `input/` Folder
+Contains CSV files with mass spectrometry data to be processed. It is a copy of the input folder located in the main folder that allows the scripts to work without modifying the original data, and is both created and removed by the script `1_ptm_detection.py`.
