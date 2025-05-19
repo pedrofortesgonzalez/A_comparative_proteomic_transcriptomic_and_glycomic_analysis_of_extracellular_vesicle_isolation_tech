@@ -1,5 +1,5 @@
 # Input Data
-This folder is where you should place your mass spectrometry data files for analysis.
+This folder contains the mass spectrometry data files for analysis. 
 
 ## Requirements
 - All files must be in CSV format
@@ -9,8 +9,8 @@ This folder is where you should place your mass spectrometry data files for anal
   - `PTM` - Post-translational modifications
 
 ## Important Notes
-- This folder is automatically created as a temporary copy of your original data during processing
-- The script `1_ptm_detection.py` will ask for the name of your input folder
+- This folder is will have a temporary copy created during processing (`../input_data/input`)
+- The script `1_ptm_detection.py` will ask for the name of your input folder (in this case, it is the name of this folder, `mass_spectrometry_data`)
 - Files will be processed in their original format - no renaming is necessary
 - Make sure your input folder name does not contain spaces
 
