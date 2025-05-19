@@ -20,9 +20,9 @@ data/
    
 # The **mass spectrometry input files must contain the following columns at least**:
    
-    - A protein/peptide identifier in UniProtKB Accession format ( **Accession** column)
-    - A column for peptide sequence ( **Peptide** column)
-    - A column for post-translational modifications ( **PTM** column). Examples of these may be located in `glycosylation_list.csv`
+    - A protein/peptide identifier in UniProtKB Accession format (Accession column)
+    - A column for peptide sequence (Peptide column)
+    - A column for post-translational modifications (PTM column). Examples of these may be located in `glycosylation_list.csv`
 
 
 
