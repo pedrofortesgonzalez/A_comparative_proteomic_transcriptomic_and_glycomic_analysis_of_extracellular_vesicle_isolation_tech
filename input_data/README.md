@@ -18,7 +18,7 @@ data/
 2. If you need to use an updated version of Vesiclepedia, make sure to update the filename in the corresponding scripts.
 3. The glycosylation list can be expanded following the same format if additional types need to be searched.
    
-# The **mass spectrometry input files must contain the following columns at least**:
+## The **mass spectrometry input files must contain at least the following columns**:
    
     - A protein/peptide identifier in UniProtKB Accession format (Accession column)
     - A column for peptide sequence (Peptide column)
@@ -44,4 +44,4 @@ List of proteins associated with EVs according to the Vesiclepedia database, upd
 
 
 ### `input/` Folder
-Contains CSV files with mass spectrometry data to be processed. It is a copy of the input folder located in the main folder that allows the scripts to work without modifying the original data, and is both created and removed by the script `1_ptm_detection.py`.
+Contains CSV files with mass spectrometry data to be processed. This is a temporary copy of the input folder from the main directory. The temporary copy allows scripts to work without modifying the original data. This folder is automatically created and removed by the script `1_ptm_detection.py`.
