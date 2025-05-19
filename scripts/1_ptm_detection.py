@@ -79,7 +79,7 @@ udf.expand_dataframe_view()
 GLYCOSYLATION_LIST_PATH = os.path.join(REPO_ROOT, 'input_data', 'glycosylation_list.csv')
 VESICLEPEDIA_PATH = os.path.join(REPO_ROOT, 'input_data', 'Vesiclepedia_proteins_240712.csv')
 
-# Verify that the files exist
+# Verificar que los archivos existen
 for file_path in [GLYCOSYLATION_LIST_PATH, VESICLEPEDIA_PATH]:
     if not os.path.exists(file_path):
         print(f"\nERROR: Required file not found:\n{file_path}\n")
