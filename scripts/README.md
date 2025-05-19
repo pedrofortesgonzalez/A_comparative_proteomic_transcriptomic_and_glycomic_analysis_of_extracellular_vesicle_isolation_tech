@@ -118,7 +118,7 @@ This script performs statistical analyses on the processed data and generates bo
 Processed CSV files in `../3_figures/filtered_dfs/`
 
 **Output files**:
-- Boxplots in `../3_figures/figures/boxplots/`
+- Boxplots in `../3_figures/boxplots/`
 - Boxplots are created with automatically adjusted y-axes
 
 
