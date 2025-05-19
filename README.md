@@ -13,8 +13,8 @@ The complete workflow and required dependencies for this analysis are described 
 # Description
 This project analyzes the performance of different EV isolation techniques (ExoGAG, IP CD9, SEC, UC) for detecting glycosylated proteins and peptides. The analysis focuses on identifying:
 
-- The total number of proteins and peptides detected by each technique
-- Proteins and peptides present in the Vesiclepedia database
-- Proteins and peptides with specific glycosylations
+- The total number of proteins and peptides detected by each technique.
+- Proteins and peptides present in the Vesiclepedia database.
+- Proteins and peptides with specific glycosylations.
 
-The results include statistical analyses (Kruskal-Wallis and *post hoc* Dunn's test if the former is significant) and visualizations (boxplots and pie charts) that allow comparing the performance of the different techniques.
+The results include statistical analyses (Kruskal-Wallis and *post hoc* Dunn's test if the former is significant) and visualizations (boxplots and pie charts) that allow for comparing the performance of the different techniques.
