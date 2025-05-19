@@ -7,7 +7,7 @@ This repository contains the code and data used for the detection and analysis o
 --doi--
 
 # Workflow
-The complete workflow and required dependencies for this analysis are described in <ins>./scripts/README.md</ins>.
+The complete workflow and required dependencies for this analysis are described in `scripts/README.md`.
 
 
 # Description
