@@ -1,0 +1,23 @@
+- Python 3.10.16
+- Required Python packages:
+  - pandas == 2.2.3
+  - session_info == 1.0.0
+  - tqdm == 4.67.1
+  - numpy == 1.26.4
+
+
+- R 4.4.2
+- Required R packages:
+  - dplyr_1.1.4 
+  - gplot2_3.5.1 
+  - ggpubr_0.6.0 
+  - rstatix_0.7.2
+  - envalysis_0.7.0 
+  - gridExtra_2.3 
+  - ggrepel_0.9.6 
+  - rstudioapi_0.17.1 
+
+
+- Code cleaning packages:
+  - Python: vulture == 1.0
+  - R: nolock_1.1.0
