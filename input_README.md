@@ -7,6 +7,7 @@ This folder contains the mass spectrometry data files for analysis. CSV files co
   - `Accession` - Protein/peptide identifier in UniProtKB Accession format
   - `Peptide` - Peptide sequence
   - `PTM` - Post-translational modifications
+  - `Pool`- In case the analysis is pooled
 
 ## Important Notes
 - This folder is will have a temporary copy created during processing (`../input_data/input`)
