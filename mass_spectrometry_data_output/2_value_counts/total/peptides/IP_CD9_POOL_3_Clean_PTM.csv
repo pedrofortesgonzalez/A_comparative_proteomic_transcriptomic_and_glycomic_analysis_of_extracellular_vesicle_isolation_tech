@@ -1,0 +1,21 @@
+Value;Count;Percentage
+Carbamidomethylation;663;93.77652050919377
+"Hex(4); Carbamidomethylation";9;1.272984441301273
+"dHex Hex(2) HexA HexNAc Sulf; Carbamidomethylation";4;0.5657708628005658
+"Hexosamine; Lactosylation";4;0.5657708628005658
+"Gluconoylation; HexNAc2; Carbamidomethylation";4;0.5657708628005658
+"Gluconoylation; HexNAc NeuGc; Carbamidomethylation";3;0.4243281471004243
+"Hexose; Hex(5)";3;0.4243281471004243
+"Gluconoylation; Hex(2) HexNAc NeuGc(2)";3;0.4243281471004243
+"Heptose; HexNAc(3); Carbamidomethylation";2;0.2828854314002829
+Ac Hex HexNAc NeuAc;2;0.2828854314002829
+"Hex(2) HexNAc Me; Carbamidomethylation";1;0.14144271570014144
+"Hex NeuAc; Carbamidomethylation; Hexosamine";1;0.14144271570014144
+Hex(4);1;0.14144271570014144
+Hex HexA HexNAc;1;0.14144271570014144
+Hexose;1;0.14144271570014144
+"Hexose; Hex HexNAc dHex Me";1;0.14144271570014144
+"Gluconoylation; Carbamidomethylation";1;0.14144271570014144
+Hex Pent;1;0.14144271570014144
+"Hexose; Hex Pent(2)";1;0.14144271570014144
+"Hex2 dHex2; Carbamidomethylation";1;0.14144271570014144

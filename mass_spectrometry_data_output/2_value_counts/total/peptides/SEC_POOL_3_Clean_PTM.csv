@@ -1,0 +1,115 @@
+Value;Count;Percentage
+Carbamidomethylation;1275;80.95238095238095
+dHex Hex(2) HexNAc(2) Pent;30;1.9047619047619049
+Hex HexNAc NeuAc(3);22;1.3968253968253967
+Hex HexNAc(3) NeuGc;12;0.7619047619047619
+"Gluconoylation; HexNAcylation (N)";8;0.5079365079365079
+Hex1HexNAc2dHex2;8;0.5079365079365079
+Heptose;7;0.4444444444444444
+Phosphoglycosyl-D-mannose-1-phosphoryl;6;0.38095238095238093
+Hex2HexNAc2;6;0.38095238095238093
+Hex HexNAc(2) NeuAc(2);6;0.38095238095238093
+HexNAc1dHex2;6;0.38095238095238093
+"Gluconoylation; Heptose";6;0.38095238095238093
+"Hex(4); Glucosylgalactosyl hydroxylysine; Carbamidomethylation";5;0.31746031746031744
+"Hex HexNAc dHex Me; Carbamidomethylation";5;0.31746031746031744
+Hex Pent(2);5;0.31746031746031744
+dHex Hex HexNAc(2) NeuAc(2);4;0.25396825396825395
+dHex Hex HexNAc(3);4;0.25396825396825395
+"Gluconoylation; Pentose";4;0.25396825396825395
+"Carbamidomethylation; Hex HexNAc(3)";4;0.25396825396825395
+dHex Hex(2) HexNAc;4;0.25396825396825395
+"Hexose; Hex(2) HexNAc NeuGc(2)";4;0.25396825396825395
+dHex(2) Hex(2) HexNAc(2);4;0.25396825396825395
+HexNAc NeuGc;3;0.19047619047619047
+Hex(5);3;0.19047619047619047
+HexNAc(2) NeuAc Sulf;3;0.19047619047619047
+"Gluconoylation; Hex(3) Phos";3;0.19047619047619047
+"Hexose; Carbamidomethylation; Hex(2) HexA Pent Sulf";3;0.19047619047619047
+Hexosamine;3;0.19047619047619047
+"Phosphoglycosyl-D-mannose-1-phosphoryl; Carbamidomethylation";2;0.12698412698412698
+"Heptose; Ac Hex HexNAc NeuAc";2;0.12698412698412698
+"Carbamidomethylation; Heptose; Hex HexNAc Kdn Sulf";2;0.12698412698412698
+"Gluconoylation; HexNAcylation (ST)";2;0.12698412698412698
+"dHex(2) Hex(4) HexNAc(4); Carbamidomethylation";2;0.12698412698412698
+"Hexose; Hex1HexNAc2dHex1Pent1";2;0.12698412698412698
+"Hex HexNAc dHex Me(2); Hexose (NSY)";2;0.12698412698412698
+Hex2HexNAc2dHex1;2;0.12698412698412698
+"Gluconoylation; dHex(2) Hex(2) HexA; Carbamidomethylation";2;0.12698412698412698
+Hex HexNAc(3) NeuAc(2);2;0.12698412698412698
+"Hex(5) HexNAc; Carbamidomethylation";2;0.12698412698412698
+Hex(3) HexNAc(2) NeuAc(2);2;0.12698412698412698
+Hex(2) HexNAc NeuGc;2;0.12698412698412698
+Hex(3) HexNAc(5);2;0.12698412698412698
+HexNAc NeuAc;2;0.12698412698412698
+dHex(2) Hex(3);2;0.12698412698412698
+dHex(2) Hex(4);2;0.12698412698412698
+"Gluconoylation; dHex Hex(2) HexNAc Sulf";2;0.12698412698412698
+"Gluconoylation; Hex(2) HexNAc";2;0.12698412698412698
+dHex(2) Hex(2) HexNAc(2) Sulf(2);2;0.12698412698412698
+Hexose;2;0.12698412698412698
+"Hexose; Glycosyl-L-hydroxyproline; Carbamidomethylation";2;0.12698412698412698
+Hex HexNAc NeuGc;2;0.12698412698412698
+"Hex(5); Heptose; Carbamidomethylation";2;0.12698412698412698
+H1O3P1Hex2;2;0.12698412698412698
+"Carbamidomethylation; Hex3";2;0.12698412698412698
+"Hexose; Hex Pent";2;0.12698412698412698
+"Heptose; HexNAc(3); Carbamidomethylation";2;0.12698412698412698
+"Hex(3) HexNAc(2) Pent; Carbamidomethylation";2;0.12698412698412698
+"Glycosyl-L-hydroxyproline; Carbamidomethylation";2;0.12698412698412698
+Gluconoylation;2;0.12698412698412698
+"Gluconoylation; Hexosamine";2;0.12698412698412698
+"Lactosylation; Hex1HexNAc1";2;0.12698412698412698
+"Gluconoylation; Carbamidomethylation";2;0.12698412698412698
+"dHex(2) Hex(3) HexA HexNAc Sulf; Carbamidomethylation";2;0.12698412698412698
+"Hexosamine; Lactosylation";2;0.12698412698412698
+"Carbamidomethylation; Hexosamine; Lactosylation";1;0.06349206349206349
+"Hexose; dHex Hex HexNAc Kdn";1;0.06349206349206349
+"Gluconoylation; Carbamidomethylation; HexNAcylation (ST)";1;0.06349206349206349
+Hex HexNAc Kdn Sulf;1;0.06349206349206349
+Hex3;1;0.06349206349206349
+"Lactosylation; Hex NeuGc";1;0.06349206349206349
+HexNAcylation (ST);1;0.06349206349206349
+Hex(5) Phos;1;0.06349206349206349
+"dHex(2) Hex(2) HexA HexNAc; Carbamidomethylation";1;0.06349206349206349
+Hex1HexNAc1;1;0.06349206349206349
+"Gluconoylation; Hexose";1;0.06349206349206349
+"Gluconoylation; Hex(3) HexNAc(4) Pent; Carbamidomethylation";1;0.06349206349206349
+"Gluconoylation; Hex(4) HexNAc(3)";1;0.06349206349206349
+"Hex Pent(2); Gluconoylation";1;0.06349206349206349
+Hex(3) HexNAc(3) NeuAc Sulf;1;0.06349206349206349
+dHex Hex HexNAc(3) NeuAc;1;0.06349206349206349
+dHex HexNAc(3);1;0.06349206349206349
+Fucosylated biantennary (-1 galactose);1;0.06349206349206349
+"Glucosylgalactosyl hydroxylysine; Carbamidomethylation; Hexosamine";1;0.06349206349206349
+"Carbamidomethylation; Hex2 dHex2";1;0.06349206349206349
+Glycosyl-L-hydroxyproline;1;0.06349206349206349
+Hex(2) HexNAc Sulf;1;0.06349206349206349
+Hex HexNAc NeuAc NeuGc;1;0.06349206349206349
+"Carbamidomethylation; Phosphoglycosyl-D-mannose-1-phosphoryl";1;0.06349206349206349
+"Hexose; Lactosylation";1;0.06349206349206349
+"Hex2 dHex2; Carbamidomethylation";1;0.06349206349206349
+"Hex HexNAc NeuGc; Hexose (NSY)";1;0.06349206349206349
+"Glycosyl-L-hydroxyproline; dHex Hex(2) HexNAc";1;0.06349206349206349
+Hex2HexNAc2Pent1;1;0.06349206349206349
+dHex(3) Hex(2) HexNAc(3) Kdn;1;0.06349206349206349
+Hex HexNAc dHex Me(2);1;0.06349206349206349
+"Gluconoylation; dHex Hex(7) HexNAc(3); Carbamidomethylation";1;0.06349206349206349
+"dHex(2) Hex(2) HexA HexNAc(2) Sulf; Carbamidomethylation";1;0.06349206349206349
+Pentose;1;0.06349206349206349
+"Hexuronic acid; dHex(2) Hex(4)";1;0.06349206349206349
+Hex HexA HexNAc(2);1;0.06349206349206349
+"Gluconoylation; Glycosyl-L-hydroxyproline; Carbamidomethylation";1;0.06349206349206349
+Hex HexNAc dHex Me;1;0.06349206349206349
+"Hexose; Heptose";1;0.06349206349206349
+"HexNAc1dHex1; Carbamidomethylation";1;0.06349206349206349
+"Phosphoglycosyl-D-mannose-1-phosphoryl; Glycosyl-L-hydroxyproline";1;0.06349206349206349
+"Heptose; HexNAc2";1;0.06349206349206349
+"Lactosylation; Hex HexNAc(2) NeuGc";1;0.06349206349206349
+"Hexose; Hex HexNAc dHex Me(2)";1;0.06349206349206349
+"Hex(2) HexNAc; Heptose";1;0.06349206349206349
+"Hexose; dHex Hex(2) HexNAc";1;0.06349206349206349
+Hex1HexNAc1NeuAc1;1;0.06349206349206349
+Hex(2) HexNAc;1;0.06349206349206349
+"Carbamidomethylation; Hex HexNAc Phos";1;0.06349206349206349
+dHex Hex(3) HexNAc;1;0.06349206349206349
