@@ -10,18 +10,14 @@ Author: Pedro Fortes González (refactored)
 """
 # import libraries
 import os
+import sys
 import pandas as pd
 import numpy as np
 import re
 from pathlib import Path
 import shutil
 from tqdm.notebook import tqdm
-import session_info
 import csv
-
-# Show package list
-session_info.show(dependencies=False, html=False, std_lib=False)
-
 
 
 ##############################################################################
@@ -48,7 +44,59 @@ def reset_dataframe_view():
     pd.reset_option('display.width')
     pd.reset_option('display.max_colwidth')
 
+##############################################################################
+# Basic variables functions
 
+def set_pools():
+    # Ask if this is a pooled analysis
+    pool_analysis_confirmation = input("\nIs this a pooled analysis? (y/n): ").strip().lower()
+    # Check if answer is affirmative
+    affirmative_answers = ['y', 'yes', 'sí', 'si', 's']
+    is_pooled = pool_analysis_confirmation in affirmative_answers
+    # Return
+    return is_pooled
+
+
+def set_techs():   
+    # Ask user to specify techniques in the analysis
+    print(f"\n-----------------------------------------------", f"\n-----------------------------------------------")
+    print("Choose a set of analysed techniques: ", f"\n  0 --> None", f"\n  1 --> Default ('Whole_milk', 'ExoGAG', 'SEC', 'IP_CD9', 'UC')")
+    print(f"  2 --> Custom", f"\n-----------------------------------------------")
+    choose_techniques = int(input("\nType an option (0/1/2): "))
+
+    if choose_techniques == 0:
+        TECHNIQUES = []
+        print(f"\nYour chose to run the analysis without specified techniques")
+    elif choose_techniques == 1:
+        TECHNIQUES = ['Whole_milk', 'ExoGAG', 'SEC', 'IP_CD9', 'UC']
+        print(f"\nYour chosen set of techniques is the Default set:", TECHNIQUES)
+    else:
+        TECHNIQUES = re.split(r",\s*", input("\nEnter technique names sepparated by commas: "))
+        print(f"\nYour chosen set of techniques is the Custom set: ", TECHNIQUES)
+
+    # has_techniques is defined as a bool
+    has_techniques = len(TECHNIQUES) > 0
+    # other ways to define it
+    #has_techniques = True if len(TECHNIQUES) > 0 else False
+    #has_techniques = bool(TECHNIQUES)
+
+    # Return
+    return has_techniques, TECHNIQUES
+
+
+def set_analysis(var1, var2, TECHNIQUES):
+    print("\nYour analysis is: ")
+    if not var1 and not var2:
+        print("Not pooled and has no techniques\n\n!!!!!!!!!!!!!!!!!!!!\nUNSUPPORTED ANALYSIS\nHalting execution...")
+        sys.exit(2)
+    elif not var1:
+        print(f"Unpooled technique analysis: comparing {len(TECHNIQUES)} different techniques")
+    elif not var2:
+        print(f"Pool-only analysis: comparing only pools")
+    else:
+        print(f"Pooled technique analysis: comparing pools of {len(TECHNIQUES)} different techniques")
+    
+    
     
 ##############################################################################
 # File preprocessing functions
@@ -106,32 +154,64 @@ def create_input_directory(RAW_DATA_DIR, PROCESSED_DATA_DIR):
     return processed_dir
 
 
-def rename_pool_files(directory, techniques):
+def rename_pool_files(directory, techniques, is_pooled, has_techniques):
     """
     Rename mass spectrometry files to indicate pool status.
     
     Args:
         directory: Path to directory containing files to rename
         techniques: List of technique identifiers used in filenames
+
+    Returns:
+        has_techniques: Boolean indicating if this analisys is for comparing techniques
         
     This function adds "_NO_POOL" suffix to files without "POOL" in the name
     and corrects specific misnamed files.
     """
+
+    # Iterate over files
     files = [file for file in Path(directory).rglob('*')]
+
     for file in files:
-        if "POOL" not in file.name: 
-            file.unlink()
-            print(f"\nFile {file.name} deleted")
-            
-        # Correct specific misnamed file
+        sep = "*"
+        starnum = len(file.name)
+        
+        print(f"\n{sep*starnum*2}")
+        print(f"{sep*(int(starnum/2) - 2)} {file.name} {sep*(int(starnum/2) - 2)}")
+        print(f"{sep*starnum*2}")   
+        
+        # Always correct specific misnamed file (common to both branches)
         if "DB search psm_ID_CD9_NO_POOL.csv" in file.name:
             new_name = file.with_name("DB search psm_IP_CD9_NO_POOL.csv")
             file.rename(new_name)
             file = new_name
             print(f"\nFile renamed: {file.name}")
+        
+        # If analysis IS pooled, handle files without "POOL"
+        if is_pooled and "POOL" not in file.name:
+            print(f"\n *********** WARNING ***********")
+            print(f"Files without specified 'POOL' in their names will be removed from pooled analyses")
+            print(f"\nFile without specified pool: {file.name}")
+            
+            answer = input("\nDo you wish to rename it? (y/n): ").strip().lower()
+            affirmative_answers = ['y', 'yes', 'sí', 'si', 's']
+            if answer in affirmative_answers:
+                addendum = input("\nPlease specify pool identifier (e.g., 'pool 1' / 'all pools'): ").upper()
+                addendum = re.sub(r"\s+", "_", addendum)
+                
+                # Create new name by inserting addendum before file extension
+                stem = file.stem  # filename without extension
+                suffix = file.suffix  # file extension
+                new_name = file.with_name(f"{stem}_{addendum}{suffix}")
+                file.rename(new_name)
+                file = new_name  # Update file reference
+                print(f"\nFile renamed to: {file.name}")
+            else:
+                file.unlink()
+                print(f"\nFile {file.name} deleted")
             
 
-def simplify_filenames(directory, techniques):
+def simplify_filenames(directory, garbage):
     """
     Remove extraneous prefixes from mass spectrometry filenames.
     
@@ -139,24 +219,31 @@ def simplify_filenames(directory, techniques):
         directory: Path to directory containing files to rename
         techniques: List of technique identifiers used in filenames
         
-    Removes "DB search psm_" prefix and replaces spaces with underscores
+    Removes elements in garbage list and replaces spaces with underscores
     in filenames to create cleaner, more consistent file naming.
     """
     files = [file for file in Path(directory).rglob('*')]
     counter = 0
     
     for file in files:
-        if "DB search psm" in file.name:  # Remove prefix from filename
+        if any(prefix in file.name for prefix in garbage): 
             counter += 1
-            new_name = file.with_name(
-                file.name.replace(' ', '_')
-                         .replace('__', '_')
-                         .lstrip('DB_search_psm_')
-            )
+            new_name_str = file.name
+
+            # Now we erase ALL prefixes (any() doesn't save prefix)
+            for prefix in garbage:
+                new_name_str = re.sub(prefix, "", new_name_str) # Remove prefixes from filename
+                
+            new_name_str = re.sub(r"\s+", "_", new_name_str) # spaces -> underscores
+            new_name_str = re.sub(r"_+", "_", new_name_str) # multiple underscores -> 1 underscore
+            new_name_str = new_name_str.strip("_") # erase underscores at end/beginning
+            
+            new_name = file.with_name(new_name_str)
             file.rename(new_name)
             file = new_name
+            print(f"\nRenamed: {file.name}")
     
-    print(f"Renamed {counter} files")
+    print(f"\nRenamed {counter} files")
             
             
             
@@ -234,48 +321,259 @@ def standardize_csv_delimiters(input_directory, file_pattern="*.csv", backup=Fal
     return modified_files            
 
 
-def combine_pool_files(directory, techniques):
+def extract_pool_number(file_path):
+    """Extract pool number from file name"""
+    match = re.search(r'POOL_(\d+)', file_path.name)
+    return int(match.group(1)) if match else 0
+
+    
+def combine_pool_files(directory, techniques, has_techniques):
     """
     Combine individual pool files (1, 2, 3) into a single combined file.
     
     Args:
         directory: Path to directory containing pool files
         techniques: List of technique identifiers to process
+        has_techniques: Boolean indicating if this analisys is for comparing techniques
         
     For each technique, finds all pool files and combines them into a single CSV
-    with the naming pattern "{technique}_POOLS_123.csv"
+    with the naming pattern "{technique}_POOLS_{pool_len_elements_concatenated}.csv"
     """
-    for technique in techniques:
-        print(f"\n{technique}")
+    
+    # has_techniques == True
+    ########################
+    if has_techniques:
+        for technique in techniques:
+            print(f"\n{technique}")
+            # Create search pattern with regex to find pool files
+            pattern = re.compile(f"{technique}.*POOL(?!S).*\d\.csv")
+            # Find files matching the regex pattern
+            files = [
+                file for file in Path(directory).rglob('*') 
+                if pattern.search(file.name)
+            ]
+        
+            # Sort files per pool number
+            files = sorted(files, key=extract_pool_number)
+        
+            # Process each file for the current technique
+            for i, file in enumerate(files, 1):
+                df = pd.read_csv(file, sep=";")
+                # Extract pool number from file name
+                pool_number = extract_pool_number(file)
+                print(f"\nDimensions {technique} pool {pool_number} df: {df.shape}")
+        
+            # Combine all pool files into one DataFrame
+            combined_pool_df = pd.concat(
+                [pd.read_csv(file, sep=";") for file in files], 
+                ignore_index=True
+            )
+        
+            # Save the resulting DataFrame
+            pool_output_path = directory + f"/{technique}_POOLS_123.csv"
+            combined_pool_df.to_csv(pool_output_path, index=False, sep=";")
+            print(f"Dimensions {technique} combined pools: {combined_pool_df.shape}")
+
+
+    # has_techniques == False
+    #########################
+    else:
         # Create search pattern with regex to find pool files
-        pattern = re.compile(f"{technique}.*POOL(?!S).*\d\.csv")
+        pattern = re.compile(r".*POOL(?!S).*\d\.csv")  # Corregido: añadido 'r' para raw string
         # Find files matching the regex pattern
         files = [
             file for file in Path(directory).rglob('*') 
             if pattern.search(file.name)
         ]
+
+        # Sort files per pool number
+        files = sorted(files, key=extract_pool_number)
         
-        # Process each file for the current technique
-        file_count = 0
-        for file in files:
-            file_count += 1
+        # Process each file
+        for i, file in enumerate(files, 1):
             df = pd.read_csv(file, sep=";")
-            print(f"\nDimensions {technique} pool {file_count} df: {df.shape}")
-        
+            pool_number = extract_pool_number(file)
+            print(f"\nDimensions pool {pool_number} df: {df.shape}")
+            
         # Combine all pool files into one DataFrame
         combined_pool_df = pd.concat(
-            [pd.read_csv(file, sep=";") for file in files], 
-            ignore_index=True
+        [pd.read_csv(file, sep=";") for file in files], 
+        ignore_index=True
         )
         
         # Save the resulting DataFrame
-        pool_output_path = directory + f"/{technique}_POOLS_123.csv"
+        file_count = len(files)
+        file_count_name = ''.join(str(x) for x in range(1, file_count+1))
+        pool_output_path = directory + f"/ALL_POOLS.csv"
         combined_pool_df.to_csv(pool_output_path, index=False, sep=";")
-        print(f"Dimensions {technique} combined pools: {combined_pool_df.shape}")
+        print(f"Dimensions combined pools: {combined_pool_df.shape}")
+        
 
+def separate_pool_files(directory):
+    """
+    Separate combined pool files into individual pool files.
+    
+    Args:
+        directory: Path to directory containing combined pool files
+        
+    For each file that contains pool data, separates them by pool
+    based on the TARGET column values.
+    """
+    # Look for files that might be combined (either explicitly marked as ALL_POOLS or potential combined files)
+    all_files = list(Path(directory).rglob('*.csv'))
+    
+    # First priority: files explicitly marked as ALL_POOLS
+    all_pools_files = [f for f in all_files if 'ALL_POOLS' in f.name]
+    
+    # Second priority: files that don't have individual pool indicators
+    potential_combined_files = [
+        f for f in all_files 
+        if not re.search(r'POOL_\d', f.name) and 'ALL_POOLS' not in f.name
+    ]
+    
+    # Combine both lists, prioritizing ALL_POOLS files
+    files_to_process = all_pools_files + potential_combined_files
+    
+    if not files_to_process:
+        print("No files found to separate.")
+        return
+        
+    for file in files_to_process:
+        print(f"\nProcessing: {file.name}")
+        
+        try:
+            df = pd.read_csv(file, sep=";")
+                
+            # Check if TARGET column exists
+            TARGET = 'Source File Mod'
+            if TARGET not in df.columns:
+                print(f"Warning: {TARGET} column not found in {file.name}")
+                continue
+                
+            # Extract pool numbers from TARGET column
+            df['Pool_Number'] = df['Source File Mod'].str.extract(r'Pool_(\d+)\.mgf')
+                
+            # Check if we found any pool numbers
+            pool_numbers = df['Pool_Number'].dropna().unique().tolist()
+            if len(pool_numbers) == 0:
+                print(f"No pool information found in {file.name}")
+                continue
+                
+            # Ensure consistent type for pool numbers (convert to strings)
+            pool_numbers = sorted(pool_numbers, key=lambda x: int(x) if x.isdigit() else x)
+            print(f"Found pools: {pool_numbers}")
+                
+            # Separate by pools
+            for pool_num in pool_numbers:
+                pool_data = df[df['Pool_Number'] == pool_num].copy()
+                pool_data = pool_data.drop('Pool_Number', axis=1)  # Remove helper column
+                    
+                # Generate output filename
+                file_stem = file.stem
+                # Remove _ALL_POOLS if it exists to get clean base name
+                clean_stem = file_stem.replace('_ALL_POOLS', '')
+                output_file = Path(directory) / f"{clean_stem}_POOL_{pool_num}.csv"
+                    
+                # Save individual pool file
+                pool_data.to_csv(output_file, index=False, sep=";")
+                print(f"Created: {output_file.name}")
+                print(f"Dimensions pool {pool_num}: {pool_data.shape}")
+                
+            # Rename original to indicate it contains all pools (only if not already marked)
+            if 'ALL_POOLS' not in file.name:
+                all_pools_name = file.with_name(f"{file.stem}_ALL_POOLS.csv")
+                # Check if destination exists before renaming
+                if all_pools_name.exists():
+                    print(f"Warning: {all_pools_name.name} already exists, skipping rename")
+                else:
+                    try:
+                        file.rename(all_pools_name)
+                        print(f"Original file renamed to: {all_pools_name.name}")
+                    except Exception as e:
+                        print(f"Error renaming file: {e}")
+            else:
+                print(f"File already marked as ALL_POOLS: {file.name}")
+                
+        except Exception as e:
+            print(f"Error processing {file.name}: {e}")
 
-
-
+def handle_pool_files(directory, techniques, is_pooled, has_techniques):
+    """
+    Handle pool files: either combine individual pools or separate combined pools.
+    
+    Args:
+        directory: Path to directory containing files
+        techniques: List of technique identifiers used in filenames
+        is_pooled: Boolean indicating if this is a pooled analysis
+        has_techniques: Boolean indicating if this analysis is for comparing techniques
+    """
+    if not is_pooled:
+        print("\n=== NON-POOLED ANALYSIS ===")
+        print("Pool handling skipped for non-pooled analysis.")
+        return
+        
+    print("\n=== POOLED ANALYSIS DETECTED ===")
+    
+    # Ensure directory is a Path object for consistency
+    directory_path = Path(directory) if not isinstance(directory, Path) else directory
+    
+    files = list(directory_path.glob('*.csv'))
+    
+    # Check for individual pool files (POOL_1, POOL_2, etc.)
+    individual_pool_files = [f for f in files if re.search(r'POOL_\d', f.name)]
+    
+    # Check for combined files - either ALL_POOLS or files without pool indicators
+    combined_files = [f for f in files if 'ALL_POOLS' in f.name or 
+                     (not re.search(r'POOL_\d', f.name) and f.name.endswith('.csv'))]
+    
+    has_individual_pools = len(individual_pool_files) > 0
+    has_combined_files = len(combined_files) > 0
+    
+    if has_individual_pools:
+        print(f"Found individual pool files: {len(individual_pool_files)} files")
+    if has_combined_files:
+        print(f"Found potential combined files: {len(combined_files)} files")
+    
+    # Decide what action to take
+    if has_individual_pools and not has_combined_files:
+        print("\n→ Action: Combining individual pool files...")
+        try:
+            # Convert Path to string for backward compatibility
+            combine_pool_files(str(directory_path), techniques, has_techniques)
+        except Exception as e:
+            print(f"Error combining pool files: {e}")
+            
+    elif has_combined_files and not has_individual_pools:
+        print("\n→ Action: Separating combined files into individual pools...")
+        try:
+            # separate_pool_files already accepts Path objects
+            separate_pool_files(directory_path)
+        except Exception as e:
+            print(f"Error separating pool files: {e}")
+            
+    elif has_individual_pools and has_combined_files:
+        print("\n⚠️  Warning: Found both individual and combined files!")
+        action = input("What would you like to do? (combine/separate/auto): ").strip().lower()
+        
+        try:
+            if action.startswith('c'):
+                combine_pool_files(str(directory_path), techniques, has_techniques)
+            elif action.startswith('s'):
+                separate_pool_files(directory_path)
+            elif action.startswith('a'):
+                # Auto mode: choose based on counts (go with the operation that would process more files)
+                if len(individual_pool_files) >= len(combined_files):
+                    print("Auto-selected: combining files (more individual files found)")
+                    combine_pool_files(str(directory_path), techniques, has_techniques)
+                else:
+                    print("Auto-selected: separating files (more combined files found)")
+                    separate_pool_files(directory_path)
+            else:
+                print("No action taken.")
+        except Exception as e:
+            print(f"Error during pool file handling: {e}")
+    else:
+        print("\n⚠️  No pool files found.")
 
 
 ##############################################################################
@@ -360,8 +658,8 @@ def extract_peptide_sequences(input_dir, target_col, new_col, pattern):
             df.to_csv(csv_file, sep=";", index=False)
             print(f"{csv_file.name} overwritten with '{new_col}'")
         else:
-            print(f"Column {target_col} not found in {csv_file}")
-            
+            print(f"Column {target_col} not found in {csv_file}")         
+    
 def classify_ptm_types(input_dir, target_col, new_col):
     """
     Classify PTMs into categories based on pattern matching in glycosylation markers.
@@ -382,28 +680,38 @@ def classify_ptm_types(input_dir, target_col, new_col):
         
         if target_col in df.columns:
             print(f"\n{csv_file}: creating {new_col}: ")
-            df[target_col] = df[target_col].astype(str)  # Convert column to string for pattern matching
+            df[target_col] = df[target_col].astype(str)  # Convert column to string for pattern matching         
+            
+            # Create clean_target_col copy to remove garbage from it
+            clean_target_col = "Clean_PTM"
+            df[clean_target_col] = df[target_col].str.replace(r'[A-Z]\d{1,2}:', '', regex=True)
+            df[clean_target_col] = df[clean_target_col].str.replace(r'(\([\D]{2,}\))?:(true|false)', '', regex=True)
+
+            # Explode clean_target_col since it may contain multiple values/row
+            #df[clean_target_col] = df[clean_target_col].str.split(';') # split turns row into a list with specified sep
+            #df[clean_target_col] = df[clean_target_col].explode(clean_target_col) # explode turns list-like rows into multiple rows
+            #df[clean_target_col] = df[clean_target_col].str.replace('^\s', "", regex=True)# clean initial spaces after removing separator (";")
             
             # Define conditions for PTM classification
             conditions = [
                 # Fucosialylated: contains fucose/dHex markers AND sialic acid markers
-                df[target_col].str.contains(r'dHex|Fucos|Biantennary', regex=True) & 
-                df[target_col].str.contains(r'NeuGc|NeuAc|Kdn|Neuraminic', regex=True),
+                df[clean_target_col].str.contains(r'dHex|Fucos|Biantennary', regex=True) & 
+                df[clean_target_col].str.contains(r'NeuGc|NeuAc|Kdn|Neuraminic', regex=True),
                 
                 # Fucosylated: contains fucose/dHex markers BUT NO sialic acid markers
-                df[target_col].str.contains(r'dHex|Fucos|Biantennary', regex=True) & 
-                ~df[target_col].str.contains(r'NeuGc|NeuAc|Kdn|Neuraminic', regex=True),
+                df[clean_target_col].str.contains(r'dHex|Fucos|Biantennary', regex=True) & 
+                ~df[clean_target_col].str.contains(r'NeuGc|NeuAc|Kdn|Neuraminic', regex=True),
                 
                 # Sialylated: contains sialic acid markers BUT NO fucose/dHex markers
-                ~df[target_col].str.contains(r'dHex|Fucos|Biantennary', regex=True) & 
-                df[target_col].str.contains(r'NeuGc|NeuAc|Kdn|Neuraminic', regex=True),
+                ~df[clean_target_col].str.contains(r'dHex|Fucos|Biantennary', regex=True) & 
+                df[clean_target_col].str.contains(r'NeuGc|NeuAc|Kdn|Neuraminic', regex=True),
                 
                 # Oligomannose: contains HexNAc markers but no fucose or sialic acid markers
-                df[target_col].str.contains(r'HexNAc|N\-linked\sglycan\score', regex=True) & 
-                ~df[target_col].str.contains(r'dHex|Fucos|NeuGc|NeuAc|Kdn|Neuraminic|Biantennary', regex=True),
+                df[clean_target_col].str.contains(r'HexNAc|N\-linked\sglycan\score', regex=True) & 
+                ~df[clean_target_col].str.contains(r'dHex|Fucos|NeuGc|NeuAc|Kdn|Neuraminic|Biantennary', regex=True),
                 
                 # No PTM: explicitly "nan" values
-                df[target_col] == "nan"
+                df[clean_target_col] == "nan"
             ]
             
             # Define values corresponding to conditions (in order)
@@ -412,23 +720,25 @@ def classify_ptm_types(input_dir, target_col, new_col):
             # Apply conditions to create the new column
             df[new_col] = np.select(conditions, choices, default='Other')
             
-            # Handle empty cells in target_col, marking them as "No PTM"
+            # Handle empty cells in clean_target_col, marking them as "No PTM"
             empty_row_catcher = (
-                df[target_col].isna() | 
-                (df[target_col] == '') | 
-                (df[target_col] == " ") | 
-                (df[target_col] == "nan")
+                df[clean_target_col].isna() | 
+                (df[clean_target_col] == '') | 
+                (df[clean_target_col] == " ") | 
+                (df[clean_target_col] == "nan")
             )
             df.loc[empty_row_catcher, new_col] = 'No PTM'
         else:
             df[new_col] = "No PTM"
-            
-        # Check result
-        print(df[new_col].value_counts(dropna=False))
         
         # Save the modified DataFrame and overwrite original file
         df.to_csv(csv_file, index=False, sep=";")
         print(f"{csv_file.name} overwritten with {new_col}")
+
+        # Check results
+        print(f"\n{df[new_col].value_counts(dropna=False).head(5)}")
+
+        print(f"\n{df[clean_target_col].value_counts(dropna=False).head(5)}")
 
 
 
@@ -500,7 +810,7 @@ def create_output_directories(input_directory):
 # Functions for data filtering
 
 
-def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_of_interest, vesiclepedia, interest_cols):
+def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_of_interest, vesiclepedia, interest_cols, is_pooled, has_techniques, analysis_choice):
     """
     Filter protein data to keep only those present in Vesiclepedia database.
     
@@ -533,9 +843,36 @@ def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_
         sample_name = sample_name.replace(' ', '_').replace('__', '_').rstrip('.csv').lstrip('DB_search_psm_')
         print(sample_name)
 
-        # Identify technique and pool
-        technique = next((technique for technique in techniques if re.search(technique, sample_name)), "")
-        pool = next((pool for pool in pools if re.search(pool, sample_name)), "")
+        # Identify technique and pool based on analysis type
+        
+        ## has_techniques = True
+        if has_techniques:
+            # Original logic: extract technique from filename
+            technique = next((technique for technique in techniques if re.search(technique, sample_name)), "")
+
+        ## has_techniques = False
+        else:
+            # Generic case: no technique-specific processing
+            technique = "Generic"
+
+        ## is_pooled = True
+        if is_pooled:
+            if has_techniques:
+                # Original logic: extract pool from filename using pools list
+                pool = next((pool for pool in pools if re.search(pool, sample_name)), "")
+            else:
+                # Generic pooled case: try to extract pool info from filename or use generic
+                if re.search(r'POOL_(\d+)', sample_name):
+                    pool_match = re.search(r'POOL_(\d+)', sample_name)
+                    pool = f"POOL_{pool_match.group(1)}"
+                elif 'ALL_POOLS' in sample_name:
+                    pool = "ALL_POOLS"
+                else:
+                    pool = "Unknown_Pool"
+
+        ## is_pooled = False
+        else:
+            pool = "NO_POOL"
     
         # Filter proteins by presence in Vesiclepedia
         peptides_count = df["Peptide_Sequence"].value_counts()
@@ -553,11 +890,11 @@ def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_
     
         # Calculate statistics
         n_prots = len(df["Prot_Name"].value_counts())
-        n_ptms = len(df["PTM"].value_counts())
+        n_ptms = len(df["Clean_PTM"].value_counts())
         n_peptides = len(df["Peptide_Sequence"].value_counts())
        
         n_prots_filt = len(df_filtered["Prot_Name"].value_counts())
-        n_ptms_filt = len(df_filtered["PTM"].value_counts())
+        n_ptms_filt = len(df_filtered["Clean_PTM"].value_counts())
         n_peptides_filt = len(df_filtered["Peptide_Sequence"].value_counts())
         
         ratio_ptms_prots = (100 * n_prots_filt) / n_prots if n_prots > 0 else 0
@@ -582,32 +919,73 @@ def filter_vesiclepedia_proteins(input_dir, output_dir, techniques, pools, ptms_
         
     # Sort summary by technique and pool
     summary_df = summary_df.sort_values(by=['Technique', "Pool"])
+    # If working w/ the default set of techniques, move "Whole_milk" to the first position
+    if analysis_choice.startswith("1"):
+        factor_tech_vals = list(summary_df['Technique'].unique())  # Convert to a list first
+        factor_tech_vals = [factor_tech_vals[-1]] + factor_tech_vals[:-1]  # Move last to first position
+        summary_df['Technique'] = pd.Categorical(summary_df['Technique'], categories=factor_tech_vals, ordered=True)
+        summary_df = summary_df.sort_values(by=['Technique', "Pool"])
     
     # Export summary results in different configurations
-    # All samples
+    # Always export all samples
     summary_file_path = output_dir / 'summary_all.csv'
     summary_df.to_csv(summary_file_path, index=False, sep=";")
+    
+    if is_pooled and has_techniques:
+        # Original logic for pooled analysis with techniques
+        
+        # POOLS_123 only
+        sf = summary_df.loc[summary_df["Pool"]=="POOLS_123"]
+        if not sf.empty:
+            filepath = output_dir / 'summary_pools_123.csv'
+            sf.to_csv(filepath, index=False, sep=";")
 
-    # POOLS_123 only
-    sf = summary_df.loc[summary_df["Pool"]=="POOLS_123"]
-    filepath = output_dir / 'summary_pools_123.csv'
-    sf.to_csv(filepath, index=False, sep=";")
+        # POOLS_123 & NO_POOL
+        sf = summary_df.loc[(summary_df["Pool"]=="POOLS_123") | (summary_df["Pool"]=="NO_POOL")]
+        if not sf.empty:
+            filepath = output_dir / 'summary_123nopool.csv'
+            sf.to_csv(filepath, index=False, sep=";")
 
-    # POOLS_123 & NO_POOL
-    sf = summary_df.loc[(summary_df["Pool"]=="POOLS_123") | (summary_df["Pool"]=="NO_POOL")]
-    filepath = output_dir / 'summary_123nopool.csv'
-    sf.to_csv(filepath, index=False, sep=";")
-
-    # Individual pools (POOL 1, POOL 2, POOL 3)
-    sf = summary_df.loc[(summary_df["Pool"]!="POOLS_123") & (summary_df["Pool"]!="NO_POOL")]
-    filepath = output_dir / 'summary_individual_pools.csv'
-    sf.to_csv(filepath, index=False, sep=";")
+        # Individual pools (POOL 1, POOL 2, POOL 3)
+        sf = summary_df.loc[(summary_df["Pool"]!="POOLS_123") & (summary_df["Pool"]!="NO_POOL")]
+        if not sf.empty:
+            filepath = output_dir / 'summary_individual_pools.csv'
+            sf.to_csv(filepath, index=False, sep=";")
+    
+    elif is_pooled and not has_techniques:
+        # Generic pooled analysis - group by pool types
+        
+        # All pools combined
+        sf = summary_df.loc[summary_df["Pool"]=="ALL_POOLS"]
+        if not sf.empty:
+            filepath = output_dir / 'summary_all_pools.csv'
+            sf.to_csv(filepath, index=False, sep=";")
+        
+        # Individual pools (POOL_1, POOL_2, etc.)
+        sf = summary_df.loc[summary_df["Pool"].str.contains("POOL_", na=False)]
+        if not sf.empty:
+            filepath = output_dir / 'summary_individual_pools.csv'
+            sf.to_csv(filepath, index=False, sep=";")
+    
+    else:
+        # Non-pooled analysis - group by technique if available
+        if has_techniques:
+            # Export by technique
+            for technique in summary_df["Technique"].unique():
+                sf = summary_df.loc[summary_df["Technique"]==technique]
+                if not sf.empty:
+                    filepath = output_dir / f'summary_{technique}.csv'
+                    sf.to_csv(filepath, index=False, sep=";")
+        else:
+            # Generic non-pooled - just the main summary
+            print("Generic non-pooled analysis - only summary_all.csv exported")
     
     return summary_df
 
             
 
-def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_of_interest, interest_cols):
+def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_of_interest, 
+                                interest_cols, is_pooled, has_techniques, analysis_choice):
     """
     Filter protein data to keep only those with glycosylation PTMs of interest.
     
@@ -618,7 +996,9 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
         pools: List of pool identifiers in the filenames
         ptms_of_interest: List of glycosylation PTMs to filter for
         interest_cols: Columns to include in filtered output
-        
+        is_pooled: Boolean indicating if this is a pooled analysis
+        has_techniques: Boolean indicating if files follow technique naming patterns
+    
     Returns:
         DataFrame summarizing the results of filtering across all files
     """
@@ -640,14 +1020,36 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
             sample_name = sample_name.replace(' ', '_').replace('__', '_').rstrip('.csv').lstrip('DB_search_psm_')
             print(f"\n{sample_name}")
 
-            # Identify technique and pool
-            technique = next((technique for technique in techniques if re.search(technique, sample_name)), "")
-            pool = next((pool for pool in pools if re.search(pool, sample_name)), "")
+            # Identify technique and pool based on analysis type
+            if has_techniques:
+                # Original logic: extract technique from filename
+                technique = next((technique for technique in techniques if re.search(technique, sample_name)), "")
+            else:
+                # Generic case: no technique-specific processing
+                technique = "Generic"
+            
+            if is_pooled:
+                if has_techniques:
+                    # Original logic: extract pool from filename using pools list
+                    pool = next((pool for pool in pools if re.search(pool, sample_name)), "")
+                else:
+                    # Generic pooled case: try to extract pool info from filename
+                    if re.search(r'POOL_(\d+)', sample_name):
+                        pool_match = re.search(r'POOL_(\d+)', sample_name)
+                        pool = f"POOL_{pool_match.group(1)}"
+                    elif 'ALL_POOLS' in sample_name:
+                        pool = "ALL_POOLS"
+                    else:
+                        pool = "Unknown_Pool"
+            else:
+                # Non-pooled analysis
+                pool = "NO_POOL"
+            
             # Filter proteins by glycosylation PTMs
             peptides_count = df["Peptide_Sequence"].value_counts()
-            print(f"\nTotal peptides: {len(peptides_count)}")
+            print(f"Total peptides: {len(peptides_count)}")
             
-            condition = df["PTM"].isin(ptms_of_interest)
+            condition = df["Clean_PTM"].isin(ptms_of_interest)
             df_filtered = df.loc[condition, interest_cols]
             
             # Save filtered data
@@ -655,29 +1057,15 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
             df_filtered.to_csv(output_file, index=False, sep=";")
             
             filtered_peptides_count = df_filtered["Peptide_Sequence"].value_counts()
-            print(f"\nGlycosylated peptides: {len(filtered_peptides_count)}")
-
-            # Filter proteins by glycosylation PTMs
-            peptides_count = df["Peptide_Sequence"].value_counts()
-            print(f"\nTotal peptides: {len(peptides_count)}")
-            
-            condition = df["PTM"].isin(ptms_of_interest)
-            df_filtered = df.loc[condition, interest_cols]
-            
-            # Save filtered data
-            output_file = output_dir / f"{sample_name}_filtered_glyc.csv"
-            df_filtered.to_csv(output_file, index=False, sep=";")
-            
-            filtered_peptides_count = df_filtered["Peptide_Sequence"].value_counts()
-            print(f"\nGlycosylated peptides: {len(filtered_peptides_count)}")
+            print(f"Glycosylated peptides: {len(filtered_peptides_count)}")
     
             # Calculate statistics
             n_prots = len(df["Prot_Name"].value_counts())
-            n_ptms = len(df["PTM"].value_counts())
+            n_ptms = len(df["Clean_PTM"].value_counts())
             n_peptides = len(df["Peptide_Sequence"].value_counts())
        
             n_prots_filt = len(df_filtered["Prot_Name"].value_counts())
-            n_ptms_filt = len(df_filtered["PTM"].value_counts())
+            n_ptms_filt = len(df_filtered["Clean_PTM"].value_counts())
             n_peptides_filt = len(df_filtered["Peptide_Sequence"].value_counts())
         
             ratio_ptms_prots = (100 * n_prots_filt) / n_prots if n_prots > 0 else 0
@@ -702,26 +1090,66 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
         
     # Sort summary by technique and pool
     summary_df = summary_df.sort_values(by=['Technique', "Pool"])
+    # If working w/ the default set of techniques, move "Whole_milk" to the first position
+    if analysis_choice.startswith("1"):
+        factor_tech_vals = list(summary_df['Technique'].unique())  # Convert to a list first
+        factor_tech_vals = [factor_tech_vals[-1]] + factor_tech_vals[:-1]  # Move last to first position
+        summary_df['Technique'] = pd.Categorical(summary_df['Technique'], categories=factor_tech_vals, ordered=True)
+        summary_df = summary_df.sort_values(by=['Technique', "Pool"])
     
-    # Export summary results in different configurations
-    # All samples
+    # Export summary results - adapt based on analysis type
+    # Always export all samples
     summary_file_path = output_dir / 'summary_all.csv'
     summary_df.to_csv(summary_file_path, index=False, sep=";")
+    
+    if is_pooled and has_techniques:
+        # Original logic for pooled analysis with techniques
+        
+        # POOLS_123 only
+        sf = summary_df.loc[summary_df["Pool"]=="POOLS_123"]
+        if not sf.empty:
+            filepath = output_dir / 'summary_pools_123.csv'
+            sf.to_csv(filepath, index=False, sep=";")
 
-    # POOLS_123 only
-    sf = summary_df.loc[summary_df["Pool"]=="POOLS_123"]
-    filepath = output_dir / 'summary_pools_123.csv'
-    sf.to_csv(filepath, index=False, sep=";")
+        # POOLS_123 & NO_POOL
+        sf = summary_df.loc[(summary_df["Pool"]=="POOLS_123") | (summary_df["Pool"]=="NO_POOL")]
+        if not sf.empty:
+            filepath = output_dir / 'summary_123nopool.csv'
+            sf.to_csv(filepath, index=False, sep=";")
 
-    # POOLS_123 & NO_POOL
-    sf = summary_df.loc[(summary_df["Pool"]=="POOLS_123") | (summary_df["Pool"]=="NO_POOL")]
-    filepath = output_dir / 'summary_123nopool.csv'
-    sf.to_csv(filepath, index=False, sep=";")
-
-    # Individual pools (POOL 1, POOL 2, POOL 3)
-    sf = summary_df.loc[(summary_df["Pool"]!="POOLS_123") & (summary_df["Pool"]!="NO_POOL")]
-    filepath = output_dir / 'summary_individual_pools.csv'
-    sf.to_csv(filepath, index=False, sep=";")
+        # Individual pools (POOL 1, POOL 2, POOL 3)
+        sf = summary_df.loc[(summary_df["Pool"]!="POOLS_123") & (summary_df["Pool"]!="NO_POOL")]
+        if not sf.empty:
+            filepath = output_dir / 'summary_individual_pools.csv'
+            sf.to_csv(filepath, index=False, sep=";")
+    
+    elif is_pooled and not has_techniques:
+        # Generic pooled analysis - group by pool types
+        
+        # All pools combined
+        sf = summary_df.loc[summary_df["Pool"]=="ALL_POOLS"]
+        if not sf.empty:
+            filepath = output_dir / 'summary_all_pools.csv'
+            sf.to_csv(filepath, index=False, sep=";")
+        
+        # Individual pools (POOL_1, POOL_2, etc.)
+        sf = summary_df.loc[summary_df["Pool"].str.contains("POOL_", na=False)]
+        if not sf.empty:
+            filepath = output_dir / 'summary_individual_pools.csv'
+            sf.to_csv(filepath, index=False, sep=";")
+    
+    else:
+        # Non-pooled analysis - group by technique if available
+        if has_techniques:
+            # Export by technique
+            for technique in summary_df["Technique"].unique():
+                sf = summary_df.loc[summary_df["Technique"]==technique]
+                if not sf.empty:
+                    filepath = output_dir / f'summary_{technique}.csv'
+                    sf.to_csv(filepath, index=False, sep=";")
+        else:
+            # Generic non-pooled - just the main summary
+            print("\nGeneric non-pooled analysis - only summary_all.csv exported")
     
     return summary_df
 
@@ -731,7 +1159,8 @@ def filter_glycosylated_proteins(input_dir, output_dir, techniques, pools, ptms_
 # Functions for counting
 
 
-def count_peptides_by_category(input_dir, output_dir, techniques, pools, interest_cols):
+def count_peptides_by_category(input_dir, output_dir, techniques, pools, interest_cols, 
+                              is_pooled, has_techniques):
     """
     Count and analyze peptides by different categories of interest.
     
@@ -741,6 +1170,8 @@ def count_peptides_by_category(input_dir, output_dir, techniques, pools, interes
         techniques: List of isolation techniques in the filenames
         pools: List of pool identifiers in the filenames
         interest_cols: Columns to perform value counts on
+        is_pooled: Boolean indicating if this is a pooled analysis
+        has_techniques: Boolean indicating if files follow technique naming patterns
         
     For each column of interest, creates a CSV file with value counts,
     showing the distribution of values and their percentages.
@@ -762,9 +1193,29 @@ def count_peptides_by_category(input_dir, output_dir, techniques, pools, interes
             sample_name = csv_file.stem
             print(sample_name)
             
-            # Identify technique and pool (not used currently but kept for future use)
-            technique = [t for t in techniques if re.search(t, sample_name)]
-            pool = [p for p in pools if re.search(p, sample_name)]
+            # Identify technique and pool based on analysis type
+            if has_techniques:
+                # Original logic: extract technique from filename
+                technique = [t for t in techniques if re.search(t, sample_name)]
+                if is_pooled:
+                    # Extract pool from filename using pools list
+                    pool = [p for p in pools if re.search(p, sample_name)]
+                else:
+                    pool = ["NO_POOL"]
+            else:
+                # Generic case: no technique-specific processing
+                technique = ["Generic"]
+                if is_pooled:
+                    # Generic pooled case: try to extract pool info from filename
+                    if re.search(r'POOL_(\d+)', sample_name):
+                        pool_match = re.search(r'POOL_(\d+)', sample_name)
+                        pool = [f"POOL_{pool_match.group(1)}"]
+                    elif 'ALL_POOLS' in sample_name:
+                        pool = ["ALL_POOLS"]
+                    else:
+                        pool = ["Unknown_Pool"]
+                else:
+                    pool = ["NO_POOL"]
             
             # Count values for each column of interest
             for col in interest_cols:
@@ -782,14 +1233,29 @@ def count_peptides_by_category(input_dir, output_dir, techniques, pools, interes
                     total_count = summary['Count'].sum()
                     summary['Percentage'] = (summary['Count'] / total_count) * 100
                     
+                    # Create output filename that reflects the analysis type
+                    if has_techniques and technique:
+                        tech_str = '_'.join(technique)
+                        if is_pooled and pool:
+                            pool_str = '_'.join(pool)
+                            output_file = output_dir / f"{sample_name}_{col}.csv"
+                        else:
+                            output_file = output_dir / f"{sample_name}_{col}.csv"
+                    else:
+                        if is_pooled and pool:
+                            pool_str = '_'.join(pool)
+                            output_file = output_dir / f"{sample_name}_{col}.csv"
+                        else:
+                            output_file = output_dir / f"{sample_name}_{col}.csv"
+                    
                     # Export the counts to CSV
-                    output_file = output_dir / f"{sample_name}_{col}.csv"
                     summary.to_csv(output_file, index=False, sep=";")
                 else:
                     print(f"Warning: Column '{col}' not found in file {sample_name}.")
 
 
-def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col, group_by_col="Prot_Name"):
+def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col, 
+                         is_pooled, has_techniques, group_by_col="Prot_Name"):
     """
     Count proteins by PTM types, grouping at the protein level.
     
@@ -799,6 +1265,8 @@ def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col
         techniques: List of isolation techniques in the filenames
         pools: List of pool identifiers in the filenames
         interest_col: Column to count values from (typically "PTM_Cluster")
+        is_pooled: Boolean indicating if this is a pooled analysis
+        has_techniques: Boolean indicating if files follow technique naming patterns
         group_by_col: Column to group by (default "Prot_Name")
         
     Groups proteins and counts the different types of PTMs for each protein,
@@ -821,9 +1289,29 @@ def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col
             sample_name = csv_file.stem
             print(sample_name)
             
-            # Identify technique and pool (not used currently but kept for future use)
-            technique = [t for t in techniques if re.search(t, sample_name)]
-            pool = [p for p in pools if re.search(p, sample_name)]
+            # Identify technique and pool based on analysis type
+            if has_techniques:
+                # Original logic: extract technique from filename
+                technique = [t for t in techniques if re.search(t, sample_name)]
+                if is_pooled:
+                    # Extract pool from filename using pools list
+                    pool = [p for p in pools if re.search(p, sample_name)]
+                else:
+                    pool = ["NO_POOL"]
+            else:
+                # Generic case: no technique-specific processing
+                technique = ["Generic"]
+                if is_pooled:
+                    # Generic pooled case: try to extract pool info from filename
+                    if re.search(r'POOL_(\d+)', sample_name):
+                        pool_match = re.search(r'POOL_(\d+)', sample_name)
+                        pool = [f"POOL_{pool_match.group(1)}"]
+                    elif 'ALL_POOLS' in sample_name:
+                        pool = ["ALL_POOLS"]
+                    else:
+                        pool = ["Unknown_Pool"]
+                else:
+                    pool = ["NO_POOL"]
             
             # Group by protein name and count PTM types
             if group_by_col in df.columns and group_by_col == "Prot_Name":
@@ -848,12 +1336,29 @@ def count_proteins_by_ptm(input_dir, output_dir, techniques, pools, interest_col
                 total_count = summary['Count'].sum()
                 summary['Percentage'] = (summary['Count'] / total_count) * 100
                 
+                # Create output filename that reflects the analysis type
+                if has_techniques and technique:
+                    tech_str = '_'.join(technique)
+                    if is_pooled and pool:
+                        pool_str = '_'.join(pool)
+                        output_file = output_dir / f"{sample_name}_PTM_types_by_protein.csv"
+                    else:
+                        output_file = output_dir / f"{sample_name}_PTM_types_by_protein.csv"
+                else:
+                    if is_pooled and pool:
+                        pool_str = '_'.join(pool)
+                        output_file = output_dir / f"{sample_name}_PTM_types_by_protein.csv"
+                    else:
+                        output_file = output_dir / f"{sample_name}_PTM_types_by_protein.csv"
+                
                 # Export the counts to CSV
-                output_file = output_dir / f"{sample_name}_PTM_types_by_protein.csv"
                 summary.to_csv(output_file, index=False, sep=";")
             else:
                 print(f"Warning: Required grouping column '{group_by_col}' not found in file {sample_name}.")
                 continue
+
+
+
             
 
 
@@ -884,4 +1389,4 @@ def delete_directory(directory_path):
             
     except Exception as e:
         print(f"\nError deleting directory: {str(e)}")
-        return False       
+        return False            
