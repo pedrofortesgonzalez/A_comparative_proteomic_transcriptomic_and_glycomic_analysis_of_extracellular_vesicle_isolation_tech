@@ -20,13 +20,14 @@ Pereira-Hernández *et al*. `A comparative proteomic, transcriptomic and glycomi
 │   ├── 1_filtered_dfs/             # Filtered datasets
 │   ├── 2_value_counts/             # Count summaries by category
 │   └── 3_figures/                  # Generated visualizations
-└── scripts/
-    ├── 1_ptm_detection.py          # Python script for data preprocessing
-    ├── 2_hyptest_n_boxplots.R      # R script for statistical testing and boxplots
-    ├── 3_sector_diagrams.R         # R script for pie chart generation
-    ├── run_analysis.sh             # Main pipeline execution script
-    ├── user_defined_funcs.py       # Custom Python functions
-    └── analysis_config.txt         # Configuration file for analysis type
+├── scripts/
+│   ├── 1_ptm_detection.py          # Python script for data preprocessing
+│   ├── 2_hyptest_n_boxplots.R      # R script for statistical testing and boxplots
+│   ├── 3_sector_diagrams.R         # R script for pie chart generation
+│   ├── run_analysis.sh             # Main pipeline execution script
+│   ├── user_defined_funcs.py       # Custom Python functions
+│   └── analysis_config.txt         # Configuration file for analysis type
+└── mass_spectrometry_data          # Data used for this analysis
 ```
 
 
