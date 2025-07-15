@@ -1,19 +1,6 @@
 # Scripts
 This folder contains all scripts needed to perform the analysis of glycosylations in EV proteins and peptides. The scripts are organized in numerical order according to the analysis workflow.
 
-## Folder structure
-```{bash}
-scripts/
-├── run_analysis.sh                    # Run sequentially scripts 1, 2 and 3
-├── 1_ptm_detection.py                 # Initial processing of mass spectrometry data
-├── 2_hyptest_n_boxplots.R             # Statistical analysis and boxplot generation
-├── 3_sector_diagrams.R                # Creation of pie charts
-├── user_defined_funcs.py              # Helper functions for data processing with Python
-├── cleaning_1_python.py               # Cleanup of unused Python libraries
-├── cleaning_2_R.R                     # Cleanup of unused R libraries
-└── __pycache__/                       # Python compiled files (automatically generated)
-```
-
 ***
 ## Requirements and Dependencies
 
