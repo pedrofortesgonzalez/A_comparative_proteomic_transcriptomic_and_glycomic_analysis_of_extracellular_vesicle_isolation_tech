@@ -33,23 +33,7 @@ Pereira-Hernández *et al*. `A comparative proteomic, transcriptomic and glycomi
 ## How to use
 
 ### Requirements and Dependencies
-
-| **Python** 3.10.16 | **R** 4.4.2 |
-| :----: | :----: |
-| pandas == 2.2.3 | dplyr_1.1.4 |
-| session_info == 1.0.0 | ggplot2_3.5.1 |
-| tqdm == 4.67.1 | ggpubr_0.6.0 |
-| numpy == 1.26.4 | rstatix_0.7.2 |
-|  | envalysis_0.7.0 |
-|  | gridExtra_2.3 |
-|  | ggrepel_0.9.6 |
-|  | rstudioapi_0.17.1 |
-
-#### Code Cleanup Libraries
-
-| **Python** | **R** |
-| :----: | :----: |
-| vulture == 1.0 | nolock_1.1.0 |
+You can find them in the file `requirements.txt`
 
 
 ### Installation
@@ -128,6 +112,8 @@ If you use this code in your research, please cite:
 ```
 Pereira-Hernández, M. *et al*. (2025). `A comparative proteomic, transcriptomic and glycomic analysis of extracellular vesicle isolation techniques highlights ExoGAG efficiency for a more complete identification of breast milk molecular signaling pathways`. [Journal information pending]
 ```
+
+You can also download the citation file `CITATION.cff`
 
 
 ## Contact
