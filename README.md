@@ -1,6 +1,6 @@
 ***Please go through this README file for a comprehensive description of the features of this repository.***
 
-# Glycosylation Analysis in Extracellular Vesicles
+# A comparative proteomic, transcriptomic and glycomic analysis of extracellular vesicle isolation techniques
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
