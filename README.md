@@ -32,21 +32,25 @@ Pereira-Hernández *et al*. `A comparative proteomic, transcriptomic and glycomi
 
 ## How to use
 
-### Getting started
-- Python 3.8+
-- R 4.0+
-- Required Python packages:
-  - pandas
-  - tqdm
-  - session_info
-- Required R packages:
-  - dplyr
-  - ggplot2
-  - ggpubr
-  - rstatix
-  - envalysis
-  - gridExtra
-  - ggrepel
+### Requirements and Dependencies
+
+| **Python** 3.10.16 | **R** 4.4.2 |
+| :----: | :----: |
+| pandas == 2.2.3 | dplyr_1.1.4 |
+| session_info == 1.0.0 | ggplot2_3.5.1 |
+| tqdm == 4.67.1 | ggpubr_0.6.0 |
+| numpy == 1.26.4 | rstatix_0.7.2 |
+|  | envalysis_0.7.0 |
+|  | gridExtra_2.3 |
+|  | ggrepel_0.9.6 |
+|  | rstudioapi_0.17.1 |
+
+#### Code Cleanup Libraries
+
+| **Python** | **R** |
+| :----: | :----: |
+| vulture == 1.0 | nolock_1.1.0 |
+
 
 ### Installation
 1. Clone this repository:
@@ -64,6 +68,7 @@ Pereira-Hernández *et al*. `A comparative proteomic, transcriptomic and glycomi
    ```
 
 **Alternatively**, download it as a folder and place it in a location you can find on your hard drive (you may need to copy and paste its location in case auto-detection fails).
+
 
 ***
 ### Usage
