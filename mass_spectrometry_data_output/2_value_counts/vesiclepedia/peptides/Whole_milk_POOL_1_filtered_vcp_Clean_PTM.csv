@@ -1,0 +1,110 @@
+Value;Count;Percentage
+Carbamidomethylation ;126;30.288461538461537
+Ubiquitin;29;6.971153846153847
+Ethylation;22;5.288461538461538
+Double Carbamidomethylation ;17;4.086538461538462
+Deamidation ;15;3.6057692307692304
+Replacement of 2 protons by iron;14;3.3653846153846154
+Formylation;11;2.644230769230769
+Glycosyl-L-hydroxyproline;9;2.1634615384615383
+Nucleophilic addition to cytopiloyne+H2O;9;2.1634615384615383
+Carboxymethyl ;8;1.9230769230769231
+Oxidation (M);8;1.9230769230769231
+Carbamidomethylation;7;1.6826923076923077
+Dethiomethyl;6;1.4423076923076923
+Dehydration;6;1.4423076923076923
+Levuglandinyl-lysine anhydrolactam adduct;5;1.201923076923077
+Hex1HexNAc1;4;0.9615384615384616
+Cysteine mercaptoethanol;3;0.7211538461538461
+Menadione hydroquinone derivative;3;0.7211538461538461
+Pyro-glu from Q;3;0.7211538461538461
+Fucose;3;0.7211538461538461
+Acetylation ;3;0.7211538461538461
+Cyano;3;0.7211538461538461
+Amidation;2;0.4807692307692308
+Pentose;2;0.4807692307692308
+Hex Pent;2;0.4807692307692308
+Dihydroxy;2;0.4807692307692308
+Oxidation ;2;0.4807692307692308
+Dehydroalanine (C);2;0.4807692307692308
+2-amino-3-oxo-butanoic_acid;2;0.4807692307692308
+Phosphorylation ;2;0.4807692307692308
+Hex2HexNAc2;2;0.4807692307692308
+Piperidination;2;0.4807692307692308
+Propionamide;2;0.4807692307692308
+Hex(2) HexNAc;2;0.4807692307692308
+Levuglandinyl-lysine anhyropyrrole adduct;2;0.4807692307692308
+Oxidation or Hydroxylation;2;0.4807692307692308
+"Hex HexNAc NeuGc(3);Hex(2) HexA HexNAc Sulf";2;0.4807692307692308
+"Heptose;Hexose";1;0.2403846153846154
+"Hex HexA HexNAc;Ac Hex HexNAc NeuAc";1;0.2403846153846154
+"Hex HexNAc dHex Me;Hex HexNAc NeuGc";1;0.2403846153846154
+"Hex(3) HexNAc(3) Pent;Hex1HexNAc2dHex2";1;0.2403846153846154
+"Hex HexNAc NeuGc(5);dHex(2) Hex(2) HexA";1;0.2403846153846154
+Nucleophilic addtion to cytopiloyne;1;0.2403846153846154
+"Hex HexNAc(2) NeuAc Sulf;Gluconoylation";1;0.2403846153846154
+dHex Hex(5) HexNAc(5);1;0.2403846153846154
+"dHex(2) Hex(2) HexA HexNAc;Hexose";1;0.2403846153846154
+HexNAc(2) NeuAc;1;0.2403846153846154
+Hex(3) HexNAc(3) NeuAc;1;0.2403846153846154
+"Hex(3) HexNAc(3);dHex Hex(3) HexA HexNAc";1;0.2403846153846154
+Lactosylation;1;0.2403846153846154
+Hexosamine;1;0.2403846153846154
+"HexNAc Kdn(2);Oxidation (M)";1;0.2403846153846154
+"Hex HexNAc NeuGc(5);dHex Hex(2) HexNAc(2) NeuAc(2) Sulf";1;0.2403846153846154
+dHex Hex(2) HexA HexNAc;1;0.2403846153846154
+"Hex(3) HexNAc(2) NeuAc;dHex Hex(2) HexNAc(3)";1;0.2403846153846154
+Hex(2) HexNAc Me;1;0.2403846153846154
+"Heptose;Hex(2) HexA NeuAc Pent Sulf";1;0.2403846153846154
+Menadione quinone derivative;1;0.2403846153846154
+Gluconoylation;1;0.2403846153846154
+"Hex(3) HexNAc(3);dHex(2) Hex(2) HexNAc(2)";1;0.2403846153846154
+"Hex HexNAc NeuAc Sulf;Hex(7) Phos(3)";1;0.2403846153846154
+"Hex(4) HexNAc(2) NeuAc;dHex(2) Hex(4)";1;0.2403846153846154
+dHex Hex(2) HexA;1;0.2403846153846154
+Hex1HexNAc2;1;0.2403846153846154
+3-sulfanylpropanoyl;1;0.2403846153846154
+dHex(2) Hex(2) HexNAc;1;0.2403846153846154
+Heptose;1;0.2403846153846154
+"Gluconoylation;HexNAc(3)";1;0.2403846153846154
+"Heptose;Glycosyl-L-hydroxyproline";1;0.2403846153846154
+"Heptose;Heptose";1;0.2403846153846154
+"Heptose;Hex(4)";1;0.2403846153846154
+"HexNAcylation ;Hexose";1;0.2403846153846154
+"Hex(4) HexNAc(2);HexNAc NeuAc";1;0.2403846153846154
+"Hex(4) HexNAc(2);dHex(3) Hex(2) HexNAc(2)";1;0.2403846153846154
+Hex(4) HexNAc(2);1;0.2403846153846154
+"Ac Hex HexNAc NeuAc(2);Hexose";1;0.2403846153846154
+"Hex(3) HexNAc(4) NeuAc;Hex2 dHex2";1;0.2403846153846154
+"Ac Hex HexNAc NeuAc(2);Hexose;Hex HexNAc(2) NeuAc(2) Sulf";1;0.2403846153846154
+Hex1HexNAc2Pent1;1;0.2403846153846154
+Glucosylgalactosyl hydroxylysine;1;0.2403846153846154
+"Hexosamine;HexNAc(5)";1;0.2403846153846154
+"Glucosylgalactosyl hydroxylysine;Hexose";1;0.2403846153846154
+Hexuronic acid;1;0.2403846153846154
+Hex(2) HexNAc(2) Sulf;1;0.2403846153846154
+dHex(2) Hex(2) HexNAc(2) NeuAc Sulf;1;0.2403846153846154
+HexNAc1dHex1;1;0.2403846153846154
+Hex(5) HexNAc(5);1;0.2403846153846154
+dHex Hex HexNAc(3) Sulf;1;0.2403846153846154
+"Hex(3) HexNAc(3) Pent;Hex HexNAc(2) NeuAc(2)";1;0.2403846153846154
+Hexose;1;0.2403846153846154
+HexNAc2dHex1;1;0.2403846153846154
+"Hex HexNAc NeuGc;Lactosylation";1;0.2403846153846154
+Nmethylmaleimidehydrolysis;1;0.2403846153846154
+"Hex(2) HexA Pent Sulf;Glucosylgalactosyl hydroxylysine";1;0.2403846153846154
+"Hexosamine;dHex Hex HexNAc(2) NeuAc";1;0.2403846153846154
+"Heptose;Gluconoylation";1;0.2403846153846154
+Proline oxidation to pyroglutamic acid;1;0.2403846153846154
+"Hex(2) HexNAc NeuGc;Hexose";1;0.2403846153846154
+dHex Hex(5) HexNAc(4) NeuAc;1;0.2403846153846154
+"Hex(8) Phos(3);Glycosyl-L-hydroxyproline";1;0.2403846153846154
+Hex(3) HexNAc;1;0.2403846153846154
+Deamidation followed by a methylation;1;0.2403846153846154
+"Gluconoylation;Hex(2) HexA Pent Sulf;Hexose";1;0.2403846153846154
+Hex(3) HexNAc(4) Sulf;1;0.2403846153846154
+"Hex HexNAc dHex Me;Fucose";1;0.2403846153846154
+"Hex(3) HexNAc(2) Pent;dHex HexNAc(3)";1;0.2403846153846154
+Hex(4) HexNAc(3) NeuAc;1;0.2403846153846154
+Hex1HexNAc2dHex1Pent1;1;0.2403846153846154
+"dHex Hex(3) HexNAc(3);Hexose";1;0.2403846153846154

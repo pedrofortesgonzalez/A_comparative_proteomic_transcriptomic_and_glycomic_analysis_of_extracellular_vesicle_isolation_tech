@@ -1,0 +1,60 @@
+Value;Count;Percentage
+Carbamidomethylation;638;84.05797101449275
+dHex(2) Hex(3) HexNAc(2);21;2.766798418972332
+"Gluconoylation; Heptose";19;2.503293807641634
+"Hexosamine; Lactosylation";7;0.922266139657444
+Hex2HexNAc2;3;0.3952569169960474
+"Gluconoylation; Hex(2) NeuAc";3;0.3952569169960474
+Phosphoglycosyl-D-mannose-1-phosphoryl;3;0.3952569169960474
+"Hexuronic acid; dHex(2) Hex(4)";3;0.3952569169960474
+Hex Pent(2);3;0.3952569169960474
+Hexose;3;0.3952569169960474
+Glycosyl-L-hydroxyproline;2;0.2635046113306983
+Hex HexNAc(3) NeuGc;2;0.2635046113306983
+"dHex(2) Hex(3) HexA HexNAc Sulf; Carbamidomethylation";2;0.2635046113306983
+dHex Hex(2) HexNAc;2;0.2635046113306983
+Hex3;2;0.2635046113306983
+dHex(2) Hex(3);2;0.2635046113306983
+dHex Hex(2) HexNAc(2) Pent;2;0.2635046113306983
+Hex(2) HexNAc NeuGc;1;0.13175230566534915
+Hex2HexNAc2Pent1;1;0.13175230566534915
+Hex2HexNAc2dHex1;1;0.13175230566534915
+Hex Pent;1;0.13175230566534915
+"Heptose; dHex(2) Hex(3) HexNAc(2)";1;0.13175230566534915
+dHex(2) Hex(2) HexA HexNAc;1;0.13175230566534915
+HexNAc NeuGc;1;0.13175230566534915
+dHex Hex HexNAc(3);1;0.13175230566534915
+HexNAc(2) NeuAc;1;0.13175230566534915
+"Hex NeuAc Pent; Glycosyl-L-hydroxyproline";1;0.13175230566534915
+"Hex(2) HexNAc(3) NeuAc Sulf; Carbamidomethylation";1;0.13175230566534915
+"Phosphoglycosyl-D-mannose-1-phosphoryl; Glycosyl-L-hydroxyproline";1;0.13175230566534915
+HexNAc NeuAc;1;0.13175230566534915
+"Carbamidomethylation; Heptose";1;0.13175230566534915
+"Heptose; Carbamidomethylation";1;0.13175230566534915
+Hex(5);1;0.13175230566534915
+dHex Hex HexNAc(2) NeuGc;1;0.13175230566534915
+"Hexose; Hexose (NSY)";1;0.13175230566534915
+"Gluconoylation; Hex(3) Phos";1;0.13175230566534915
+Hex(2) HexNAc;1;0.13175230566534915
+"Hex NeuGc; Hexose";1;0.13175230566534915
+dHex(3) HexNAc(3) Kdn;1;0.13175230566534915
+"Hex1HexNAc2; Glycosyl-L-hydroxyproline; Carbamidomethylation";1;0.13175230566534915
+Hex1HexNAc2;1;0.13175230566534915
+"Hex HexNAc NeuAc(3); Carbamidomethylation";1;0.13175230566534915
+Pentose;1;0.13175230566534915
+"Carbamidomethylation; Heptose; Hex HexNAc Kdn Sulf";1;0.13175230566534915
+"Hexose; Hex Pent";1;0.13175230566534915
+Hex HexNAc(2) NeuAc(2);1;0.13175230566534915
+"Hex2HexNAc2; Carbamidomethylation";1;0.13175230566534915
+"Gluconoylation; HexNAcylation (ST)";1;0.13175230566534915
+"Hex3; Carbamidomethylation";1;0.13175230566534915
+"Gluconoylation; Hex(2) HexNAc";1;0.13175230566534915
+Hex HexNAc NeuAc(3);1;0.13175230566534915
+Hex HexNAc(3) NeuAc;1;0.13175230566534915
+"Hexose; Hex HexNAc dHex Me(2)";1;0.13175230566534915
+"Gluconoylation; Pentose; Carbamidomethylation";1;0.13175230566534915
+Hex NeuAc Pent;1;0.13175230566534915
+Hexose (NSY);1;0.13175230566534915
+"Carbamidomethylation; Hexosamine";1;0.13175230566534915
+Lactosylation;1;0.13175230566534915
+Hex HexNAc NeuGc;1;0.13175230566534915
