@@ -113,8 +113,6 @@ If you use this code in your research, please cite:
 Pereira-Hernández, M. *et al*. (2025). `A comparative proteomic, transcriptomic and glycomic analysis of extracellular vesicle isolation techniques highlights ExoGAG efficiency for a more complete identification of breast milk molecular signaling pathways`. [Journal information pending]
 ```
 
-You can also download the citation file `CITATION.cff`
-
 
 ## Contact
 - GitHub Profile: [Pedro Fortes González](https://github.com/pedrofortesgonzalez)
