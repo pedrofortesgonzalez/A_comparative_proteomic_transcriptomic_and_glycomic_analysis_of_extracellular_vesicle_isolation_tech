@@ -1,0 +1,671 @@
+,Peptide,PTM,AScore,Accession,Source File,Technique
+802,TTFDVYTESWAQDPSQENKKK(+57.02),"K21:Carbamidomethylation (DHKE, X@N-term):false","K21:Carbamidomethylation (DHKE, X@N-term):7.65",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1028,IAEN(+146.06)RADAVT(+294.10)LDGGFIYEAGLAPYK,N4:Fucose:false;T10:Hex Pent:false,N4:Fucose:1000.00;T10:Hex Pent:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+801,VAAED(+57.02)WK,"D5:Carbamidomethylation (DHKE, X@N-term):false","D5:Carbamidomethylation (DHKE, X@N-term):0.00",P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+887,TAGWNVPIGTLRPFLN(+2350.83)WTGPPEPIEAAVAR,N16:dHex Hex(5) HexNAc(4) NeuAc(2):false,N16:dHex Hex(5) HexNAc(4) NeuAc(2):21.04,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1032,DS(-18.01)AIGFSR,S2:Dehydration:false,S2:Dehydration:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+881,ALPPQPLWS(+714.27)VPQ(+192.06)PKVLPIPQQVVPYPQR,S9:Hex1HexNAc2dHex1:false;Q12:Heptose:false,S9:Hex1HexNAc2dHex1:1000.00;Q12:Heptose:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+882,TGLRRTAGWNVPIGT(+1679.63)LRPFLNWTGPPEPIEAAVAR,T15:dHex(4) Hex(3) HexNAc(3):false,T15:dHex(4) Hex(3) HexNAc(3):1.67,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+904,TAGWNVPIGTLRPFLN(+1907.71)WT(+406.16)GPPEPIEAAVAR,N16:Hex(3) HexNAc(7):false;T18:HexNAc2:false,N16:Hex(3) HexNAc(7):7.03;T18:HexNAc2:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1034,FQLFGSPSGQK(+27.99),K11:Formylation:false,K11:Formylation:74.64,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1029,AMS(+486.16)LDGGYVYTAGK,S3:Hex3:false,S3:Hex3:81.34,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+798,K(+57.02)YNELLK,"K1:Carbamidomethylation (DHKE, X@N-term):true","K1:Carbamidomethylation (DHKE, X@N-term):51.69",P10909|CLUS_HUMAN,Pool 2,Whole_milk
+850,S(+539.22)(+162.05)DGQLQEGSPIQAWQLFVNEESTIPR,S1:Hex HexNAc dHex Me(2):false;S1:Hexose:false,S1:Hex HexNAc dHex Me(2):36.20;S1:Hexose:36.20,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1025,LSLHRPALEDLLLGSEANLTCT(+698.24)LT(+860.33)GLR,T22:Ac Hex HexNAc NeuAc:false;T24:Hex1HexNAc2dHex2:false,T22:Ac Hex HexNAc NeuAc:0.00;T24:Hex1HexNAc2dHex2:0.00,P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+874,RTAGWNVPIGTLRPFLN(+1864.55)WT(+1460.53)GPPEPIEAAVAR,N17:Hex(3) HexNAc(6) Sulf(2):false;T19:Biantennary (-1 galactose):false,N17:Hex(3) HexNAc(6) Sulf(2):20.33;T19:Biantennary (-1 galactose):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+810,LVSE(+57.02)FTITK,"E4:Carbamidomethylation (DHKE, X@N-term):false","E4:Carbamidomethylation (DHKE, X@N-term):13.08",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1018,YLGPQYVAGITNLK(+57.02),"K14:Carbamidomethylation (DHKE, X@N-term):false","K14:Carbamidomethylation (DHKE, X@N-term):12.88",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+910,K(+162.05)QTALVELVK,K1:Hexose:false,K1:Hexose:14.04,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+909,Q(+0.98)LDSIVGER,Q1:Deamidation (NQ):true,Q1:Deamidation (NQ):1000.00,P48668|K2C6C_HUMAN:P13647|K2C5_HUMAN:P02538|K2C6A_HUMAN,Pool 2,Whole_milk
+1019,QTDEIKD(+57.02)TR,"D7:Carbamidomethylation (DHKE, X@N-term):false","D7:Carbamidomethylation (DHKE, X@N-term):0.00",P47710|CASA1_HUMAN,Pool 2,Whole_milk
+878,S(+1151.42)CHTGLRRTAGWNVPIGTLRPFLNWTGPPEPIEAAVAR,S1:dHex(2) Hex HexNAc(2) NeuAc:false,S1:dHex(2) Hex HexNAc(2) NeuAc:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+875,LT(+1120.43)WASRQEPSQGTTTFAVTSILR,T2:dHex Hex HexNAc(4):false,T2:dHex Hex HexNAc(4):0.00,P01876|IGHA1_HUMAN,Pool 2,Whole_milk
+808,QVLLH(+15.99)QQAK,H5:Oxidation (HW):true,H5:Oxidation (HW):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+964,KQFTKC(+76.00)ELSQLLK,C6:Cysteine mercaptoethanol:true,C6:Cysteine mercaptoethanol:1000.00,P00709|LALBA_HUMAN,Pool 2,Whole_milk
+807,AAC(+71.04)LLPK,C3:Propionamide:true,C3:Propionamide:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1023,DTLM(+15.99)ISR,M4:Oxidation (M):true,M4:Oxidation (M):1000.00,P01859|IGHG2_HUMAN:P01861|IGHG4_HUMAN:P01857|IGHG1_HUMAN:P01860|IGHG3_HUMAN,Pool 2,Whole_milk
+806,GFSPKD(-18.01)VLVR,D6:Dehydration:false,D6:Dehydration:0.00,P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+796,VKHED(+57.02)QQQGEDEHQDK,"D5:Carbamidomethylation (DHKE, X@N-term):false","D5:Carbamidomethylation (DHKE, X@N-term):0.00",P05814|CASB_HUMAN,Pool 2,Whole_milk
+1021,GWNVPIGTLRPFLN(+1095.40)WT(+1390.44)GPPEPIEAAVAR,N14:Hex(3) HexNAc(3):false;T16:dHex Hex(3) HexA(2) HexNAc(2):false,N14:Hex(3) HexNAc(3):0.00;T16:dHex Hex(3) HexA(2) HexNAc(2):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+903,PYVPMYYVPNS(+283.04)YPYYGTNLYQR,S11:O3S1HexNAc1:false,S11:O3S1HexNAc1:36.87,P07498|CASK_HUMAN,Pool 2,Whole_milk
+901,VPAQLLGLLLLWLPGARCAIQLTQSPSSLS(+406.16)A,S30:HexNAc2:false,S30:HexNAc2:0.00,P0DP09|KV113_HUMAN:A0A0B4J2D9|KVD13_HUMAN,Pool 2,Whole_milk
+794,T(+57.02)PLPLAGPPR,"T1:Carbamidomethylation (DHKE, X@N-term):true","T1:Carbamidomethylation (DHKE, X@N-term):1000.00",Q13410|BT1A1_HUMAN,Pool 2,Whole_milk
+955,TAGWNVPIGTLRPFLN(+1444.53)WT(+525.21)GPPEPIEAAVAR,N16:Fucosylated biantennary (-2 galactose):false;T18:Hex HexNAc dHex Me:false,N16:Fucosylated biantennary (-2 galactose):0.00;T18:Hex HexNAc dHex Me:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+958,TIESLSS(+365.13)SEESITEYKQKVEK,S7:Hex1HexNAc1:false,S7:Hex1HexNAc1:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+895,F(+178.05)EQ(+192.06)LGEYKFQNALLVR,F1:Gluconoylation:false;Q3:Heptose:false,F1:Gluconoylation:81.81;Q3:Heptose:105.53,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+884,TAGWNVPIGTLRPFLN(+1768.64)WTGPPEPIEAAVAR,N16:Fucosylated biantennary:false,N16:Fucosylated biantennary:20.33,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+956,TPLTAN(+0.98)ITK,N6:Deamidation (NQ):false,N6:Deamidation (NQ):1000.00,P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+892,LD(+57.02)ELRDEGK,"D2:Carbamidomethylation (DHKE, X@N-term):false","D2:Carbamidomethylation (DHKE, X@N-term):12.28",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1043,QIGLYPVLVIDSSGYVNPNYT(+1264.39)GRIRLDIQG,T21:dHex(2) Hex(3) HexNAc(2) Sulf:false,T21:dHex(2) Hex(3) HexNAc(2) Sulf:0.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+891,V(+114.04)PSHAVVAR,"V1:Double Carbamidomethylation (DHKE, X@N-term):true","V1:Double Carbamidomethylation (DHKE, X@N-term):47.09",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+886,SCHTGLRRTAGWN(+1505.54)VPIGTLRPFLNWTGPPEPIEAAVAR,N13:dHex Hex(3) HexNAc(3) Pent(2):false,N13:dHex Hex(3) HexNAc(3) Pent(2):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+889,T(+57.02)HYYAVAVVKKG,"T1:Carbamidomethylation (DHKE, X@N-term):false","T1:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1046,LGFLS(+307.09)TGDANLPGNYGLR,S5:N-glycoyl neuraminic acid:false,S5:N-glycoyl neuraminic acid:0.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+773,GID(+57.02)YWLAHK,"D3:Carbamidomethylation (DHKE, X@N-term):true","D3:Carbamidomethylation (DHKE, X@N-term):18.53",P00709|LALBA_HUMAN,Pool 2,Whole_milk
+772,RPAIAINN(+15.00)PYVPR,N8:Deamidation followed by a methylation:false,N8:Deamidation followed by a methylation:17.01,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1048,LWEGAQN(+568.21)GRCPLLVDSEGWVK,N7:Hex1HexNAc2:false,N7:Hex1HexNAc2:77.76,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1045,DVDGAYM(+15.99)TK,M7:Oxidation (M):true,M7:Oxidation (M):1000.00,P04264|K2C1_HUMAN,Pool 2,Whole_milk
+776,SC(+76.00)HLAMAPNHAVVSR,C2:Cysteine mercaptoethanol:false,C2:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+896,C(+25.00)TAFHDNEETFLKK,C1:Cyano:false,C1:Cyano:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+897,AAC(+76.00)LLPK,C3:Cysteine mercaptoethanol:true,C3:Cysteine mercaptoethanol:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+812,TVAAPSVFIFPPSDEQLK(+57.02),"K18:Carbamidomethylation (DHKE, X@N-term):false","K18:Carbamidomethylation (DHKE, X@N-term):0.00",P01834|IGKC_HUMAN,Pool 2,Whole_milk
+961,EKQTDEIKD(+57.02)TR,"D9:Carbamidomethylation (DHKE, X@N-term):false","D9:Carbamidomethylation (DHKE, X@N-term):9.34",P47710|CASA1_HUMAN,Pool 2,Whole_milk
+900,ADAAPDE(+57.02)K,"E7:Carbamidomethylation (DHKE, X@N-term):false","E7:Carbamidomethylation (DHKE, X@N-term):7.65",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+960,RTAGWNVPIGTLRPFLNW(+161.07)T(+1898.70)GPPEPIEAAVAR,W18:Hexosamine:false;T19:dHex(3) Hex(4) HexNAc(4):false,W18:Hexosamine:0.00;T19:dHex(3) Hex(4) HexNAc(4):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1038,SE(+57.02)EEVAAR,"E2:Carbamidomethylation (DHKE, X@N-term):false","E2:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+899,ENAGDVAFVKDVT(+365.13)VLQNTDGNNNEAWAK,T13:Hex1HexNAc1:false,T13:Hex1HexNAc1:11.12,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+789,FQ(+0.98)LFGSPSGQK,Q2:Deamidation (NQ):false,Q2:Deamidation (NQ):37.89,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+788,L(+57.02)KYENEVALR,"L1:Carbamidomethylation (DHKE, X@N-term):false","L1:Carbamidomethylation (DHKE, X@N-term):0.00",P13645|K1C10_HUMAN,Pool 2,Whole_milk
+954,TAGWNVPIGTLRPFLN(+1021.36)WT(+1240.43)GPPEPIEAAVAR,N16:Hex(2) HexNAc(2) NeuAc:false;T18:Hex(2) HexNAc(3) NeuGc:false,N16:Hex(2) HexNAc(2) NeuAc:6.59;T18:Hex(2) HexNAc(3) NeuGc:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+787,GPP(+15.99)VSCIKRDSPIQCIQAIAENR,P3:Oxidation or Hydroxylation:false,P3:Oxidation or Hydroxylation:11.06,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+786,LRPVAAEVYGT(-18.01)ER,T11:Dehydration:false,T11:Dehydration:14.04,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+783,L(+57.02)RSEIDNVKK,"L1:Carbamidomethylation (DHKE, X@N-term):false","L1:Carbamidomethylation (DHKE, X@N-term):4.52",P04264|K2C1_HUMAN,Pool 2,Whole_milk
+781,L(+57.02)PLRYPERLQNPSESSEPIPLESR,"L1:Carbamidomethylation (DHKE, X@N-term):false","L1:Carbamidomethylation (DHKE, X@N-term):0.00",P47710|CASA1_HUMAN,Pool 2,Whole_milk
+898,ADFALLC(+57.02)LDGKR,C7:Carbamidomethylation:true,C7:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+778,L(+57.02)LVVYPWTQR,"L1:Carbamidomethylation (DHKE, X@N-term):true","L1:Carbamidomethylation (DHKE, X@N-term):1000.00",P69891|HBG1_HUMAN:P02042|HBD_HUMAN:P69892|HBG2_HUMAN:P68871|HBB_HUMAN,Pool 2,Whole_milk
+902,T(+57.02)QSFVAK,"T1:Carbamidomethylation (DHKE, X@N-term):true","T1:Carbamidomethylation (DHKE, X@N-term):68.95",P47989|XDH_HUMAN,Pool 2,Whole_milk
+1017,AEFAE(+53.92)VSK,E5:Replacement of 2 protons by iron:true,E5:Replacement of 2 protons by iron:48.45,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1014,YIC(-33.99)ENQDSISSK,C3:Dehydroalanine (C):true,C3:Dehydroalanine (C):1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+872,AKDTVYTK(+27.99),K8:Formylation:true,K8:Formylation:104.48,P05814|CASB_HUMAN,Pool 2,Whole_milk
+972,TAGWNVPIGTLRPFLN(+1095.40)WT(+1110.40)GPPEPIEAAVAR,N16:Hex(3) HexNAc(3):false;T18:dHex(2) Hex HexNAc(2) Kdn:false,N16:Hex(3) HexNAc(3):6.92;T18:dHex(2) Hex HexNAc(2) Kdn:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1692,TAAENE(+57.02)FVGLK,"E6:Carbamidomethylation (DHKE, X@N-term):false","E6:Carbamidomethylation (DHKE, X@N-term):22.85",Q01546|K22O_HUMAN,Pool 2,Whole_milk
+845,DFALLC(+57.02)LDGKR,C6:Carbamidomethylation:true,C6:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+995,QT(-18.01)DEIKDTR,T2:Dehydration:false,T2:Dehydration:17.01,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+827,LDELRDE(+57.02)GK,"E7:Carbamidomethylation (DHKE, X@N-term):false","E7:Carbamidomethylation (DHKE, X@N-term):10.42",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+843,RDSPIQC(-33.99)IQAIAENR,C7:Dehydroalanine (C):true,C7:Dehydroalanine (C):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+858,CCT(-2.02)ESLVNR,T3:2-amino-3-oxo-butanoic_acid:false,T3:2-amino-3-oxo-butanoic_acid:45.01,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+857,D(+28.03)AHKSEVAHR,D1:Ethylation:false,D1:Ethylation:22.34,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+828,S(+27.99)DTSLTWNSVK,S1:Formylation:false,S1:Formylation:64.63,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+945,TAGWNVPIGTLRPFLN(+1914.70)WTGPPEPIEAAVAR,N16:dHex(2) Hex(5) HexNAc(4):false,N16:dHex(2) Hex(5) HexNAc(4):30.57,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+840,RAPAFE(+57.02)GR,"E6:Carbamidomethylation (DHKE, X@N-term):false","E6:Carbamidomethylation (DHKE, X@N-term):55.46",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+855,TAGWNVPIGTLRPFLN(+2059.73)WTGPPEPIEAAVAR,N16:dHex Hex(5) HexNAc(4) NeuAc:false,N16:dHex Hex(5) HexNAc(4) NeuAc:11.49,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+991,VAAE(+57.02)DWK,"E4:Carbamidomethylation (DHKE, X@N-term):false","E4:Carbamidomethylation (DHKE, X@N-term):0.00",P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+829,QTD(+57.02)EIKDTR,"D3:Carbamidomethylation (DHKE, X@N-term):false","D3:Carbamidomethylation (DHKE, X@N-term):14.02",P47710|CASA1_HUMAN,Pool 2,Whole_milk
+949,VGC(+71.04)PVGDAAR,C3:Propionamide:true,C3:Propionamide:1000.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+934,SYSC(+114.04)QVTHEGSTVEK,C4:Ubiquitin:true,C4:Ubiquitin:24.44,P0DOY2|IGLC2_HUMAN:P0CF74|IGLC6_HUMAN:P0DOY3|IGLC3_HUMAN:B9A064|IGLL5_HUMAN:P0CG04|IGLC1_HUMAN,Pool 2,Whole_milk
+830,STM(+15.99)QELNSR,M3:Oxidation (M):true,M3:Oxidation (M):1000.00,P35527|K1C9_HUMAN,Pool 2,Whole_milk
+989,C(+57.02)GLGINSR,"C1:Carbamidomethylation (DHKE, X@N-term):true","C1:Carbamidomethylation (DHKE, X@N-term):1000.00",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+937,S(+203.08)VPQPKVLPIPQQVVPYPQR,S1:HexNAcylation (ST):false,S1:HexNAcylation (ST):1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+832,C(+25.00)QALPSQDEGPSK,C1:Cyano:false,C1:Cyano:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+833,Q(-17.03)RGPYTYR,Q1:Pyro-glu from Q:false,Q1:Pyro-glu from Q:1000.00,P16671|CD36_HUMAN,Pool 2,Whole_milk
+838,T(+27.99)PLTATLSK,T1:Formylation:true,T1:Formylation:94.50,P01876|IGHA1_HUMAN,Pool 2,Whole_milk
+853,STSSFSC(+57.02)LSR,C7:Carbamidomethylation:true,C7:Carbamidomethylation:1000.00,P35908|K22E_HUMAN,Pool 2,Whole_milk
+985,A(+57.02)PAFEGR,"A1:Carbamidomethylation (DHKE, X@N-term):true","A1:Carbamidomethylation (DHKE, X@N-term):61.77",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+835,EIVMT(-18.01)QSPATLSLSPGER,T5:Dehydration:false,T5:Dehydration:14.04,A0A0C4DH55|KVD07_HUMAN,Pool 2,Whole_milk
+837,GPPVSC(+57.02)IK,C6:Carbamidomethylation:false,C6:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+980,S(+453.15)GVALSPWVIQK,S1:Hex NeuAc:false,S1:Hex NeuAc:56.99,P19835|CEL_HUMAN,Pool 2,Whole_milk
+974,MGDS(+541.20)AVPTHWEPYTTENSGYLEITK,S4:Hex(2) HexNAc Me:false,S4:Hex(2) HexNAc Me:0.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+979,TAGWNVPIGTLRPFLN(+1589.57)WT(+673.24)GPPEPIEAAVAR,N16:Hex(3) HexNAc(4) NeuAc:false;T18:dHex Hex(2) HexNAc:false,N16:Hex(3) HexNAc(4) NeuAc:12.53;T18:dHex Hex(2) HexNAc:3.19,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+978,MGDSAVPTHWEPYT(+541.20)TENSGYLEITK,T14:Hex(2) HexNAc Me:false,T14:Hex(2) HexNAc Me:0.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+852,SPTIPFFDPQIPK(-0.98),K13:Amidation:false,K13:Amidation:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+911,AENAGDVAFVKDVT(+294.10)VLQNTDGNNNEAWAK,T14:Hex Pent:false,T14:Hex Pent:17.91,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+859,PVQALLLNQELLLN(+552.22)PTHQIYPVTQPLAPVHNPISV,N14:HexNAc2dHex1:false,N14:HexNAc2dHex1:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+847,AVPVQALLLNQELLLN(+730.26)PTHQIYPVTQPLAPVHNPISV,N16:Hex2HexNAc2:false,N16:Hex2HexNAc2:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1015,QAQEK(+57.02)FGK,"K5:Carbamidomethylation (DHKE, X@N-term):false","K5:Carbamidomethylation (DHKE, X@N-term):13.30",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+849,QLN(+1524.53)QLAAYPYAVWYYPQIMQYVPFPPFSDISNPTAHENYEK,N3:dHex Hex(6) HexNAc(2):false,N3:dHex Hex(6) HexNAc(2):9.58,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+941,LVRPEVDVM(+15.99),M9:Oxidation (M):true,M9:Oxidation (M):1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+951,AVT(+242.02)LDGGFIYEAGLAPYK,T3:Phosphoglycosyl-D-mannose-1-phosphoryl:false,T3:Phosphoglycosyl-D-mannose-1-phosphoryl:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+815,SHCIAEVEN(+0.98)DEMPADLPS(+132.04)LAADFVESK,N9:Deamidation (NQ):false;S18:Pentose:false,N9:Deamidation (NQ):1000.00;S18:Pentose:5.38,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+816,AVM(-48.00)DDFAAFVEK,M3:Dethiomethyl:false,M3:Dethiomethyl:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1009,SCHTGLRRTAGWNVPIGTLRPFLN(+1183.41)WT(+132.04)GPPEPIEAAVAR,N24:Hex(3) HexNAc(2) NeuAc:false;T26:Pentose:false,N24:Hex(3) HexNAc(2) NeuAc:0.00;T26:Pentose:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+912,LNE(+53.92)YNQLQLQAAHAQEQIR,E3:Replacement of 2 protons by iron:false,E3:Replacement of 2 protons by iron:28.48,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1008,FLCRQS(-2.02)SGENCDVVVNTLGK,S6:2-amino-3-oxo-butanoic_acid:false,S6:2-amino-3-oxo-butanoic_acid:0.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+871,LVPVLAENYKS(+176.03)QQSSDPDPNCVDRPVEGYLAVAVVR,S11:Hexuronic acid:false,S11:Hexuronic acid:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+950,TAGWNVPIGTLRPFLN(+1021.36)WT(+1238.42)GPPEPIEAAVAR,N16:Hex(2) HexNAc(2) NeuAc:false;T18:Hex HexNAc NeuAc(3):false,N16:Hex(2) HexNAc(2) NeuAc:5.20;T18:Hex HexNAc NeuAc(3):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+817,VLPIPQQVVP(+15.99)YPQR,P10:Oxidation or Hydroxylation:false,P10:Oxidation or Hydroxylation:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1007,AEFAEVSK(+27.99),K8:Formylation:true,K8:Formylation:93.60,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+818,THYYAVAVVK(+57.02)K,"K10:Carbamidomethylation (DHKE, X@N-term):false","K10:Carbamidomethylation (DHKE, X@N-term):12.28",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+919,QVASM(-48.00)TKPTTIIEK,M5:Dethiomethyl:false,M5:Dethiomethyl:1000.00,P05413|FABPH_HUMAN,Pool 2,Whole_milk
+870,TGLRRTAGWNVPIGTLRPFLN(+1622.58)WTGPPEPIEAAVAR,N21:Biantennary:false,N21:Biantennary:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+913,KPVDKFK(+114.04)DCHLAR,K7:Ubiquitin:false,K7:Ubiquitin:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+869,PYVPMYYVPNS(+283.05)YPYYGTNLYQR,S11:N-acetylglucosamine-1-phosphoryl:false,S11:N-acetylglucosamine-1-phosphoryl:45.03,P07498|CASK_HUMAN,Pool 2,Whole_milk
+819,D(+57.02)SAIGFSR,"D1:Carbamidomethylation (DHKE, X@N-term):true","D1:Carbamidomethylation (DHKE, X@N-term):1000.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+868,SCHTGLRRTAGWNVPIGTLRPFLN(+1505.54)WTGPPEPIEAAVAR,N24:dHex Hex(3) HexNAc(3) Pent(2):false,N24:dHex Hex(3) HexNAc(3) Pent(2):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+820,H(+57.02)KEFVGNWNK,"H1:Carbamidomethylation (DHKE, X@N-term):false","H1:Carbamidomethylation (DHKE, X@N-term):12.28",Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+821,C(+57.02)VPNSNER,"C1:Carbamidomethylation (DHKE, X@N-term):false","C1:Carbamidomethylation (DHKE, X@N-term):87.26",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1002,TAGWNVPIGTLRPFLN(+1021.36)WT(+1093.38)GPPEPIEAAVAR,N16:Hex(2) HexNAc(2) NeuAc:false;T18:dHex Hex HexA HexNAc(3):false,N16:Hex(2) HexNAc(2) NeuAc:6.59;T18:dHex Hex HexA HexNAc(3):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+864,AVPVQALLLN(+365.13)QELLLNPTHQIYPVTQPLAPVHNPISV,N10:Hex1HexNAc1:false,N10:Hex1HexNAc1:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+861,PYVPMYYVPNS(+242.02)YPYYGTNLYQR,S11:Phosphoglycosyl-D-mannose-1-phosphoryl:false,S11:Phosphoglycosyl-D-mannose-1-phosphoryl:71.27,P07498|CASK_HUMAN,Pool 2,Whole_milk
+966,EITALAPSTM(+15.99)K,M10:Oxidation (M):false,M10:Oxidation (M):1000.00,P60709|ACTB_HUMAN:P63267|ACTH_HUMAN:P68133|ACTS_HUMAN:P62736|ACTA_HUMAN:P63261|ACTG_HUMAN:P68032|ACTC_HUMAN,Pool 2,Whole_milk
+967,TIESLSS(+365.13)SEESITEYKQK,S7:Hex1HexNAc1:false,S7:Hex1HexNAc1:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+917,VRGPPVSC(+76.00)IK,C8:Cysteine mercaptoethanol:true,C8:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+848,AVPVQALLLNQELLLN(+365.13)PTHQIYPVTQPLAPVHNPISV,N16:Hex1HexNAc1:false,N16:Hex1HexNAc1:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+997,TAGWNVPIGTLRPFLN(+1227.44)WT(+995.33)GPPEPIEAAVAR,N16:Hex(3) HexNAc(3) Pent:false;T18:dHex(2) Hex(2) HexA HexNAc:false,N16:Hex(3) HexNAc(3) Pent:33.80;T18:dHex(2) Hex(2) HexA HexNAc:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1006,FLCRQSSGEN(+15.99)CDVVVNTLGK,N10:Oxidation or Hydroxylation:false,N10:Oxidation or Hydroxylation:0.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+867,VYTVD(+57.02)LGR,"D5:Carbamidomethylation (DHKE, X@N-term):true","D5:Carbamidomethylation (DHKE, X@N-term):63.97",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+0,TGDPNM(+15.99)GDSAVPTHWEPYTTENSGYLEITKK,M6:Oxidation (M):true,M6:Oxidation (M):1000.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1052,VKHEDQQQGEDE(+57.02)HQDK,"E12:Carbamidomethylation (DHKE, X@N-term):false","E12:Carbamidomethylation (DHKE, X@N-term):7.21",P05814|CASB_HUMAN,Pool 2,Whole_milk
+1456,F(+57.02)FSASCVPGADKG,"F1:Carbamidomethylation (DHKE, X@N-term):true","F1:Carbamidomethylation (DHKE, X@N-term):80.30",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1461,VLPIPQQVVPYPQR(+53.92),R14:Replacement of 2 protons by iron:false,R14:Replacement of 2 protons by iron:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1467,LADFALLCLDGKRKPVT(+79.97)EAR,T17:Phosphorylation (STY):false,T17:Phosphorylation (STY):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1470,VPAQLLGLLLLWLPGARCAIQLTQSPSSLS(+525.21)AS(+203.08)VGDR,S30:Hex HexNAc dHex Me:false;S32:HexNAcylation (ST):false,S30:Hex HexNAc dHex Me:0.00;S32:HexNAcylation (ST):0.00,P0DP09|KV113_HUMAN:A0A0B4J2D9|KVD13_HUMAN,Pool 2,Whole_milk
+1471,GGS(-18.01)FQLNELQGLK,S3:Dehydration:false,S3:Dehydration:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1474,E(+42.01)LVSDYKEKQMPK,E1:Acetylation (N-term):false,E1:Acetylation (N-term):1000.00,P0CG38|POTEI_HUMAN,Pool 2,Whole_milk
+1479,NNVM(+15.99)LQ(+0.98)W,M4:Oxidation (M):true;Q6:Deamidation (NQ):false,M4:Oxidation (M):1000.00;Q6:Deamidation (NQ):45.16,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1483,GM(-48.00)SISRPNAVVGR,M2:Dethiomethyl:false,M2:Dethiomethyl:1000.00,P15291|B4GT1_HUMAN,Pool 2,Whole_milk
+1488,L(+163.05)PNSHPPTVVR,L1:Phenethyl isothiocyanate:true,L1:Phenethyl isothiocyanate:1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1491,L(+114.04)RPVAAEVYGTER,"L1:Double Carbamidomethylation (DHKE, X@N-term):false","L1:Double Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1501,PFFD(+53.92)PQIPK,D4:Replacement of 2 protons by iron:true,D4:Replacement of 2 protons by iron:22.57,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1504,PQDKDGS(+1247.37)FSVVITGLR,S7:dHex Hex(2) HexNAc(2) NeuAc Sulf:false,S7:dHex Hex(2) HexNAc(2) NeuAc Sulf:32.28,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1506,C(+76.00)VPNSNER,C1:Cysteine mercaptoethanol:false,C1:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1513,SGSAVVSGGS(-18.01)R,S10:Dehydration:false,S10:Dehydration:0.00,P35908|K22E_HUMAN,Pool 2,Whole_milk
+1514,QQGM(+15.99)MGGMHQ(+0.98)K,M4:Oxidation (M):false;Q10:Deamidation (NQ):true,M4:Oxidation (M):0.00;Q10:Deamidation (NQ):19.08,Q6S8J3|POTEE_HUMAN:A5A3E0|POTEF_HUMAN:P0CG38|POTEI_HUMAN,Pool 2,Whole_milk
+1519,S(+178.05)(+933.34)VPQPKVLPIPQQVVPYPQR,S1:Gluconoylation:false;S1:Hex(2) HexNAc(3):false,S1:Gluconoylation:0.00;S1:Hex(2) HexNAc(3):0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1521,ET(-18.01)FTSGR,T2:Dehydration:false,T2:Dehydration:26.31,Q13410|BT1A1_HUMAN,Pool 2,Whole_milk
+1524,RPAIAINNPY(-18.01),Y10:Dehydration:false,Y10:Dehydration:1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1527,AVPVQALLLNQELLLNP(-0.98),P17:Amidation:true,P17:Amidation:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1530,DTLM(-48.00)ISR,M4:Dethiomethyl:true,M4:Dethiomethyl:1000.00,P01859|IGHG2_HUMAN:P01857|IGHG1_HUMAN:P01861|IGHG4_HUMAN:P01860|IGHG3_HUMAN,Pool 2,Whole_milk
+1531,N(+178.05)Q(+192.06)FASFIDKVR,N1:Gluconoylation:false;Q2:Heptose:false,N1:Gluconoylation:81.34;Q2:Heptose:38.16,Q8N1N4|K2C78_HUMAN:P04264|K2C1_HUMAN,Pool 2,Whole_milk
+1533,RPNLHPS(+114.04)FIAIPPKK,S7:Ubiquitin:false,S7:Ubiquitin:25.93,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1540,T(+161.07)FYYAVAVVK,T1:Hexosamine:false,T1:Hexosamine:130.84,P02787|TRFE_HUMAN,Pool 2,Whole_milk
+1543,LC(+76.00)TVATLR,C2:Cysteine mercaptoethanol:true,C2:Cysteine mercaptoethanol:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1544,LPLRYPERLQNPSESS(+525.21)EPIPLES(+673.24)R,S16:Hex HexNAc dHex Me:false;S23:dHex Hex(2) HexNAc:false,S16:Hex HexNAc dHex Me:0.00;S23:dHex Hex(2) HexNAc:0.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1545,W(+31.99)LQGSQELPREK,W1:Dihydroxy:false,W1:Dihydroxy:27.11,P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+1546,GWNVPIGTLRPFLN(+1021.36)WT(+1264.39)GPPEPIEAAVAR,N14:Hex(2) HexNAc(2) NeuAc:false;T16:dHex(2) Hex(3) HexNAc(2) Sulf:false,N14:Hex(2) HexNAc(2) NeuAc:4.16;T16:dHex(2) Hex(3) HexNAc(2) Sulf:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1452,N(+71.04)QLQLQAAHAQEQIR,"N1:Propionamide (K, X@N-term):false","N1:Propionamide (K, X@N-term):1000.00",P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1547,GSDCPDKFC(+170.04)LFQSETK,C9:Menadione quinone derivative:false,C9:Menadione quinone derivative:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1451,EIVMT(-18.01)QSPATLSVSPGER,T5:Dehydration:true,T5:Dehydration:32.28,P01624|KV315_HUMAN,Pool 2,Whole_milk
+1443,PDPN(+365.13)CVDR(+324.11)PVEGYLAVAVVR,N4:Hex1HexNAc1:false;R8:Lactosylation:false,N4:Hex1HexNAc1:1000.00;R8:Lactosylation:64.80,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1395,QTIS(+79.97)RPK,S4:Phosphorylation (STY):false,S4:Phosphorylation (STY):19.05,P01871|IGHM_HUMAN,Pool 2,Whole_milk
+1397,M(+114.04)IAYWTNFAK,"M1:Double Carbamidomethylation (DHKE, X@N-term):true","M1:Double Carbamidomethylation (DHKE, X@N-term):82.46",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1398,RPAIAINNPY(-18.01)V,Y10:Dehydration:false,Y10:Dehydration:1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1399,ASSIIDEL(-0.98),L8:Amidation:true,L8:Amidation:1000.00,P10909|CLUS_HUMAN,Pool 2,Whole_milk
+1401,QPLWS(+307.09)VPQ(+192.06)PKVLPIPQQVVPYPQR,S5:N-glycoyl neuraminic acid:false;Q8:Heptose:false,S5:N-glycoyl neuraminic acid:1000.00;Q8:Heptose:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1402,SDC(+170.04)PDKFCLFQSETK,C3:Menadione quinone derivative:false,C3:Menadione quinone derivative:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1408,SC(+114.04)HTGLR,C2:Ubiquitin:false,C2:Ubiquitin:8.69,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1409,VPSHT(-2.02)VVAR,T5:2-amino-3-oxo-butanoic_acid:false,T5:2-amino-3-oxo-butanoic_acid:8.22,P02787|TRFE_HUMAN,Pool 2,Whole_milk
+1410,LC(+25.00)AGTGENK,C2:Cyano:false,C2:Cyano:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1412,AVPVQALLLNQ(-0.98),Q11:Amidation:true,Q11:Amidation:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1414,R(+114.04)KPVTEAR,"R1:Double Carbamidomethylation (DHKE, X@N-term):false","R1:Double Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1417,TVTINCPFK(+114.04)TENAQKR,K9:Ubiquitin:false,K9:Ubiquitin:0.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1418,QS(+203.08)ESLVNR,S2:HexNAcylation (ST):false,S2:HexNAcylation (ST):20.41,Q9GZX5|ZN350_HUMAN,Pool 2,Whole_milk
+1419,LDLAGRDLTDYLMK(+57.02),"K14:Carbamidomethylation (DHKE, X@N-term):false","K14:Carbamidomethylation (DHKE, X@N-term):19.86",P60709|ACTB_HUMAN:P63267|ACTH_HUMAN:P68133|ACTS_HUMAN:P62736|ACTA_HUMAN:Q562R1|ACTBL_HUMAN:P63261|ACTG_HUMAN:P68032|ACTC_HUMAN,Pool 2,Whole_milk
+1421,TFTC(+114.04)TAAYPESK,C4:Ubiquitin:false,C4:Ubiquitin:14.02,P01876|IGHA1_HUMAN,Pool 2,Whole_milk
+1422,L(+178.05)PIPQQVVPYPQR,L1:Gluconoylation:false,L1:Gluconoylation:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1423,ALGSVCPS(+958.38)LCPPGGIHQVTINKSLLAPLNVELDPEIQK,S8:dHex HexNAc(4):false,S8:dHex HexNAc(4):0.00,Q86Y46|K2C73_HUMAN,Pool 2,Whole_milk
+1425,S(+162.05)(+1161.45)CHTGLRRTAGWNVPIGTLRPFLNWTGPPEPIEAAVAR,S1:Hexose:false;S1:dHex HexNAc(5):false,S1:Hexose:0.00;S1:dHex HexNAc(5):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1426,HTGLRRTAGWNVPIGTLRPFLN(+192.06)WT(+1321.41)GPPEPIEAAVAR,N22:Heptose:false;T24:dHex Hex(3) HexNAc(3) Sulf:false,N22:Heptose:0.00;T24:dHex Hex(3) HexNAc(3) Sulf:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1427,SPTIPFFDPQIPK(+58.01),"K13:Carboxymethyl (KW, X@N-term):false","K13:Carboxymethyl (KW, X@N-term):23.56",P05814|CASB_HUMAN,Pool 2,Whole_milk
+1428,C(+25.00)VPGADK,C1:Cyano:false,C1:Cyano:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1431,KGET(+114.04)FSCMVGHEALPLAFTQK,T4:Ubiquitin:false,T4:Ubiquitin:0.00,P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+1433,DQH(+57.02)MAIAWVK,"H3:Carbamidomethylation (DHKE, X@N-term):false","H3:Carbamidomethylation (DHKE, X@N-term):7.32",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1435,V(+362.14)PVLAENYK,V1:Nucleophilic addtion to cytopiloyne:true,V1:Nucleophilic addtion to cytopiloyne:24.44,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1437,SPLFM(+15.99)GK,M5:Oxidation (M):true,M5:Oxidation (M):1000.00,P01009|A1AT_HUMAN,Pool 2,Whole_milk
+1439,NICDIS(-2.02)CDK,S6:2-amino-3-oxo-butanoic_acid:false,S6:2-amino-3-oxo-butanoic_acid:0.00,P00709|LALBA_HUMAN,Pool 2,Whole_milk
+1442,ALTLAYK(+57.02),"K7:Carbamidomethylation (DHKE, X@N-term):true","K7:Carbamidomethylation (DHKE, X@N-term):27.58",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1449,D(+53.92)ASGVTFTWTPSSGK,D1:Replacement of 2 protons by iron:false,D1:Replacement of 2 protons by iron:25.66,P01876|IGHA1_HUMAN,Pool 2,Whole_milk
+1394,C(+71.04)GLGINSR,C1:Propionamide:true,C1:Propionamide:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1549,LSGLP(+148.04)KHRVIGSGCNLDSAR,P5:Glycosyl-L-hydroxyproline:false,P5:Glycosyl-L-hydroxyproline:1000.00,P07195|LDHB_HUMAN,Pool 2,Whole_milk
+1555,VPSH(+114.04)AVVAR,"H4:Double Carbamidomethylation (DHKE, X@N-term):true","H4:Double Carbamidomethylation (DHKE, X@N-term):26.52",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1637,AEAEALY(-18.01)QTK,Y7:Dehydration:false,Y7:Dehydration:0.00,Q86Y46|K2C73_HUMAN:Q8N1N4|K2C78_HUMAN:P12035|K2C3_HUMAN,Pool 2,Whole_milk
+1638,ALENP(+31.99)QPHPGWQGTLK,P5:Dihydroxy:true,P5:Dihydroxy:33.18,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1639,KYAAS(+426.14)SYLSLTPEQWK,S5:Hex Pent(2):false,S5:Hex Pent(2):10.11,A0M8Q6|IGLC7_HUMAN:P0DOY2|IGLC2_HUMAN:P0CF74|IGLC6_HUMAN:B9A064|IGLL5_HUMAN:P0DOY3|IGLC3_HUMAN:P0CG04|IGLC1_HUMAN,Pool 2,Whole_milk
+1640,SPTIPFFDPQ(+15.00)IPK,Q10:Deamidation followed by a methylation:false,Q10:Deamidation followed by a methylation:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1641,EVHYHGEPISVNVS(+426.14)INNCTNKVIK,S14:Hex Pent(2):false,S14:Hex Pent(2):11.12,P36575|ARRC_HUMAN,Pool 2,Whole_milk
+1642,LVNEVTEFAKTCVADES(-2.02)AENCDK,S17:2-amino-3-oxo-butanoic_acid:false,S17:2-amino-3-oxo-butanoic_acid:5.14,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1643,W(+162.05)(+162.05)S(+539.22)VPQPKVLPIPQQVVPYPQR,W1:Hexose:false;W1:Hexose:false;S2:Hex HexNAc dHex Me(2):false,W1:Hexose:0.00;W1:Hexose:0.00;S2:Hex HexNAc dHex Me(2):1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1648,QKQPACH(+40.03)ENDERPFYQK,H7:Propionaldehyde +40:false,H7:Propionaldehyde +40:0.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1650,EITALAPSTM(-48.00)K,M10:Dethiomethyl:false,M10:Dethiomethyl:1000.00,P60709|ACTB_HUMAN:P63267|ACTH_HUMAN:P68133|ACTS_HUMAN:P62736|ACTA_HUMAN:P63261|ACTG_HUMAN:P68032|ACTC_HUMAN,Pool 2,Whole_milk
+1661,NGSDC(+129.04)PDKFCLFQSETK,C5:Nmethylmaleimidehydrolysis:false,C5:Nmethylmaleimidehydrolysis:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1662,S(+58.01)TDYGIFQINSR,"S1:Carboxymethyl (KW, X@N-term):false","S1:Carboxymethyl (KW, X@N-term):1000.00",P61626|LYSC_HUMAN,Pool 2,Whole_milk
+1665,T(+703.22)WTPSSGK,T1:HexNAc Kdn(2):true,T1:HexNAc Kdn(2):32.28,P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+1666,S(+27.99)ISISVAR,S1:Formylation:false,S1:Formylation:1000.00,P04264|K2C1_HUMAN,Pool 2,Whole_milk
+1667,WELLQQ(+0.98)VDTSTR,Q6:Deamidation (NQ):false,Q6:Deamidation (NQ):17.01,P04264|K2C1_HUMAN,Pool 2,Whole_milk
+1668,NLLFNDNTE(-0.98),E9:Amidation:true,E9:Amidation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1669,LAEN(+192.06)AGDVAFVK,N4:Heptose:false,N4:Heptose:58.11,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1670,PT(+203.08)IPFFDPQIPK,T2:HexNAcylation (ST):false,T2:HexNAcylation (ST):1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1671,QKACET(+494.17)DLAKAEPALLAAQEALDTLNK,T6:HexNAc NeuAc:false,T6:HexNAc NeuAc:7.61,Q9UFH2|DYH17_HUMAN,Pool 2,Whole_milk
+1673,LVVGNTEIGIEMK(+57.02),"K13:Carbamidomethylation (DHKE, X@N-term):false","K13:Carbamidomethylation (DHKE, X@N-term):11.10",P47989|XDH_HUMAN,Pool 2,Whole_milk
+1674,LVDSKNFDDYM(-48.00)K,M11:Dethiomethyl:true,M11:Dethiomethyl:1000.00,P05413|FABPH_HUMAN,Pool 2,Whole_milk
+1675,T(+646.20)KNLLFNDNTECLAR,T1:dHex Hex(2) HexA:false,T1:dHex Hex(2) HexA:60.15,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1678,PIGTLRPFLN(+1907.71)WT(+834.28)GPPEPIEAAVAR,N10:Hex(3) HexNAc(7):false;T12:Hex(2) HexNAc NeuGc:false,N10:Hex(3) HexNAc(7):1000.00;T12:Hex(2) HexNAc NeuGc:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1679,HPS(+486.16)FIAIPPK,S3:Hex3:false,S3:Hex3:1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1683,GPPVSC(+114.04)IK,C6:Ubiquitin:false,C6:Ubiquitin:7.65,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1689,NN(+0.98)SFYGPELK,N2:Deamidation (NQ):false,N2:Deamidation (NQ):11.06,P47989|XDH_HUMAN,Pool 2,Whole_milk
+1690,ALEN(+0.98)PQ(+0.98)PHPGWQGTLK,N4:Deamidation (NQ):false;Q6:Deamidation (NQ):false,N4:Deamidation (NQ):24.34;Q6:Deamidation (NQ):16.36,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1691,D(+53.92)SAIGFSR,D1:Replacement of 2 protons by iron:false,D1:Replacement of 2 protons by iron:19.99,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1636,T(-2.02)PTLVEVSR,T1:2-amino-3-oxo-butanoic_acid:true,T1:2-amino-3-oxo-butanoic_acid:22.85,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1550,PIQC(+31.99)IQAIAENR,C4:Dihydroxy:false,C4:Dihydroxy:16.66,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1632,LENLTVTEVGWD(+28.03)GLR,D12:Ethylation:false,D12:Ethylation:11.12,P24821|TENA_HUMAN,Pool 2,Whole_milk
+1629,F(+27.99)GKDKSPK,F1:Formylation:false,F1:Formylation:17.01,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1561,GSDC(+170.04)PDKFCLFQSETK,C4:Menadione quinone derivative:false,C4:Menadione quinone derivative:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1564,RTVAAPSVFIFPPS(+511.19)DEQ(+192.06)LK,S14:Hex1HexNAc1dHex1:false;Q17:Heptose:false,S14:Hex1HexNAc1dHex1:52.22;Q17:Heptose:0.00,P01834|IGKC_HUMAN,Pool 2,Whole_milk
+1569,ALT(-18.01)LAYK,T3:Dehydration:false,T3:Dehydration:32.97,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1575,C(+71.04)HTAVDR,C1:Propionamide:true,C1:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1577,TTYE(+57.02)KYLGPQYVAGITNLKK,"E4:Carbamidomethylation (DHKE, X@N-term):false","E4:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1578,KVFE(+57.02)RCELAR,"E4:Carbamidomethylation (DHKE, X@N-term):false","E4:Carbamidomethylation (DHKE, X@N-term):12.33",P61626|LYSC_HUMAN,Pool 2,Whole_milk
+1587,QTDEIK(+114.04)DTR,K6:Ubiquitin:true,K6:Ubiquitin:32.28,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1590,C(+25.00)VVAEPEK,C1:Cyano:false,C1:Cyano:1000.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1592,SC(+133.02)HTGLRR,C2:S-homocysteinylation:false,C2:S-homocysteinylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1594,KS(+114.04)EEEVAARR,S2:Ubiquitin:false,S2:Ubiquitin:18.17,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1597,QNSKSNSVPIILAIVGLMLVT(+494.17)VVAGVLIVK(+324.11),T21:HexNAc NeuAc:false;K30:Lactosylation:false,T21:HexNAc NeuAc:9.69;K30:Lactosylation:4.19,Q99523|SORT_HUMAN,Pool 2,Whole_milk
+1598,TSFTSVSR(+31.99)SGGG,R8:Dihydroxy:false,R8:Dihydroxy:12.35,P13647|K2C5_HUMAN,Pool 2,Whole_milk
+1599,AEAEALYQT(-18.01)K,T9:Dehydration:false,T9:Dehydration:8.22,Q86Y46|K2C73_HUMAN:Q8N1N4|K2C78_HUMAN:P12035|K2C3_HUMAN,Pool 2,Whole_milk
+1601,C(+114.04)VPNSNER,C1:Ubiquitin:true,C1:Ubiquitin:61.69,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1602,V(+114.04)NEVTEFAK,"V1:Double Carbamidomethylation (DHKE, X@N-term):false","V1:Double Carbamidomethylation (DHKE, X@N-term):75.74",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1603,GRVMPVLKS(+698.24)PT(+1272.45)IPFFDPQIPK,S9:Ac Hex HexNAc NeuAc:false;T11:dHex(2) Hex(2) HexNAc(2) Kdn:false,S9:Ac Hex HexNAc NeuAc:0.00;T11:dHex(2) Hex(2) HexNAc(2) Kdn:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1604,P(+27.99)SHAVVAR,P1:Formylation:false,P1:Formylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1606,G(+114.04)RVMPVLK,"G1:Double Carbamidomethylation (DHKE, X@N-term):false","G1:Double Carbamidomethylation (DHKE, X@N-term):0.00",P05814|CASB_HUMAN,Pool 2,Whole_milk
+1610,GKDK(+57.02)SPK,"K4:Carbamidomethylation (DHKE, X@N-term):true","K4:Carbamidomethylation (DHKE, X@N-term):23.10",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1613,RTAGWNVPIGTLRPFLN(+1227.44)WT(+730.26)GPPEPIEAAVAR,N17:Hex(3) HexNAc(3) Pent:false;T19:Hex2HexNAc2:false,N17:Hex(3) HexNAc(3) Pent:7.03;T19:Hex2HexNAc2:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1614,GNVIVVTFN(+0.98)YR,N9:Deamidation (NQ):false,N9:Deamidation (NQ):27.75,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1615,N(-17.03)QKQPACHENDERPFYQK,N1:Ammonia-loss (N):false,N1:Ammonia-loss (N):23.78,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1619,EPNN(+568.21)K(+192.06)EGYYGYTGAFR,N4:Hex1HexNAc2:false;K5:Heptose:false,N4:Hex1HexNAc2:0.00;K5:Heptose:0.00,P02787|TRFE_HUMAN,Pool 2,Whole_milk
+1621,T(+57.02)LIEKTNEER,"T1:Carbamidomethylation (DHKE, X@N-term):true","T1:Carbamidomethylation (DHKE, X@N-term):56.34",P10909|CLUS_HUMAN,Pool 2,Whole_milk
+1622,AD(+53.92)AVTLDGGFIYEAGLAPYK,D2:Replacement of 2 protons by iron:false,D2:Replacement of 2 protons by iron:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1625,FFSASCVPGADKGQFPNLC(+114.04)R,C19:Ubiquitin:false,C19:Ubiquitin:8.82,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1627,RTAGWNVPIGTLRPFLN(+1095.40)WT(+917.35)GPPEPIEAAVAR,N17:Hex(3) HexNAc(3):false;T19:dHex Hex HexNAc(3):false,N17:Hex(3) HexNAc(3):0.00;T19:dHex Hex HexNAc(3):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1631,TYFPHFDLSH(+57.02)GSAQVK,"H10:Carbamidomethylation (DHKE, X@N-term):false","H10:Carbamidomethylation (DHKE, X@N-term):0.00",P69905|HBA_HUMAN,Pool 2,Whole_milk
+1051,C(+25.00)LFQSETK,C1:Cyano:true,C1:Cyano:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1391,FLCRQSSGENCD(+15.99)VVVNTLGKR,D12:Oxidation or Hydroxylation:false,D12:Oxidation or Hydroxylation:0.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1387,LC(+133.02)AGTGENK,C2:S-homocysteinylation:true,C2:S-homocysteinylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1129,LGDS(+1079.40)VDIFKGIPFAAPTK,S4:dHex Hex(2) HexNAc(3):false,S4:dHex Hex(2) HexNAc(3):67.58,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1131,GLQGQPPALFKPQLVRLLGT(+744.24)AQLTLLHAMLALK(+178.05),T20:Hex HexA HexNAc(2):false;K33:Gluconoylation:true,T20:Hex HexA HexNAc(2):11.12;K33:Gluconoylation:20.01,Q2VPB7|AP5B1_HUMAN,Pool 2,Whole_milk
+1134,DVAFVKDVT(+698.24)VLQNTDGNNNEAWAK,T9:Ac Hex HexNAc NeuAc:false,T9:Ac Hex HexNAc NeuAc:23.70,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1135,FLCRQSS(-2.02)GENCDVVVNTLGK,S7:2-amino-3-oxo-butanoic_acid:false,S7:2-amino-3-oxo-butanoic_acid:0.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1138,TIESLS(+365.13)SSEESITEYKQK,S6:Hex1HexNAc1:false,S6:Hex1HexNAc1:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1143,SVTC(+76.00)HVK,C4:Cysteine mercaptoethanol:true,C4:Cysteine mercaptoethanol:1000.00,P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+1145,LRPVAAEVY(+15.99)GTER,Y9:Oxidation or Hydroxylation:true,Y9:Oxidation or Hydroxylation:16.08,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1148,V(+71.04)TVLGQPK,"V1:Propionamide (K, X@N-term):true","V1:Propionamide (K, X@N-term):64.58",B9A064|IGLL5_HUMAN,Pool 2,Whole_milk
+1149,T(+146.06)HYTITIR,T1:Fucose:true,T1:Fucose:34.76,P24821|TENA_HUMAN,Pool 2,Whole_milk
+1157,PQTLALPPQPLWS(+956.28)VPQPK(+340.10)VLPIPQQVVPYPQR,S13:dHex Hex(2) HexNAc(2) Sulf:false;K18:Glucosylgalactosyl hydroxylysine:false,S13:dHex Hex(2) HexNAc(2) Sulf:0.00;K18:Glucosylgalactosyl hydroxylysine:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1158,LRPVAAEVYGT(+307.09)ERQ,T11:N-glycoyl neuraminic acid:false,T11:N-glycoyl neuraminic acid:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1162,GIDYWLAH(+114.04)K,"H8:Double Carbamidomethylation (DHKE, X@N-term):false","H8:Double Carbamidomethylation (DHKE, X@N-term):9.34",P00709|LALBA_HUMAN,Pool 2,Whole_milk
+1165,NLLFNDNT(+114.04)ECLAR,T8:Ubiquitin:false,T8:Ubiquitin:8.22,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1169,VRGPPVSC(+57.02)IK,C8:Carbamidomethylation:true,C8:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1179,A(+57.02)LTLAYK,"A1:Carbamidomethylation (DHKE, X@N-term):true","A1:Carbamidomethylation (DHKE, X@N-term):80.85",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1181,GPPVSC(+76.00)IK,C6:Cysteine mercaptoethanol:false,C6:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1184,TLALPPQPLWS(+1182.29)VPQPK(+340.10)VLPIPQQVVPYPQR,S11:dHex(2) Hex(2) HexNAc(2) Sulf(2):false;K16:Glucosylgalactosyl hydroxylysine:false,S11:dHex(2) Hex(2) HexNAc(2) Sulf(2):0.00;K16:Glucosylgalactosyl hydroxylysine:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1185,LQSGNS(+453.15)QESVTEQDSK,S6:Hex NeuAc:false,S6:Hex NeuAc:12.33,P01834|IGKC_HUMAN,Pool 2,Whole_milk
+1186,PQPLWS(+1825.66)VPQ(+192.06)PKVLPIPQQVVPYPQR,S6:Hex(5) HexNAc(5):false;Q9:Heptose:false,S6:Hex(5) HexNAc(5):1000.00;Q9:Heptose:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1187,FQLFGSPSGQKD(+53.92)LLFK,D12:Replacement of 2 protons by iron:true,D12:Replacement of 2 protons by iron:42.89,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1188,S(+835.30)VPQPK(+161.07)VLPIPQQVVPYPQR,S1:dHex Hex(3) HexNAc:false;K6:Hexosamine:false,S1:dHex Hex(3) HexNAc:1000.00;K6:Hexosamine:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1189,VTEEDFYKLVSEFTITK(+71.04)G,"K17:Propionamide (K, X@N-term):false","K17:Propionamide (K, X@N-term):127.49",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1190,LVTD(+57.02)LTK,"D4:Carbamidomethylation (DHKE, X@N-term):true","D4:Carbamidomethylation (DHKE, X@N-term):29.32",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1192,G(+114.04)RVMPVLKSPTIPFFDPQIPK,"G1:Double Carbamidomethylation (DHKE, X@N-term):false","G1:Double Carbamidomethylation (DHKE, X@N-term):0.00",P05814|CASB_HUMAN,Pool 2,Whole_milk
+1193,SC(+133.02)HLAMAPNHAVVSR,C2:S-homocysteinylation:false,C2:S-homocysteinylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1197,AIAENRADAVT(+995.33)LDGGFIYEAGLAPYK,T11:dHex(2) Hex(2) HexA HexNAc:false,T11:dHex(2) Hex(2) HexA HexNAc:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+769,T(+57.02)VAAPSVFIFPPSDEQLK,"T1:Carbamidomethylation (DHKE, X@N-term):false","T1:Carbamidomethylation (DHKE, X@N-term):57.35",P01834|IGKC_HUMAN,Pool 2,Whole_milk
+1127,GWNVPIGTLRPFLN(+1378.43)WT(+907.32)GPPEPIEAAVAR,N14:Hex(3) HexNAc(4) Sulf:false;T16:dHex(2) Hex HexNAc Kdn:false,N14:Hex(3) HexNAc(4) Sulf:6.59;T16:dHex(2) Hex HexNAc Kdn:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1204,LVTDLTK(+57.02),"K7:Carbamidomethylation (DHKE, X@N-term):true","K7:Carbamidomethylation (DHKE, X@N-term):38.16",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1125,T(+162.05)(+1517.58)GLRRTAGWNVPIGTLRPFLNWTGPPEPIEAAVAR,T1:Hexose:false;T1:dHex(4) Hex(2) HexNAc(3):false,T1:Hexose:0.00;T1:dHex(4) Hex(2) HexNAc(3):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1120,TAGWNVPIGTLRPFLNW(+161.07)T(+1955.72)GPPEPIEAAVAR,W17:Hexosamine:false;T18:dHex(2) Hex(4) HexNAc(5):false,W17:Hexosamine:0.00;T18:dHex(2) Hex(4) HexNAc(5):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1053,PVSC(+57.02)IKR,C4:Carbamidomethylation:true,C4:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1055,WSVPQPK(+57.02),"K7:Carbamidomethylation (DHKE, X@N-term):true","K7:Carbamidomethylation (DHKE, X@N-term):93.99",P05814|CASB_HUMAN,Pool 2,Whole_milk
+1057,AFVKDVT(+948.34)VLQNTDGNNNEAWAK,T7:dHex(2) HexNAc(2) Kdn:false,T7:dHex(2) HexNAc(2) Kdn:39.44,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1058,QK(+40.03)QPACHENDERPFYQK,K2:Propionaldehyde +40:false,K2:Propionaldehyde +40:10.19,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1063,SVQWCAVSQPEATK(+27.99)CFQWQR,K14:Formylation:false,K14:Formylation:7.38,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1066,WC(+57.02)AVGEQELRK,C2:Carbamidomethylation:true,C2:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1071,TAGWNVPIGTLRPFLN(+1095.40)WT(+1168.44)GPPEPIEAAVAR,N16:Hex(3) HexNAc(3):false;T18:dHex(3) Hex(2) HexNAc(2):false,N16:Hex(3) HexNAc(3):6.67;T18:dHex(3) Hex(2) HexNAc(2):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1073,SCHTGLRRTAGWNVPIGTLRPFLN(+404.07)WT(+948.34)GPPEPIEAAVAR,N24:H1O3P1Hex2:false;T26:dHex(2) HexNAc(2) Kdn:false,N24:H1O3P1Hex2:0.00;T26:dHex(2) HexNAc(2) Kdn:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1074,S(+68.06)YSCQVTHEGSTVEK,S1:Piperidination:false,S1:Piperidination:60.32,P0DOY2|IGLC2_HUMAN:P0CF74|IGLC6_HUMAN:P0DOY3|IGLC3_HUMAN:B9A064|IGLL5_HUMAN:P0CG04|IGLC1_HUMAN,Pool 2,Whole_milk
+1075,SPT(+79.97)IPFFDPQ(+0.98)IPK,T3:Phosphorylation (STY):false;Q10:Deamidation (NQ):false,T3:Phosphorylation (STY):9.42;Q10:Deamidation (NQ):1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1078,KSE(+57.02)EEVAARR,"E3:Carbamidomethylation (DHKE, X@N-term):false","E3:Carbamidomethylation (DHKE, X@N-term):9.34",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1082,GN(+0.98)VIVVTFNYR,N2:Deamidation (NQ):false,N2:Deamidation (NQ):61.38,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1083,G(+57.02)NVIVVTFNYR,"G1:Carbamidomethylation (DHKE, X@N-term):false","G1:Carbamidomethylation (DHKE, X@N-term):1000.00",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1089,G(+178.05)K(+178.05)EDAIWNLLR,G1:Gluconoylation:false;K2:Gluconoylation:false,G1:Gluconoylation:1000.00;K2:Gluconoylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1090,K(+324.11)QTALVELVK,K1:Lactosylation:true,K1:Lactosylation:85.33,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1091,PRIDS(+307.09)GLYLGSGYFTAIQNLR,S5:N-glycoyl neuraminic acid:false,S5:N-glycoyl neuraminic acid:9.27,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1093,VLSPADK(+57.02)TNVK,"K7:Carbamidomethylation (DHKE, X@N-term):false","K7:Carbamidomethylation (DHKE, X@N-term):9.34",P69905|HBA_HUMAN,Pool 2,Whole_milk
+1096,NN(+0.98)VM(+15.99)LQW,N2:Deamidation (NQ):false;M4:Oxidation (M):true,N2:Deamidation (NQ):0.00;M4:Oxidation (M):1000.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1097,LGFLST(+307.09)GDANLPGNYGLR,T6:N-glycoyl neuraminic acid:false,T6:N-glycoyl neuraminic acid:8.69,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1100,L(+27.99)PLRYPER,L1:Formylation:false,L1:Formylation:1000.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1104,LKQVLLH(+15.99)QQAK,H7:Oxidation (HW):true,H7:Oxidation (HW):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1106,SPTIPFFDP(+15.99)QIPK,P9:Oxidation or Hydroxylation:false,P9:Oxidation or Hydroxylation:17.01,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1108,RTAGWNVPIGTLRPFLN(+1768.64)WT(+192.06)GPPEPIEAAVAR,N17:Fucosylated biantennary:false;T19:Heptose:false,N17:Fucosylated biantennary:16.94;T19:Heptose:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1109,LPLRYPERLQNPSESS(+525.21)EPIPLES(+714.27)R,S16:Hex HexNAc dHex Me:false;S23:Hex1HexNAc2dHex1:false,S16:Hex HexNAc dHex Me:0.00;S23:Hex1HexNAc2dHex1:5.59,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1110,LVRPEVDVMCT(+114.04)AFHDNEETFLKK,T11:Ubiquitin:false,T11:Ubiquitin:0.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1114,VLSIAQAHSPAFSC(+76.00)EQVR,C14:Cysteine mercaptoethanol:true,C14:Cysteine mercaptoethanol:1000.00,P08571|CD14_HUMAN,Pool 2,Whole_milk
+1118,GDSAVPTHWEPYTT(+689.24)ENSGYLEITKK,T14:Hex(3) HexNAc:false,T14:Hex(3) HexNAc:0.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1121,Q(+0.98)LVEIEK,Q1:Deamidation (NQ):true,Q1:Deamidation (NQ):1000.00,P00738|HPT_HUMAN:P00739|HPTR_HUMAN,Pool 2,Whole_milk
+1390,RIDS(+404.07)GLYLGSGYFTAIQNLR,S4:H1O3P1Hex2:false,S4:H1O3P1Hex2:5.14,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1206,SPT(+349.14)IPFFDPQIPK,T3:HexNAc1dHex1:false,T3:HexNAc1dHex1:7.32,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1213,AKDTVY(+15.99)TK,Y6:Oxidation or Hydroxylation:true,Y6:Oxidation or Hydroxylation:26.31,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1318,KSC(+133.02)HTAVDR,C3:S-homocysteinylation:false,C3:S-homocysteinylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1319,ATKE(+57.02)QLK,"E4:Carbamidomethylation (DHKE, X@N-term):false","E4:Carbamidomethylation (DHKE, X@N-term):19.07",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1322,K(+27.99)SEEEVAARR,K1:Formylation:true,K1:Formylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1325,C(+25.00)APGSDPR,C1:Cyano:false,C1:Cyano:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1327,VY(-18.01)TVDLGR,Y2:Dehydration:false,Y2:Dehydration:0.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1328,C(+25.00)LLNNFYPR,C1:Cyano:true,C1:Cyano:1000.00,P01834|IGKC_HUMAN,Pool 2,Whole_milk
+1330,GQFPNLC(+76.00)R,C7:Cysteine mercaptoethanol:false,C7:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1331,A(+114.04)MIAYWTNFAK,"A1:Double Carbamidomethylation (DHKE, X@N-term):false","A1:Double Carbamidomethylation (DHKE, X@N-term):82.30",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1333,KPVDKFKD(-18.01),D8:Dehydration:false,D8:Dehydration:33.26,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1336,IGGRGSSS(-18.01)GGVK,S8:Dehydration:false,S8:Dehydration:0.00,P04264|K2C1_HUMAN,Pool 2,Whole_milk
+1339,GVAGGSVAVLC(+76.00)PYNRK,C11:Cysteine mercaptoethanol:true,C11:Cysteine mercaptoethanol:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1340,TIES(+365.13)LSSSEESITEYK,S4:Hex1HexNAc1:false,S4:Hex1HexNAc1:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1341,VAPE(+53.92)EHPTLLTEAPLNPK,E4:Replacement of 2 protons by iron:false,E4:Replacement of 2 protons by iron:0.00,P63267|ACTH_HUMAN:P68133|ACTS_HUMAN:P62736|ACTA_HUMAN:P68032|ACTC_HUMAN,Pool 2,Whole_milk
+1342,VMPVLKSPT(+114.04)IPFFDPQIPK,T9:Ubiquitin:false,T9:Ubiquitin:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1344,Q(+57.02)TDEIKDTR,"Q1:Carbamidomethylation (DHKE, X@N-term):false","Q1:Carbamidomethylation (DHKE, X@N-term):0.00",P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1348,GPPVSC(-33.99)IK,C6:Dehydroalanine (C):false,C6:Dehydroalanine (C):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1363,N(+68.06)QPSTQIVANAK,N1:Piperidination:false,N1:Piperidination:55.31,Q99541|PLIN2_HUMAN,Pool 2,Whole_milk
+1366,VN(+1702.54)GKEDAIWNLLR,N2:Hex(5) HexNAc(4) Sulf:false,N2:Hex(5) HexNAc(4) Sulf:75.74,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1368,HLAM(-48.00)APNHAVVSR,M4:Dethiomethyl:false,M4:Dethiomethyl:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1369,VLVHTSVSPSPDN(+0.98)LR,N13:Deamidation (NQ):false,N13:Deamidation (NQ):1000.00,Q6WN34|CRDL2_HUMAN,Pool 2,Whole_milk
+1373,GQFPNLCRLCAGT(-2.02)GENK,T13:2-amino-3-oxo-butanoic_acid:false,T13:2-amino-3-oxo-butanoic_acid:48.12,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1374,S(+1015.40)(+162.05)CHTGLRRTAGWNVPIGTLRPFLNWTGPPEPIEAAVAR,S1:HexNAc(5):false;S1:Hexose:false,S1:HexNAc(5):0.00;S1:Hexose:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1377,LDE(+57.02)LRDEGKASSAK,"E3:Carbamidomethylation (DHKE, X@N-term):false","E3:Carbamidomethylation (DHKE, X@N-term):0.00",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1380,NAGDVAFVKDVT(+527.18)VLQNTDGNNNEAWAK,T12:Hex(2) HexNAc:false,T12:Hex(2) HexNAc:17.91,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1382,KPVDK(+114.04)FKDCHLAR,K5:Ubiquitin:false,K5:Ubiquitin:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1383,VPAQLLGLLLLWLPGARCAIQLTQS(+1093.38)PSSLSASVGDR,S25:dHex Hex HexA HexNAc(3):false,S25:dHex Hex HexA HexNAc(3):0.00,P0DP09|KV113_HUMAN:A0A0B4J2D9|KVD13_HUMAN,Pool 2,Whole_milk
+1386,LPILNQPSTQIVANAK(-0.98),K16:Amidation:false,K16:Amidation:1000.00,Q99541|PLIN2_HUMAN,Pool 2,Whole_milk
+1315,V(+314.19)TLDGGFIYEAGLAPYK,V1:Levuglandinyl-lysine anhydrolactam adduct:false,V1:Levuglandinyl-lysine anhydrolactam adduct:87.91,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1211,RPAIAINN(-18.01),N8:Dehydration:true,N8:Dehydration:1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1312,LDELRDE(+57.02)GKASSAK,"E7:Carbamidomethylation (DHKE, X@N-term):false","E7:Carbamidomethylation (DHKE, X@N-term):0.00",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1301,VWC(+210.00)AVGEQELR,C3:Carboxymethylated DTT modification of cysteine:false,C3:Carboxymethylated DTT modification of cysteine:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1215,T(+57.02)LVDAVAK,"T1:Carbamidomethylation (DHKE, X@N-term):true","T1:Carbamidomethylation (DHKE, X@N-term):34.94",P47989|XDH_HUMAN,Pool 2,Whole_milk
+1217,A(+57.02)RVVWCAVGEQELR,"A1:Carbamidomethylation (DHKE, X@N-term):true","A1:Carbamidomethylation (DHKE, X@N-term):59.08",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1222,QYLPNS(+114.04)HPPTVVR,S6:Ubiquitin:false,S6:Ubiquitin:14.19,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1224,LNEYNQLQLQAAHAQEQIR(+114.04)R,"R19:Double Carbamidomethylation (DHKE, X@N-term):false","R19:Double Carbamidomethylation (DHKE, X@N-term):0.00",P47710|CASA1_HUMAN,Pool 2,Whole_milk
+1225,EKY(-18.01)LTWASR,Y3:Dehydration:false,Y3:Dehydration:26.31,P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+1231,IQAIAENRADAVT(+755.30)LDGGFIYEAGLAPYK,T13:dHex HexNAc(3):false,T13:dHex HexNAc(3):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1237,GPPVSC(-33.99)IKR,C6:Dehydroalanine (C):false,C6:Dehydroalanine (C):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1238,FDSWPC(+76.00)VLGR,C6:Cysteine mercaptoethanol:false,C6:Cysteine mercaptoethanol:1000.00,Q13410|BT1A1_HUMAN,Pool 2,Whole_milk
+1239,PVQALLLNQELLLNPTHQIYPVTQPLAPVHN(+146.06)PIS(+445.10)V,N31:Fucose:false;S34:Hex HexNAc Phos:false,N31:Fucose:0.00;S34:Hex HexNAc Phos:0.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1242,C(+71.04)VPNSNER,C1:Propionamide:true,C1:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1243,V(+58.01)TEEDFYKLVSEFTITK,"V1:Carboxymethyl (KW, X@N-term):false","V1:Carboxymethyl (KW, X@N-term):34.75",P19835|CEL_HUMAN,Pool 2,Whole_milk
+1245,L(+57.02)ASYLDKVR,"L1:Carbamidomethylation (DHKE, X@N-term):true","L1:Carbamidomethylation (DHKE, X@N-term):61.30",P02533|K1C14_HUMAN:P08727|K1C19_HUMAN:P13645|K1C10_HUMAN:Q04695|K1C17_HUMAN:Q99456|K1C12_HUMAN:P19012|K1C15_HUMAN:P08779|K1C16_HUMAN,Pool 2,Whole_milk
+1246,TAGWNVPIGTLRPFLN(+1024.36)WT(+1091.28)GPPEPIEAAVAR,N16:Hex(3) HexNAc(2) Pent:false;T18:dHex Hex(3) HexA HexNAc Sulf:false,N16:Hex(3) HexNAc(2) Pent:19.79;T18:dHex Hex(3) HexA HexNAc Sulf:8.77,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1248,NLLFNDN(+0.98)T(+132.04)ECLAR,N7:Deamidation (NQ):false;T8:Pentose:false,N7:Deamidation (NQ):14.04;T8:Pentose:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1250,QPAC(+71.04)HENDERPFYQK,C4:Propionamide:true,C4:Propionamide:1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+1258,I(+57.02)LLNPQDK,"I1:Carbamidomethylation (DHKE, X@N-term):true","I1:Carbamidomethylation (DHKE, X@N-term):55.13",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1262,S(+57.02)PKFQLFGSPSGQK,"S1:Carbamidomethylation (DHKE, X@N-term):false","S1:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1264,V(+68.06)YACEVTHQGLSSPVTK,V1:Piperidination:false,V1:Piperidination:76.76,P01834|IGKC_HUMAN,Pool 2,Whole_milk
+1269,FKDC(+76.00)HLAR,C4:Cysteine mercaptoethanol:true,C4:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1270,HRS(+511.19)YSCQVTHEGSTVEK,S3:Hex1HexNAc1dHex1:false,S3:Hex1HexNAc1dHex1:0.00,P0DOY2|IGLC2_HUMAN:P0CF74|IGLC6_HUMAN:B9A064|IGLL5_HUMAN:P0CG04|IGLC1_HUMAN,Pool 2,Whole_milk
+1276,FGRN(+0.98)GSD,N4:Deamidation (NQ):true,N4:Deamidation (NQ):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1277,TH(+57.02)YYAVAVVKKG,"H2:Carbamidomethylation (DHKE, X@N-term):false","H2:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+1278,DQHM(-48.00)AIAWVKR,M4:Dethiomethyl:false,M4:Dethiomethyl:1000.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+1280,C(+25.00)TESLVNR,C1:Cyano:true,C1:Cyano:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1287,PT(+445.10)IPFFDPQIPK,T2:Hex HexNAc Phos:false,T2:Hex HexNAc Phos:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+1293,AFVNC(+76.00)DENSR,C5:Cysteine mercaptoethanol:true,C5:Cysteine mercaptoethanol:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+1298,KGETFS(+114.04)CMVGHEALPLAFTQK,S6:Ubiquitin:false,S6:Ubiquitin:0.00,P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+1303,S(+27.99)EEEVAARR,S1:Formylation:false,S1:Formylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+768,AE(+57.02)FAEVSK,"E2:Carbamidomethylation (DHKE, X@N-term):false","E2:Carbamidomethylation (DHKE, X@N-term):0.00",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+1693,PSFASIFLT(+79.97)K,T9:Phosphorylation (STY):false,T9:Phosphorylation (STY):4.05,P01871|IGHM_HUMAN,Pool 2,Whole_milk
+766,S(+57.02)SQVPQSR,"S1:Carbamidomethylation (DHKE, X@N-term):true","S1:Carbamidomethylation (DHKE, X@N-term):1000.00",P00709|LALBA_HUMAN,Pool 2,Whole_milk
+478,LNEYN(+0.98)Q(+0.98)LQLQAAHAQEQIRR,N5:Deamidation (NQ):false;Q6:Deamidation (NQ):false,N5:Deamidation (NQ):28.36;Q6:Deamidation (NQ):17.65,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+479,D(+58.01)LLFKDSAIGFSR,"D1:Carboxymethyl (KW, X@N-term):false","D1:Carboxymethyl (KW, X@N-term):61.69",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+149,NAVH(+57.02)VNLFETPVEAQYVR,"H4:Carbamidomethylation (DHKE, X@N-term):false","H4:Carbamidomethylation (DHKE, X@N-term):9.42",Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+482,KVTEEDFYK(+57.02)LVSEFTITK,"K9:Carbamidomethylation (DHKE, X@N-term):false","K9:Carbamidomethylation (DHKE, X@N-term):0.00",P19835|CEL_HUMAN,Pool 2,Whole_milk
+148,VFDEFKPLVEEPQNLIK(+57.02),"K17:Carbamidomethylation (DHKE, X@N-term):true","K17:Carbamidomethylation (DHKE, X@N-term):37.05",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+147,ADYEKHKVYAC(+114.04)EVTHQGLSSPVTK,C11:Ubiquitin:false,C11:Ubiquitin:23.15,P01834|IGKC_HUMAN,Pool 2,Whole_milk
+484,LADFALLC(+114.04)LDGK,C8:Ubiquitin:true,C8:Ubiquitin:20.54,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+485,LILTLTHGTAVC(+57.02)TR,C12:Carbamidomethylation:false,C12:Carbamidomethylation:1000.00,P05413|FABPH_HUMAN,Pool 2,Whole_milk
+486,KGGS(+114.04)FQLNELQGLK,S4:Ubiquitin:false,S4:Ubiquitin:7.64,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+476,RPNLH(+57.02)PSFIAIPPKK,"H5:Carbamidomethylation (DHKE, X@N-term):false","H5:Carbamidomethylation (DHKE, X@N-term):6.29",P07498|CASK_HUMAN,Pool 2,Whole_milk
+145,DVTVLQNTDGNNNE(+57.02)AWAK,"E14:Carbamidomethylation (DHKE, X@N-term):false","E14:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+142,NAD(+57.02)LQVLKPEPELVYEDLR,"D3:Carbamidomethylation (DHKE, X@N-term):false","D3:Carbamidomethylation (DHKE, X@N-term):6.59",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+139,YLGPQYVAGITN(+0.98)LKK,N12:Deamidation (NQ):true,N12:Deamidation (NQ):90.79,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+499,VTM(+15.99)QNLNDR,M3:Oxidation (M):true,M3:Oxidation (M):1000.00,P02533|K1C14_HUMAN:Q7Z3Y8|K1C27_HUMAN:Q7Z3Y7|K1C28_HUMAN:P13645|K1C10_HUMAN:P08779|K1C16_HUMAN,Pool 2,Whole_milk
+500,KVTEED(+53.92)FYKLVSEFTITK,D6:Replacement of 2 protons by iron:false,D6:Replacement of 2 protons by iron:12.28,P19835|CEL_HUMAN,Pool 2,Whole_milk
+501,YWC(+57.02)NDGK,C3:Carbamidomethylation:true,C3:Carbamidomethylation:1000.00,P61626|LYSC_HUMAN,Pool 2,Whole_milk
+505,LRPVAAEVY(-18.01)GTER,Y9:Dehydration:true,Y9:Dehydration:22.87,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+508,LLRDYQELM(+15.99)NTK,M9:Oxidation (M):true,M9:Oxidation (M):1000.00,P04264|K2C1_HUMAN,Pool 2,Whole_milk
+132,GGSFQLNELQGLKSC(+57.02)HTGLR,C15:Carbamidomethylation:true,C15:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+513,RPAIAINN(-17.03)PYVPR,N8:Ammonia-loss (N):false,N8:Ammonia-loss (N):11.06,P07498|CASK_HUMAN,Pool 2,Whole_milk
+488,LNEYNQLQLQAAH(+114.04)AQEQIR,"H13:Double Carbamidomethylation (DHKE, X@N-term):true","H13:Double Carbamidomethylation (DHKE, X@N-term):34.81",P47710|CASA1_HUMAN,Pool 2,Whole_milk
+514,AM(+15.99)IAYWTNFAK,M2:Oxidation (M):false,M2:Oxidation (M):1000.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+474,QYLPNSH(+57.02)PPTVVR,"H7:Carbamidomethylation (DHKE, X@N-term):true","H7:Carbamidomethylation (DHKE, X@N-term):113.99",P07498|CASK_HUMAN,Pool 2,Whole_milk
+160,APFDVIGPPEPILAVVGEDAELPC(+57.02)R,C24:Carbamidomethylation:false,C24:Carbamidomethylation:1000.00,Q13410|BT1A1_HUMAN,Pool 2,Whole_milk
+181,RETIESLSSSE(+57.02)ESITEYK,"E11:Carbamidomethylation (DHKE, X@N-term):false","E11:Carbamidomethylation (DHKE, X@N-term):0.00",P05814|CASB_HUMAN,Pool 2,Whole_milk
+179,RPC(+71.04)FSALEVDETYVPK,C3:Propionamide:false,C3:Propionamide:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+442,LADFALLC(-33.99)LDGKR,C8:Dehydroalanine (C):true,C8:Dehydroalanine (C):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+444,L(+57.02)VSEFTITK,"L1:Carbamidomethylation (DHKE, X@N-term):true","L1:Carbamidomethylation (DHKE, X@N-term):62.26",P19835|CEL_HUMAN,Pool 2,Whole_milk
+177,RDSPIQC(+57.02)IQAIAENR,C7:Carbamidomethylation:true,C7:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+445,A(+57.02)KDTVYTK,"A1:Carbamidomethylation (DHKE, X@N-term):true","A1:Carbamidomethylation (DHKE, X@N-term):40.00",P05814|CASB_HUMAN,Pool 2,Whole_milk
+174,TYYANPAVVRPH(+57.02)AQIPQR,"H12:Carbamidomethylation (DHKE, X@N-term):false","H12:Carbamidomethylation (DHKE, X@N-term):99.02",P07498|CASK_HUMAN,Pool 2,Whole_milk
+448,TFTC(+71.04)TAAYPESK,C4:Propionamide:true,C4:Propionamide:1000.00,P01876|IGHA1_HUMAN,Pool 2,Whole_milk
+449,YIC(+71.04)ENQDSISSK,C3:Propionamide:true,C3:Propionamide:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+158,SCH(+57.02)LAMAPNHAVVSR,"H3:Carbamidomethylation (DHKE, X@N-term):false","H3:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+450,RSDTSLTWN(+0.98)SVK,N9:Deamidation (NQ):true,N9:Deamidation (NQ):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+455,LRPVAAEVYGTE(+57.02)R,"E12:Carbamidomethylation (DHKE, X@N-term):false","E12:Carbamidomethylation (DHKE, X@N-term):112.56",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+170,K(+114.04)VPQVSTPTLVEVSR,K1:Ubiquitin:false,K1:Ubiquitin:46.87,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+457,C(+71.04)GLVPVLAENYK,C1:Propionamide:false,C1:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+459,SVNGKEDAIW(+15.99)NLLR,W10:Oxidation (HW):true,W10:Oxidation (HW):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+462,VPSH(+15.99)AVVAR,H4:Oxidation (HW):false,H4:Oxidation (HW):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+463,FFSASC(+71.04)VPGADK,C6:Propionamide:true,C6:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+165,A(+57.02)ISQSGVALSPWVIQK,"A1:Carbamidomethylation (DHKE, X@N-term):false","A1:Carbamidomethylation (DHKE, X@N-term):89.30",P19835|CEL_HUMAN,Pool 2,Whole_milk
+164,C(+57.02)PLLVDSEGWVKAQYEGR,"C1:Carbamidomethylation (DHKE, X@N-term):true","C1:Carbamidomethylation (DHKE, X@N-term):105.53",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+467,WLQGSQELPRE(+57.02)K,"E11:Carbamidomethylation (DHKE, X@N-term):false","E11:Carbamidomethylation (DHKE, X@N-term):0.00",P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+454,VFSN(+0.98)GADLSGVTEEAPLKLSK,N4:Deamidation (NQ):false,N4:Deamidation (NQ):1000.00,P01009|A1AT_HUMAN,Pool 2,Whole_milk
+440,DLKLADFALLC(+57.02)LDGK,C11:Carbamidomethylation:true,C11:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+129,VFDEFK(+57.02)PLVEEPQNLIK,"K6:Carbamidomethylation (DHKE, X@N-term):true","K6:Carbamidomethylation (DHKE, X@N-term):67.76",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+519,N(+0.98)GDILTLK,N1:Deamidation (NQ):true,N1:Deamidation (NQ):1000.00,P05413|FABPH_HUMAN,Pool 2,Whole_milk
+560,GIPFAAPTK(+57.02),"K9:Carbamidomethylation (DHKE, X@N-term):true","K9:Carbamidomethylation (DHKE, X@N-term):82.59",P19835|CEL_HUMAN,Pool 2,Whole_milk
+561,ARVVWC(+76.00)AVGEQELR,C6:Cysteine mercaptoethanol:true,C6:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+562,GGSFQLN(+0.98)ELQGLK,N7:Deamidation (NQ):true,N7:Deamidation (NQ):32.28,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+563,VRGPPVSC(+57.02),C8:Carbamidomethylation:true,C8:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+564,NADLQVLKPEPE(+53.92)LVYEDLR,E12:Replacement of 2 protons by iron:false,E12:Replacement of 2 protons by iron:14.04,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+108,VFDEFKPLVEE(+57.02)PQNLIK,"E11:Carbamidomethylation (DHKE, X@N-term):true","E11:Carbamidomethylation (DHKE, X@N-term):26.02",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+566,QAQEKFGK(+57.02)DK,"K8:Carbamidomethylation (DHKE, X@N-term):false","K8:Carbamidomethylation (DHKE, X@N-term):30.46",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+105,AEFAEVSK(+57.02)LVTDLTK,"K8:Carbamidomethylation (DHKE, X@N-term):true","K8:Carbamidomethylation (DHKE, X@N-term):56.34",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+574,S(+114.04)PTIPFFDPQIPK,S1:Ubiquitin:true,S1:Ubiquitin:15.73,P05814|CASB_HUMAN,Pool 2,Whole_milk
+559,NQVSLTC(+57.02)LVK,C7:Carbamidomethylation:true,C7:Carbamidomethylation:1000.00,P01859|IGHG2_HUMAN:P01857|IGHG1_HUMAN:P01861|IGHG4_HUMAN:P01860|IGHG3_HUMAN,Pool 2,Whole_milk
+577,G(+88.00)IPIVTSPYQIHFTK,G1:3-sulfanylpropanoyl:false,G1:3-sulfanylpropanoyl:121.40,P01024|CO3_HUMAN,Pool 2,Whole_milk
+100,Q(-17.03)YLPNSHPPTVVR,Q1:Pyro-glu from Q:false,Q1:Pyro-glu from Q:1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+581,SC(+71.04)HLAMAPNHAVVSR,C2:Propionamide:false,C2:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+582,AQPAVVLPVPQPEIM(+15.99)EVPK,M15:Oxidation (M):false,M15:Oxidation (M):1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+584,K(+27.99)PVTEAR,K1:Formylation:true,K1:Formylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+591,C(+114.04)ELSQLLK,C1:Ubiquitin:true,C1:Ubiquitin:77.24,P00709|LALBA_HUMAN,Pool 2,Whole_milk
+593,RSDTSLTW(+15.99)NSVK,W8:Oxidation (HW):true,W8:Oxidation (HW):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+96,ID(+57.02)SGLYLGSGYFTAIQNLRK,"D2:Carbamidomethylation (DHKE, X@N-term):false","D2:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+597,NLLFNDNTEC(+25.00)LAR,C10:Cyano:false,C10:Cyano:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+598,DGREQEAEQM(+15.99)PEYR,M10:Oxidation (M):true,M10:Oxidation (M):1000.00,Q13410|BT1A1_HUMAN,Pool 2,Whole_milk
+101,GEADAM(-48.00)SLDGGYVYTAGK,M6:Dethiomethyl:true,M6:Dethiomethyl:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+517,LNEYN(+0.98)QLQLQAAHAQEQIRR,N5:Deamidation (NQ):false,N5:Deamidation (NQ):9.42,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+558,FDEYFSQSC(+76.00)APGSDPR,C9:Cysteine mercaptoethanol:true,C9:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+114,FDEYFSQSC(+57.02)APGSDPR,C9:Carbamidomethylation:true,C9:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+285,F(+57.02)KDLGEENFK,"F1:Carbamidomethylation (DHKE, X@N-term):false","F1:Carbamidomethylation (DHKE, X@N-term):12.28",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+523,THYYAVAVVK(+57.02),"K10:Carbamidomethylation (DHKE, X@N-term):true","K10:Carbamidomethylation (DHKE, X@N-term):117.14",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+126,K(+57.02)VTEEDFYKLVSEFTITK,"K1:Carbamidomethylation (DHKE, X@N-term):true","K1:Carbamidomethylation (DHKE, X@N-term):19.16",P19835|CEL_HUMAN,Pool 2,Whole_milk
+525,LGLLGDSVD(+57.02)IFK,"D9:Carbamidomethylation (DHKE, X@N-term):false","D9:Carbamidomethylation (DHKE, X@N-term):38.16",P19835|CEL_HUMAN,Pool 2,Whole_milk
+528,C(+76.00)LRDGAGDVAFIR,C1:Cysteine mercaptoethanol:true,C1:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+532,GIDYWLAHK(+57.02),"K9:Carbamidomethylation (DHKE, X@N-term):false","K9:Carbamidomethylation (DHKE, X@N-term):12.28",P00709|LALBA_HUMAN,Pool 2,Whole_milk
+122,TTFDVYTESWAQD(+57.02)PSQENKKK,"D13:Carbamidomethylation (DHKE, X@N-term):false","D13:Carbamidomethylation (DHKE, X@N-term):0.00",P19835|CEL_HUMAN,Pool 2,Whole_milk
+533,G(+114.04)GCITLISSEGYVSSK,"G1:Double Carbamidomethylation (DHKE, X@N-term):false","G1:Double Carbamidomethylation (DHKE, X@N-term):7.32",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+119,V(+57.02)FDEFKPLVEEPQNLIK,"V1:Carbamidomethylation (DHKE, X@N-term):false","V1:Carbamidomethylation (DHKE, X@N-term):22.85",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+557,RSD(+57.02)TSLTWNSVK,"D3:Carbamidomethylation (DHKE, X@N-term):false","D3:Carbamidomethylation (DHKE, X@N-term):7.32",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+535,VTTVASH(+57.02)TSDSDVPSGVTEVVVK,"H7:Carbamidomethylation (DHKE, X@N-term):false","H7:Carbamidomethylation (DHKE, X@N-term):5.89",P10909|CLUS_HUMAN,Pool 2,Whole_milk
+537,LVVGNTEIGIEM(+15.99)K,M12:Oxidation (M):true,M12:Oxidation (M):1000.00,P47989|XDH_HUMAN,Pool 2,Whole_milk
+538,L(+57.02)VAASQAALGL,"L1:Carbamidomethylation (DHKE, X@N-term):true","L1:Carbamidomethylation (DHKE, X@N-term):1000.00",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+539,I(+57.02)PAFGSIPIEFR,"I1:Carbamidomethylation (DHKE, X@N-term):true","I1:Carbamidomethylation (DHKE, X@N-term):106.02",P47989|XDH_HUMAN,Pool 2,Whole_milk
+541,D(-18.01)GAGDVAFIR,D1:Dehydration:false,D1:Dehydration:46.21,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+544,ALENPQPHPGW(+15.99)QGTLK,W11:Oxidation (HW):false,W11:Oxidation (HW):12.16,P19835|CEL_HUMAN,Pool 2,Whole_milk
+546,G(+57.02)DSVVYGLR,"G1:Carbamidomethylation (DHKE, X@N-term):false","G1:Carbamidomethylation (DHKE, X@N-term):14.02",P10451|OSTP_HUMAN,Pool 2,Whole_milk
+547,LADFALLC(+114.04)LDGKR,C8:Ubiquitin:true,C8:Ubiquitin:19.56,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+549,C(+71.04)ELSQLLK,C1:Propionamide:true,C1:Propionamide:1000.00,P00709|LALBA_HUMAN,Pool 2,Whole_milk
+551,LADFALLC(+25.00)LDGKR,C8:Cyano:true,C8:Cyano:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+536,EIPLSPM(+15.99)GEDSAPR,M7:Oxidation (M):true,M7:Oxidation (M):1000.00,Q13410|BT1A1_HUMAN,Pool 2,Whole_milk
+92,KVPQVSTPTLVE(+57.02)VSR,"E12:Carbamidomethylation (DHKE, X@N-term):true","E12:Carbamidomethylation (DHKE, X@N-term):161.32",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+439,NLLFNDNTEC(+76.00)LAR,C10:Cysteine mercaptoethanol:false,C10:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+437,FKDLGE(+57.02)ENFK,"E6:Carbamidomethylation (DHKE, X@N-term):false","E6:Carbamidomethylation (DHKE, X@N-term):0.00",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+322,QYLPN(+0.98)SHPPTVVR,N5:Deamidation (NQ):true,N5:Deamidation (NQ):42.68,P07498|CASK_HUMAN,Pool 2,Whole_milk
+258,VTFLGLQHWVPE(+57.02)LAR,"E12:Carbamidomethylation (DHKE, X@N-term):true","E12:Carbamidomethylation (DHKE, X@N-term):44.59",Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+325,N(+57.02)FGSVQFVASYK,"N1:Carbamidomethylation (DHKE, X@N-term):true","N1:Carbamidomethylation (DHKE, X@N-term):78.35",Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+326,RDSPIQC(+76.00)IQAIAENR,C7:Cysteine mercaptoethanol:true,C7:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+327,TGDPNMGDS(+114.04)AVPTHWEPYTTENSGYLEITKK,S9:Ubiquitin:false,S9:Ubiquitin:0.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+328,VLPIPQQ(+0.98)VVPYPQR,Q7:Deamidation (NQ):true,Q7:Deamidation (NQ):17.01,P05814|CASB_HUMAN,Pool 2,Whole_milk
+255,VRGPPVSC(+57.02)IKR,C8:Carbamidomethylation:true,C8:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+254,DVFLGM(+15.99)FLYEYAR,M6:Oxidation (M):true,M6:Oxidation (M):1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+253,KGGSFQLN(+0.98)ELQGLK,N8:Deamidation (NQ):true,N8:Deamidation (NQ):80.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+319,T(+57.02)YAYLFSHPSR,"T1:Carbamidomethylation (DHKE, X@N-term):true","T1:Carbamidomethylation (DHKE, X@N-term):94.41",P19835|CEL_HUMAN,Pool 2,Whole_milk
+249,DLLFKD(+57.02)SAIGFSR,"D6:Carbamidomethylation (DHKE, X@N-term):true","D6:Carbamidomethylation (DHKE, X@N-term):21.94",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+338,GEADAMS(+114.04)LDGGYVYTAGK,S7:Ubiquitin:false,S7:Ubiquitin:73.16,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+247,AKLGAVYTEGGFVE(+57.02)GVNKK,"E14:Carbamidomethylation (DHKE, X@N-term):false","E14:Carbamidomethylation (DHKE, X@N-term):0.00",P19835|CEL_HUMAN,Pool 2,Whole_milk
+340,TADKLVFFVN(+0.98)GR,N10:Deamidation (NQ):true,N10:Deamidation (NQ):1000.00,P47989|XDH_HUMAN,Pool 2,Whole_milk
+342,EQFC(+172.05)RLNEYNQLQLQAAHAQEQIR,C4:Menadione hydroquinone derivative:false,C4:Menadione hydroquinone derivative:1000.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+346,ALENPQPHPGWQGTLK(+57.02),"K16:Carbamidomethylation (DHKE, X@N-term):true","K16:Carbamidomethylation (DHKE, X@N-term):44.33",P19835|CEL_HUMAN,Pool 2,Whole_milk
+347,TNAENEFVTIK(+57.02)K,"K11:Carbamidomethylation (DHKE, X@N-term):false","K11:Carbamidomethylation (DHKE, X@N-term):12.28",P04264|K2C1_HUMAN,Pool 2,Whole_milk
+244,STDYGIFQIN(+0.98)SR,N10:Deamidation (NQ):true,N10:Deamidation (NQ):18.53,P61626|LYSC_HUMAN,Pool 2,Whole_milk
+349,L(+57.02)VNEVTEFAK,"L1:Carbamidomethylation (DHKE, X@N-term):true","L1:Carbamidomethylation (DHKE, X@N-term):62.26",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+243,LNEYNQLQLQAAHAQE(+28.03)QIR,E16:Ethylation:false,E16:Ethylation:5.77,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+337,GEADAMSLD(+57.02)GGYVYTAGK,"D9:Carbamidomethylation (DHKE, X@N-term):false","D9:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+351,FKD(+57.02)LGEENFK,"D3:Carbamidomethylation (DHKE, X@N-term):true","D3:Carbamidomethylation (DHKE, X@N-term):46.91",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+318,SC(+57.02)HTAVDR,C2:Carbamidomethylation:true,C2:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+316,FQLFGSPSGQKDLLFK(+57.02),"K16:Carbamidomethylation (DHKE, X@N-term):true","K16:Carbamidomethylation (DHKE, X@N-term):49.79",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+289,R(+114.04)PAIAINNPYVPR,"R1:Double Carbamidomethylation (DHKE, X@N-term):false","R1:Double Carbamidomethylation (DHKE, X@N-term):107.52",P07498|CASK_HUMAN,Pool 2,Whole_milk
+283,R(+57.02)ETIESLSSSEESITEYK,"R1:Carbamidomethylation (DHKE, X@N-term):false","R1:Carbamidomethylation (DHKE, X@N-term):0.00",P05814|CASB_HUMAN,Pool 2,Whole_milk
+291,C(+114.04)AFSSQEPYFSYSGAFK,C1:Ubiquitin:false,C1:Ubiquitin:28.36,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+280,VVWC(+57.02)AVGEQELRK,C4:Carbamidomethylation:true,C4:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+279,C(+25.00)IQAIAENRADAVTLDGGFIYEAGLAPYK,C1:Cyano:false,C1:Cyano:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+277,RH(+57.02)PDYSVVLLLR,"H2:Carbamidomethylation (DHKE, X@N-term):false","H2:Carbamidomethylation (DHKE, X@N-term):0.00",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+276,VVSVLTVVHQ(+0.98)DWLNGKEYK,Q10:Deamidation (NQ):false,Q10:Deamidation (NQ):0.00,P01859|IGHG2_HUMAN,Pool 2,Whole_milk
+298,R(+57.02)SDTSLTWNSVK,"R1:Carbamidomethylation (DHKE, X@N-term):false","R1:Carbamidomethylation (DHKE, X@N-term):9.40",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+272,C(+57.02)PLLVDSEGWVK,"C1:Carbamidomethylation (DHKE, X@N-term):true","C1:Carbamidomethylation (DHKE, X@N-term):115.97",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+262,VGPLGFLSTGD(+53.92)ANLPGNYGLR,D11:Replacement of 2 protons by iron:false,D11:Replacement of 2 protons by iron:116.35,P19835|CEL_HUMAN,Pool 2,Whole_milk
+299,T(+27.99)YAYLFSHPSR,T1:Formylation:false,T1:Formylation:1000.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+302,V(+114.04)LPIPQQVVPYPQR,"V1:Double Carbamidomethylation (DHKE, X@N-term):false","V1:Double Carbamidomethylation (DHKE, X@N-term):111.11",P05814|CASB_HUMAN,Pool 2,Whole_milk
+268,TTFDVYTESWAQDPSQE(+57.02)NKKK,"E17:Carbamidomethylation (DHKE, X@N-term):false","E17:Carbamidomethylation (DHKE, X@N-term):7.77",P19835|CEL_HUMAN,Pool 2,Whole_milk
+267,ADAAPDEKVLDSGFREIE(+57.02)NK,"E18:Carbamidomethylation (DHKE, X@N-term):false","E18:Carbamidomethylation (DHKE, X@N-term):7.32",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+306,VN(+0.98)VDEVGGEALGR,N2:Deamidation (NQ):false,N2:Deamidation (NQ):1000.00,P68871|HBB_HUMAN,Pool 2,Whole_milk
+307,C(+71.04)LAENAGDVAFVK,C1:Propionamide:true,C1:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+265,DVTVLQNTD(+57.02)GNNNEAWAK,"D9:Carbamidomethylation (DHKE, X@N-term):false","D9:Carbamidomethylation (DHKE, X@N-term):10.53",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+310,ADAAPD(+57.02)EKVLDSGFREIENK,"D6:Carbamidomethylation (DHKE, X@N-term):false","D6:Carbamidomethylation (DHKE, X@N-term):12.28",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+313,NGSDC(+114.04)PDKFCLFQSETK,C5:Ubiquitin:false,C5:Ubiquitin:0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+315,T(+27.99)HYYAVAVVKK,T1:Formylation:false,T1:Formylation:137.26,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+301,IKFEM(+15.99)EQNLR,M5:Oxidation (M):true,M5:Oxidation (M):1000.00,P35527|K1C9_HUMAN,Pool 2,Whole_milk
+184,GVAGGSVAVLC(+57.02)PYNR,C11:Carbamidomethylation:true,C11:Carbamidomethylation:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+242,GGSFQLNE(+57.02)LQGLK,"E8:Carbamidomethylation (DHKE, X@N-term):true","E8:Carbamidomethylation (DHKE, X@N-term):48.54",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+354,FKDLGEENFK(+57.02),"K10:Carbamidomethylation (DHKE, X@N-term):true","K10:Carbamidomethylation (DHKE, X@N-term):77.24",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+394,QVLLHQQAK(+57.02)FGR,"K9:Carbamidomethylation (DHKE, X@N-term):true","K9:Carbamidomethylation (DHKE, X@N-term):61.69",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+395,ADAAPDEKVLDSGFREIENK(+57.02),"K20:Carbamidomethylation (DHKE, X@N-term):true","K20:Carbamidomethylation (DHKE, X@N-term):18.53",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+396,V(+57.02)TVIANAQDLSK,"V1:Carbamidomethylation (DHKE, X@N-term):true","V1:Carbamidomethylation (DHKE, X@N-term):150.63",Q13410|BT1A1_HUMAN,Pool 2,Whole_milk
+398,GSVTFHC(+76.00)ALGPEVANVAK,C7:Cysteine mercaptoethanol:true,C7:Cysteine mercaptoethanol:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+203,LCAGT(-2.02)GENKCAFSSQEPYFSYSGAFK,T5:2-amino-3-oxo-butanoic_acid:false,T5:2-amino-3-oxo-butanoic_acid:13.99,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+401,NESTQNC(+57.02)VVAEPEK,C7:Carbamidomethylation:true,C7:Carbamidomethylation:1000.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+402,LVRPEVDVMC(+114.04)TAFHDNEETFLKK,C10:Ubiquitin:false,C10:Ubiquitin:0.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+405,K(+57.02)VTEEDFYK,"K1:Carbamidomethylation (DHKE, X@N-term):true","K1:Carbamidomethylation (DHKE, X@N-term):49.37",P19835|CEL_HUMAN,Pool 2,Whole_milk
+409,TYAYLFSH(+57.02)PSR,"H8:Carbamidomethylation (DHKE, X@N-term):true","H8:Carbamidomethylation (DHKE, X@N-term):95.98",P19835|CEL_HUMAN,Pool 2,Whole_milk
+208,VTFLGLQH(+57.02)WVPELAR,"H8:Carbamidomethylation (DHKE, X@N-term):true","H8:Carbamidomethylation (DHKE, X@N-term):52.86",Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+414,LHGK(+57.02)TTYEK,"K4:Carbamidomethylation (DHKE, X@N-term):true","K4:Carbamidomethylation (DHKE, X@N-term):29.25",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+195,DVTVLQNTDGNNNE(+57.02)AWAKDLK,"E14:Carbamidomethylation (DHKE, X@N-term):true","E14:Carbamidomethylation (DHKE, X@N-term):23.70",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+420,VGC(+76.00)PVGDAAR,C3:Cysteine mercaptoethanol:true,C3:Cysteine mercaptoethanol:1000.00,P19835|CEL_HUMAN,Pool 2,Whole_milk
+421,N(+57.02)LFETPILAR,"N1:Carbamidomethylation (DHKE, X@N-term):true","N1:Carbamidomethylation (DHKE, X@N-term):78.06",Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+422,AK(+27.99)DTVYTK,K2:Formylation:true,K2:Formylation:17.01,P05814|CASB_HUMAN,Pool 2,Whole_milk
+193,T(+27.99)YYANPAVVRPHAQIPQR,T1:Formylation:false,T1:Formylation:1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+190,SVNGK(+57.02)EDAIWNLLR,"K5:Carbamidomethylation (DHKE, X@N-term):true","K5:Carbamidomethylation (DHKE, X@N-term):25.75",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+430,ADAAPDEKVLD(+57.02)SGFREIENK,"D11:Carbamidomethylation (DHKE, X@N-term):false","D11:Carbamidomethylation (DHKE, X@N-term):0.00",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+434,SVNGK(+58.01)EDAIWNLLR,"K5:Carboxymethyl (KW, X@N-term):false","K5:Carboxymethyl (KW, X@N-term):47.31",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+436,Q(-17.03)TDEIKDTR,Q1:Pyro-glu from Q:false,Q1:Pyro-glu from Q:1000.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+196,SQQ(+0.98)TISQLHSTVHLIEFAR,Q3:Deamidation (NQ):false,Q3:Deamidation (NQ):14.02,Q99541|PLIN2_HUMAN,Pool 2,Whole_milk
+353,LADFALLC(+71.04)LDGKR,C8:Propionamide:true,C8:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+390,L(+27.99)NEYNQLQLQAAHAQEQIRR,L1:Formylation:false,L1:Formylation:1000.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+388,LGLLGD(+57.02)SVDIFK,"D6:Carbamidomethylation (DHKE, X@N-term):true","D6:Carbamidomethylation (DHKE, X@N-term):24.24",P19835|CEL_HUMAN,Pool 2,Whole_milk
+239,D(+57.02)ASGVTFTWTPSSGK,"D1:Carbamidomethylation (DHKE, X@N-term):true","D1:Carbamidomethylation (DHKE, X@N-term):116.79",P01876|IGHA1_HUMAN,Pool 2,Whole_milk
+355,KPVDKFKDC(+114.04)HLAR,C9:Ubiquitin:true,C9:Ubiquitin:20.41,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+356,SLN(+0.98)NQFASFIDKVR,N3:Deamidation (NQ):true,N3:Deamidation (NQ):17.01,P04264|K2C1_HUMAN,Pool 2,Whole_milk
+238,VGAH(+57.02)AGEYGAEALER,"H4:Carbamidomethylation (DHKE, X@N-term):false","H4:Carbamidomethylation (DHKE, X@N-term):13.93",P69905|HBA_HUMAN,Pool 2,Whole_milk
+237,D(+27.99)GAGDVAFIR,D1:Formylation:false,D1:Formylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+360,LNEYNQLQLQAAH(+15.99)AQEQIR,H13:Oxidation (HW):true,H13:Oxidation (HW):1000.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+361,R(+114.04)PCFSALEVDETYVPK,"R1:Double Carbamidomethylation (DHKE, X@N-term):false","R1:Double Carbamidomethylation (DHKE, X@N-term):0.00",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+363,VPPR(+114.04)IDSGLYLGSGYFTAIQNLR,"R4:Double Carbamidomethylation (DHKE, X@N-term):false","R4:Double Carbamidomethylation (DHKE, X@N-term):4.05",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+365,Q(+27.99)TDEIKDTR,Q1:Formylation:true,Q1:Formylation:146.48,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+389,T(+58.01)HYYAVAVVK,"T1:Carboxymethyl (KW, X@N-term):true","T1:Carboxymethyl (KW, X@N-term):181.94",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+232,VFDEFKPLVE(+53.92)EPQNLIK,E10:Replacement of 2 protons by iron:false,E10:Replacement of 2 protons by iron:10.11,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+371,V(+58.01)LPIPQQVVPYPQR,"V1:Carboxymethyl (KW, X@N-term):false","V1:Carboxymethyl (KW, X@N-term):1000.00",P05814|CASB_HUMAN,Pool 2,Whole_milk
+229,ESTVFEDLSDEAERDEYELLC(+76.00)PDNTR,C21:Cysteine mercaptoethanol:true,C21:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+372,V(+57.02)PSHAVVAR,"V1:Carbamidomethylation (DHKE, X@N-term):true","V1:Carbamidomethylation (DHKE, X@N-term):68.31",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+227,A(+57.02)LENPQPHPGWQGTLK,"A1:Carbamidomethylation (DHKE, X@N-term):true","A1:Carbamidomethylation (DHKE, X@N-term):30.36",P19835|CEL_HUMAN,Pool 2,Whole_milk
+225,ADAAPDEK(+57.02)VLDSGFREIENK,"K8:Carbamidomethylation (DHKE, X@N-term):true","K8:Carbamidomethylation (DHKE, X@N-term):47.09",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+224,A(+57.02)EFAEVSKLVTDLTK,"A1:Carbamidomethylation (DHKE, X@N-term):false","A1:Carbamidomethylation (DHKE, X@N-term):11.06",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+215,RE(+57.02)TIESLSSSEESITEYK,"E2:Carbamidomethylation (DHKE, X@N-term):false","E2:Carbamidomethylation (DHKE, X@N-term):8.14",P05814|CASB_HUMAN,Pool 2,Whole_milk
+382,L(+27.99)DELRDEGK,L1:Formylation:false,L1:Formylation:166.72,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+387,LNEYNQ(+0.98)LQLQAAHAQEQIR,Q6:Deamidation (NQ):false,Q6:Deamidation (NQ):0.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+230,DSPIQC(+57.02)IQAIAENRADAVTLDGGFIYEAGLAPYK,C6:Carbamidomethylation:true,C6:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+599,SDTSLTW(+15.99)NSVK,W7:Oxidation (HW):true,W7:Oxidation (HW):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+520,M(+15.99)FLSFPTTK,M1:Oxidation (M):true,M1:Oxidation (M):1000.00,P69905|HBA_HUMAN,Pool 2,Whole_milk
+286,LADFALLC(+71.04)LDGK,C8:Propionamide:true,C8:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+726,SNLC(+114.04)ALCIGDEQGENK,C4:Ubiquitin:false,C4:Ubiquitin:8.29,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+641,A(+57.02)EFAEVSK,"A1:Carbamidomethylation (DHKE, X@N-term):true","A1:Carbamidomethylation (DHKE, X@N-term):15.91",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+19,ADYEKHKVYAC(+57.02)EVTHQGLSSPVTK,C11:Carbamidomethylation:true,C11:Carbamidomethylation:1000.00,P01834|IGKC_HUMAN,Pool 2,Whole_milk
+640,LRPVAAE(+53.92)VYGTER,E7:Replacement of 2 protons by iron:true,E7:Replacement of 2 protons by iron:65.17,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+729,E(+27.99)KQTDEIKDTR,E1:Formylation:false,E1:Formylation:12.28,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+639,S(+57.02)LGVGFATR,"S1:Carbamidomethylation (DHKE, X@N-term):true","S1:Carbamidomethylation (DHKE, X@N-term):1000.00",P05413|FABPH_HUMAN,Pool 2,Whole_milk
+17,SLHTLFGDKLC(+57.02)TVATLR,C11:Carbamidomethylation:true,C11:Carbamidomethylation:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+58,GSVTFHC(+57.02)ALGPEVANVAK,C7:Carbamidomethylation:true,C7:Carbamidomethylation:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+34,T(+57.02)YYANPAVVRPHAQIPQR,"T1:Carbamidomethylation (DHKE, X@N-term):false","T1:Carbamidomethylation (DHKE, X@N-term):152.45",P07498|CASK_HUMAN,Pool 2,Whole_milk
+636,VFDEFKPLVEE(+53.92)PQNLIK,E11:Replacement of 2 protons by iron:false,E11:Replacement of 2 protons by iron:0.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+732,ILLNPQDK(+58.01)DGSFSVVITGLR,"K8:Carboxymethyl (KW, X@N-term):false","K8:Carboxymethyl (KW, X@N-term):17.76",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+634,M(+15.99)WVTGVVTQGASR,M1:Oxidation (M):true,M1:Oxidation (M):1000.00,Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+60,VM(-48.00)PVLKSPTIPFFDPQIPK,M2:Dethiomethyl:false,M2:Dethiomethyl:1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+734,TAAENDFVTLK(+57.02)K,"K11:Carbamidomethylation (DHKE, X@N-term):false","K11:Carbamidomethylation (DHKE, X@N-term):0.00",P35908|K22E_HUMAN,Pool 2,Whole_milk
+646,NLLFNDNTEC(+133.02)LAR,C10:S-homocysteinylation:false,C10:S-homocysteinylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+632,KPVDKFKDC(+71.04)HLAR,C9:Propionamide:false,C9:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+631,QVLLH(+57.02)QQAK,"H5:Carbamidomethylation (DHKE, X@N-term):true","H5:Carbamidomethylation (DHKE, X@N-term):59.20",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+630,RPC(-33.99)FSALEVDETYVPK,C3:Dehydroalanine (C):false,C3:Dehydroalanine (C):1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+629,SPTIPFFDPQIPK(+114.04),K13:Ubiquitin:true,K13:Ubiquitin:82.30,P05814|CASB_HUMAN,Pool 2,Whole_milk
+62,YVNKEIQNAVN(+0.98)GVK,N11:Deamidation (NQ):true,N11:Deamidation (NQ):50.22,P10909|CLUS_HUMAN,Pool 2,Whole_milk
+736,C(+133.02)GLVPVLAENYK,C1:S-homocysteinylation:true,C1:S-homocysteinylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+737,KGDTFSC(+133.02)MVGHEALPLAFTQK,C7:S-homocysteinylation:false,C7:S-homocysteinylation:1000.00,P01876|IGHA1_HUMAN,Pool 2,Whole_milk
+63,A(+57.02)KLGAVYTEGGFVEGVNK,"A1:Carbamidomethylation (DHKE, X@N-term):false","A1:Carbamidomethylation (DHKE, X@N-term):9.34",P19835|CEL_HUMAN,Pool 2,Whole_milk
+627,SPTIP(+15.99)FFDPQIPK,P5:Oxidation or Hydroxylation:false,P5:Oxidation or Hydroxylation:17.81,P05814|CASB_HUMAN,Pool 2,Whole_milk
+626,GGC(+76.00)ITLISSEGYVSSK,C3:Cysteine mercaptoethanol:false,C3:Cysteine mercaptoethanol:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+623,F(+27.99)QLFGSPSGQK,F1:Formylation:true,F1:Formylation:92.91,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+739,ALE(+57.02)NPQPHPGWQGTLK,"E3:Carbamidomethylation (DHKE, X@N-term):false","E3:Carbamidomethylation (DHKE, X@N-term):0.00",P19835|CEL_HUMAN,Pool 2,Whole_milk
+622,FQLFGSPSGQK(+57.02),"K11:Carbamidomethylation (DHKE, X@N-term):true","K11:Carbamidomethylation (DHKE, X@N-term):120.64",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+621,CLR(+114.04)DGAGDVAFIR,"R3:Double Carbamidomethylation (DHKE, X@N-term):false","R3:Double Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+740,TYYANPAVVRPH(+114.04)AQIPQR,"H12:Double Carbamidomethylation (DHKE, X@N-term):false","H12:Double Carbamidomethylation (DHKE, X@N-term):9.40",P07498|CASK_HUMAN,Pool 2,Whole_milk
+735,EIQNAVN(+0.98)GVK,N7:Deamidation (NQ):true,N7:Deamidation (NQ):40.63,P10909|CLUS_HUMAN,Pool 2,Whole_milk
+648,VTKCCT(-2.02)ESLVNR,T6:2-amino-3-oxo-butanoic_acid:true,T6:2-amino-3-oxo-butanoic_acid:29.57,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+23,GEADAM(+15.99)SLDGGYVYTAGK,M6:Oxidation (M):true,M6:Oxidation (M):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+649,GM(+15.99)SISRPNAVVGR,M2:Oxidation (M):false,M2:Oxidation (M):1000.00,P15291|B4GT1_HUMAN,Pool 2,Whole_milk
+687,D(+27.99)GAGDVAFVK,D1:Formylation:false,D1:Formylation:76.18,P02787|TRFE_HUMAN,Pool 2,Whole_milk
+685,LVNE(+53.92)VTEFAK,E4:Replacement of 2 protons by iron:false,E4:Replacement of 2 protons by iron:44.44,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+684,NGS(-2.02)DCPDKFCLFQSETK,S3:2-amino-3-oxo-butanoic_acid:false,S3:2-amino-3-oxo-butanoic_acid:64.27,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+691,VRGPPVSC(+71.04)IK,C8:Propionamide:true,C8:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+682,LADFALLC(+133.02)LDGKR,C8:S-homocysteinylation:false,C8:S-homocysteinylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+681,FDSWPC(+57.02)VLGR,C6:Carbamidomethylation:true,C6:Carbamidomethylation:1000.00,Q13410|BT1A1_HUMAN,Pool 2,Whole_milk
+36,DVTVLQNTDGN(+0.98)NNEAWAK,N11:Deamidation (NQ):false,N11:Deamidation (NQ):0.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+693,RPN(+0.98)LHPSFIAIPPKK,N3:Deamidation (NQ):false,N3:Deamidation (NQ):1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+694,LSQRFPK(+57.02),"K7:Carbamidomethylation (DHKE, X@N-term):true","K7:Carbamidomethylation (DHKE, X@N-term):89.47",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+27,K(+57.02)GGSFQLNELQGLK,"K1:Carbamidomethylation (DHKE, X@N-term):true","K1:Carbamidomethylation (DHKE, X@N-term):161.78",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+677,C(+25.00)GLGINSR,C1:Cyano:true,C1:Cyano:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+676,TVTINC(+114.04)PFKTENAQK,C6:Ubiquitin:false,C6:Ubiquitin:5.08,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+674,C(+25.00)QVTHEGSTVEK,C1:Cyano:false,C1:Cyano:1000.00,P0DOY2|IGLC2_HUMAN:P0CF74|IGLC6_HUMAN:P0DOY3|IGLC3_HUMAN:B9A064|IGLL5_HUMAN:P0CG04|IGLC1_HUMAN,Pool 2,Whole_milk
+700,SC(+57.02)HTGLR,C2:Carbamidomethylation:true,C2:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+673,FFSASC(+76.00)VPGADK,C6:Cysteine mercaptoethanol:true,C6:Cysteine mercaptoethanol:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+41,SC(+57.02)HLAMAPNHAVVSR,C2:Carbamidomethylation:false,C2:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+671,I(+57.02)LPVAWHNR,"I1:Carbamidomethylation (DHKE, X@N-term):true","I1:Carbamidomethylation (DHKE, X@N-term):71.27",Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+717,SHC(+133.02)IAEVENDEMPADLPSLAADFVESK,C3:S-homocysteinylation:false,C3:S-homocysteinylation:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+651,SPTIPFFD(+15.99)PQIPK,D8:Oxidation or Hydroxylation:false,D8:Oxidation or Hydroxylation:8.29,P05814|CASB_HUMAN,Pool 2,Whole_milk
+653,T(+42.01)ADKLVFFVNGR,T1:Acetylation (Protein N-term):true,T1:Acetylation (Protein N-term):1000.00,P47989|XDH_HUMAN,Pool 2,Whole_milk
+713,C(+25.00)FLQHKDDNPNLPR,C1:Cyano:false,C1:Cyano:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+711,NPLFWAK(+57.02),"K7:Carbamidomethylation (DHKE, X@N-term):true","K7:Carbamidomethylation (DHKE, X@N-term):90.32",P19835|CEL_HUMAN,Pool 2,Whole_milk
+50,LGLLGDSVDIFKGIPFAAPTK(+57.02),"K21:Carbamidomethylation (DHKE, X@N-term):true","K21:Carbamidomethylation (DHKE, X@N-term):66.71",P19835|CEL_HUMAN,Pool 2,Whole_milk
+64,N(+57.02)AVHVNLFETPVEAQYVR,"N1:Carbamidomethylation (DHKE, X@N-term):false","N1:Carbamidomethylation (DHKE, X@N-term):12.16",Q08431|MFGM_HUMAN,Pool 2,Whole_milk
+658,RSDTSLTW(+31.99)NSVK,W8:Dihydroxy:true,W8:Dihydroxy:24.67,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+659,T(+57.02)YETTLEK,"T1:Carbamidomethylation (DHKE, X@N-term):true","T1:Carbamidomethylation (DHKE, X@N-term):35.51",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+705,T(+42.01)APYVPM(+15.99)YYVPNSYPYYGTNLYQR,T1:Acetylation (N-term):false;M7:Oxidation (M):false,T1:Acetylation (N-term):1000.00;M7:Oxidation (M):1000.00,P07498|CASK_HUMAN,Pool 2,Whole_milk
+48,QNC(+71.04)ELFEQLGEYKFQNALLVR,C3:Propionamide:true,C3:Propionamide:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+661,SVTC(+57.02)HVK,C4:Carbamidomethylation:true,C4:Carbamidomethylation:1000.00,P01876|IGHA1_HUMAN:P01877|IGHA2_HUMAN,Pool 2,Whole_milk
+663,EK(+27.99)QTDEIKDTR,K2:Formylation:false,K2:Formylation:0.00,P47710|CASA1_HUMAN,Pool 2,Whole_milk
+664,C(+133.02)LAENAGDVAFVK,C1:S-homocysteinylation:true,C1:S-homocysteinylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+708,AAC(+57.02)LLPK,C3:Carbamidomethylation:true,C3:Carbamidomethylation:1000.00,P02768|ALBU_HUMAN,Pool 2,Whole_milk
+13,V(+57.02)GPLGFLSTGDANLPGNYGLR,"V1:Carbamidomethylation (DHKE, X@N-term):false","V1:Carbamidomethylation (DHKE, X@N-term):52.32",P19835|CEL_HUMAN,Pool 2,Whole_milk
+637,DAHKSE(+57.02)VAHR,"E6:Carbamidomethylation (DHKE, X@N-term):true","E6:Carbamidomethylation (DHKE, X@N-term):37.43",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+688,V(+57.02)TEEDFYK,"V1:Carbamidomethylation (DHKE, X@N-term):true","V1:Carbamidomethylation (DHKE, X@N-term):32.28",P19835|CEL_HUMAN,Pool 2,Whole_milk
+77,LGLLGDSVD(+57.02)IFKGIPFAAPTK,"D9:Carbamidomethylation (DHKE, X@N-term):false","D9:Carbamidomethylation (DHKE, X@N-term):0.00",P19835|CEL_HUMAN,Pool 2,Whole_milk
+604,L(+57.02)VSLTLNLVTR,"L1:Carbamidomethylation (DHKE, X@N-term):true","L1:Carbamidomethylation (DHKE, X@N-term):1000.00",P01833|PIGR_HUMAN,Pool 2,Whole_milk
+612,S(+27.99)CHLAMAPNHAVVSR,S1:Formylation:false,S1:Formylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+8,I(+57.02)DSGLYLGSGYFTAIQNLR,"I1:Carbamidomethylation (DHKE, X@N-term):false","I1:Carbamidomethylation (DHKE, X@N-term):0.00",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+747,VM(+15.99)PVLKSPTIPFFDPQ(+0.98)IPK,M2:Oxidation (M):false;Q16:Deamidation (NQ):false,M2:Oxidation (M):1000.00;Q16:Deamidation (NQ):1000.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+748,C(+25.00)DVVVNTLGK,C1:Cyano:true,C1:Cyano:1000.00,P01833|PIGR_HUMAN,Pool 2,Whole_milk
+761,KGGSFQLN(-17.03)ELQGLK,N8:Ammonia-loss (N):true,N8:Ammonia-loss (N):1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+76,C(+71.04)AFSSQEPYFSYSGAFK,C1:Propionamide:false,C1:Propionamide:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+749,Y(+27.99)YGYTGAFR,Y1:Formylation:true,Y1:Formylation:1000.00,P02788|TRFL_HUMAN:P02787|TRFE_HUMAN,Pool 2,Whole_milk
+4,L(+57.02)GAVYTEGGFVEGVNKK,"L1:Carbamidomethylation (DHKE, X@N-term):true","L1:Carbamidomethylation (DHKE, X@N-term):121.05",P19835|CEL_HUMAN,Pool 2,Whole_milk
+609,SDTSLTW(+31.99)NSVK,W7:Dihydroxy:true,W7:Dihydroxy:34.30,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+84,TTFDVYTESWAQDPSQENKK(+57.02)K,"K20:Carbamidomethylation (DHKE, X@N-term):false","K20:Carbamidomethylation (DHKE, X@N-term):0.00",P19835|CEL_HUMAN,Pool 2,Whole_milk
+753,E(+27.99)SITEYKQKVEK,E1:Formylation:true,E1:Formylation:85.00,P05814|CASB_HUMAN,Pool 2,Whole_milk
+751,GPPVSC(+57.02)IKR,C6:Carbamidomethylation:false,C6:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+66,F(+57.02)QLFGSPSGQKDLLFK,"F1:Carbamidomethylation (DHKE, X@N-term):true","F1:Carbamidomethylation (DHKE, X@N-term):123.50",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+607,SD(+57.02)TSLTWNSVK,"D2:Carbamidomethylation (DHKE, X@N-term):false","D2:Carbamidomethylation (DHKE, X@N-term):14.02",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+610,Q(+57.02)VLLHQQAK,"Q1:Carbamidomethylation (DHKE, X@N-term):true","Q1:Carbamidomethylation (DHKE, X@N-term):51.96",P02788|TRFL_HUMAN,Pool 2,Whole_milk
+74,ARVVWC(+57.02)AVGEQELRK,C6:Carbamidomethylation:true,C6:Carbamidomethylation:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+762,C(+47.94)TGYRPILQGFR,C1:Selenium replaces sulphur:true,C1:Selenium replaces sulphur:1000.00,P47989|XDH_HUMAN,Pool 2,Whole_milk
+741,C(+25.00)AVGEQELR,C1:Cyano:true,C1:Cyano:1000.00,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+743,VLPIPQQVVPYP(+13.98)QR,P12:Proline oxidation to pyroglutamic acid:false,P12:Proline oxidation to pyroglutamic acid:11.10,P05814|CASB_HUMAN,Pool 2,Whole_milk
+765,D(+28.03)GAGDVAFIR,D1:Ethylation:false,D1:Ethylation:70.48,P02788|TRFL_HUMAN,Pool 2,Whole_milk
+744,D(+57.02)DNPNLPR,"D1:Carbamidomethylation (DHKE, X@N-term):true","D1:Carbamidomethylation (DHKE, X@N-term):21.94",P02768|ALBU_HUMAN,Pool 2,Whole_milk
+68,AISQSGVALSPWVIQKNPLFWAK(+57.02),"K23:Carbamidomethylation (DHKE, X@N-term):true","K23:Carbamidomethylation (DHKE, X@N-term):41.52",P19835|CEL_HUMAN,Pool 2,Whole_milk
+602,VGPLGFLSTGD(+57.02)ANLPGNYGLR,"D11:Carbamidomethylation (DHKE, X@N-term):false","D11:Carbamidomethylation (DHKE, X@N-term):32.88",P19835|CEL_HUMAN,Pool 2,Whole_milk
