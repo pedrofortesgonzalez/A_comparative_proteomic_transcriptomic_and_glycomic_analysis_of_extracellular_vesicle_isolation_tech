@@ -4,13 +4,13 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📋 Overview
+## Overview
 This repository contains a computational pipeline for analyzing glycomic profiles of extracellular vesicles (EVs) isolated through four different techniques: ExoGAG, IP-CD9, SEC and UC. The workflow processes mass spectrometry data to identify post-translational modifications (PTMs), with a focus on protein glycosylation patterns. It serves as supplementary material for the publication:
 ```
 Pereira-Hernández *et al*. `A comparative proteomic, transcriptomic and glycomic analysis of extracellular vesicle isolation techniques highlights ExoGAG efficiency for a more complete identification of breast milk molecular signaling pathways`
 ```
 
-## 📁 Repository Structure
+## Repository Structure
 ```
 .
 ├── input_data/                     # Input data directory
