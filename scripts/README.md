@@ -1,26 +1,6 @@
 # Scripts
 This folder contains all scripts needed to perform the analysis of glycosylations in EV proteins and peptides. The scripts are organized in numerical order according to the analysis workflow.
 
-***
-## Requirements and Dependencies
-
-| **Python** 3.10.16 | **R** 4.4.2 |
-| :----: | :----: |
-| pandas == 2.2.3 | dplyr_1.1.4 |
-| session_info == 1.0.0 | ggplot2_3.5.1 |
-| tqdm == 4.67.1 | ggpubr_0.6.0 |
-| numpy == 1.26.4 | rstatix_0.7.2 |
-|  | envalysis_0.7.0 |
-|  | gridExtra_2.3 |
-|  | ggrepel_0.9.6 |
-|  | rstudioapi_0.17.1 |
-
-#### Code Cleanup Libraries
-
-| **Python** | **R** |
-| :----: | :----: |
-| vulture == 1.0 | nolock_1.1.0 |
-
 
 ***
 ## Workflow and Usage Notes
