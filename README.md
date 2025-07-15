@@ -10,7 +10,7 @@ This repository contains a computational pipeline for analyzing glycomic profile
 Pereira-Hernández *et al*. `A comparative proteomic, transcriptomic and glycomic analysis of extracellular vesicle isolation techniques highlights ExoGAG efficiency for a more complete identification of breast milk molecular signaling pathways`
 ```
 
-## Repository Structure
+## Structure
 ```
 .
 ├── input_data/                     # Input data directory
@@ -57,13 +57,14 @@ You can find them in the file `requirements.txt`
 
 ***
 ### Usage
-1. Place your mass spectrometry data files in a directory inside the repository folder
-2. Run the complete analysis pipeline:
+1. Place your mass spectrometry data files in a directory inside the repository folder. Name this directory without using spaces or special characters, e.g. `example_input_dir_1`
+
+2.1. Run the complete analysis pipeline:
    ```bash
    ./scripts/run_analysis.sh /path/to/your/data
    ```
 
-3. Alternatively, run each step individually:
+2.2. Alternatively, run each step individually:
    ```bash
    # Step 1: Data preprocessing
    python scripts/1_ptm_detection.py
@@ -74,6 +75,10 @@ You can find them in the file `requirements.txt`
    # Step 3: Generate sector diagrams
    Rscript scripts/3_sector_diagrams.R
    ```
+
+2.3. Also alternatively, run each script on an IDE of your choice such as Jupyter Notebook, Spyder or RStudio
+
+**For more details on the scripts or the structure of the input data, go to the *Readme* file inside each folder**.
 
 ***
 ### Analysis Workflow
