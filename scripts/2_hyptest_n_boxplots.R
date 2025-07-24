@@ -338,7 +338,7 @@ create_boxplot_with_stats <- function(data, y_var, grouping_var = GROUPING_VAR, 
       
       # Filter to show only significant p-values
       posthoc_tests_filtered <- posthoc_tests %>% 
-        #filter(p.adj.signif != "ns") %>%
+        filter(p.adj.signif != "ns") %>%
         # Sort the comparisons to group similar ones
         arrange(group1, group2)
       
