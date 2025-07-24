@@ -60,7 +60,7 @@ def set_pools():
 def set_techs():   
     # Ask user to specify techniques in the analysis
     print(f"\n-----------------------------------------------", f"\n-----------------------------------------------")
-    print("Choose a set of analysed techniques: ", f"\n  0 --> None", f"\n  1 --> Default ('Whole_milk', 'ExoGAG', 'SEC', 'IP_CD9', 'UC')")
+    print("Choose a set of analysed techniques: ", f"\n  0 --> None", f"\n  1 --> Default ('Raw_milk', 'ExoGAG', 'SEC', 'IP_CD9', 'UC')")
     print(f"  2 --> Custom", f"\n-----------------------------------------------")
     choose_techniques = int(input("\nType an option (0/1/2): "))
 
@@ -68,7 +68,7 @@ def set_techs():
         TECHNIQUES = []
         print(f"\nYour chose to run the analysis without specified techniques")
     elif choose_techniques == 1:
-        TECHNIQUES = ['Whole_milk', 'ExoGAG', 'SEC', 'IP_CD9', 'UC']
+        TECHNIQUES = ['Raw_milk', 'ExoGAG', 'SEC', 'IP_CD9', 'UC']
         print(f"\nYour chosen set of techniques is the Default set:", TECHNIQUES)
     else:
         TECHNIQUES = re.split(r",\s*", input("\nEnter technique names sepparated by commas: "))

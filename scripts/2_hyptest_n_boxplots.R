@@ -338,7 +338,7 @@ create_boxplot_with_stats <- function(data, y_var, grouping_var = GROUPING_VAR, 
       
       # Filter to show only significant p-values
       posthoc_tests_filtered <- posthoc_tests %>% 
-        filter(p.adj.signif != "ns") %>%
+        #filter(p.adj.signif != "ns") %>%
         # Sort the comparisons to group similar ones
         arrange(group1, group2)
       
@@ -688,11 +688,11 @@ load_and_prepare_data <- function(file_path, analysis_type = ANALYSIS_TYPE) {
     if("IP_CD9" %in% levels(df$Technique)) {
       df <- df %>% mutate(Technique = recode(Technique, "IP_CD9" = "IP CD9"))
     } 
-    if ("Whole_milk" %in% levels(df$Technique)){
-      df <- df %>% mutate(Technique = recode(Technique, "Whole_milk" = "Whole milk"))
+    if ("Raw_milk" %in% levels(df$Technique)){
+      df <- df %>% mutate(Technique = recode(Technique, "Raw_milk" = "Raw milk"))
     }
     
-    # Apply the reordering function to move the last technique (Whole_milk/Whole milk) to first position
+    # Apply the reordering function to move the last technique (Raw_milk/Raw milk) to first position
     df <- reorder_technique_factor(df)
   }
   return(df)
@@ -708,6 +708,12 @@ cat("\n\n===== TOTAL DATA ANALYSIS =====\n\n")
 # Load data
 data_path <- "../output/1_filtered_dfs/vesiclepedia/summary_all.csv"
 df_total <- load_and_prepare_data(data_path, ANALYSIS_TYPE)
+
+# reorder techniques
+levels(df_total$Technique)
+df_total$Technique <- factor(df_total$Technique, 
+                             levels = c(
+                               "Raw milk", "ExoGAG", "IP CD9", "SEC", "UC"))
 
 # Verify data structure
 cat("Total data summary:\n")
@@ -889,6 +895,12 @@ cat("\n\n===== GLYCOSYLATION ANALYSIS =====\n\n")
 # Load glycosylation data
 glyc_path <- "../output/1_filtered_dfs/vesiclepedia_glycosylated/summary_all.csv"
 df_glyc <- load_and_prepare_data(glyc_path, ANALYSIS_TYPE)
+
+# reorder techniques
+levels(df_glyc$Technique)
+df_glyc$Technique <- factor(df_glyc$Technique, 
+                             levels = c(
+                               "Raw milk", "ExoGAG", "IP CD9", "SEC", "UC"))
 
 # Verify data structure
 cat("Glycosylated data summary:\n")

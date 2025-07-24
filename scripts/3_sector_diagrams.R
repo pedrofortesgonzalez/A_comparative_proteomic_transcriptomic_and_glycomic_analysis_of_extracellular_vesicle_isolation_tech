@@ -351,7 +351,11 @@ grouping_df <- read.csv(grouping_file_path, sep = ";", fileEncoding = "UTF-8")
 grouping_df[[GROUPING_VAR]] <- factor(grouping_df[[GROUPING_VAR]])
 grouping_levels <- levels(grouping_df[[GROUPING_VAR]])
 
-
+# reorder techniques
+levels(grouping_df$Technique)
+grouping_df$Technique <- factor(grouping_df$Technique, 
+                            levels = c(
+                              "Raw milk", "ExoGAG", "IP CD9", "SEC", "UC"))
 
 # ______________________________________________________________________________
 # 5. Generate all charts ----
